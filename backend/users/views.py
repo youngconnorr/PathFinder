@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, generics
 from .serializers import *
 from .models import *
 from rest_framework.response import Response
@@ -59,3 +59,29 @@ class UserViewset(viewsets.ViewSet):
         queryset = User.objects.all()
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
+
+
+class SavedInfoViewset(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = SavedInfoSerializer
+    
+    def get_queryset(self):
+        user = self.request.user #sets user to authenticated user
+        return SavedInfo.objects.filter(author=user) #return all savedinfo by a certain user
+    
+    def perform_create(self, serializer):
+        if serializer.is_valid():
+            serializer.save(author=self.request.user) #manually adding user because it is read only and is not going to be passed in through model
+        else:
+            print(serializer.errors)
+     
+                     
+class SavedInfoDelete(viewsets.ViewSet):
+    serializer_class = SavedInfoSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        user = self.request.user #sets user to authenticated user
+        return SavedInfo.objects.filter(author=user)
+    
+    

@@ -28,5 +28,18 @@ class CustomUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-
+class SavedInfo(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE,  related_name="saved" ) #foreign key links an object that belongs to an object, in this case saved info is linked to User 
+    
+    #might need to change abstractuser 
+    
+    def __str__(self):
+        return self.title
+    
+    
+    
+    
 # Create your models here.

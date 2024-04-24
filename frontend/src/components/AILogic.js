@@ -1,9 +1,5 @@
 import { OpenAI } from 'openai';
 
-// Load environment variables from .env file
-
-// Retrieve API key from environment variables
-
 const openai = new OpenAI({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
