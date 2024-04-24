@@ -32,6 +32,15 @@ const Home = () => {
     setMonth(input.target.value)
   }
 
+  const restaurantList = response.restaurants;
+  const clothingList = response.clothing;
+  const visitsList = response.visits;
+
+  const formatAIOutput = (jsonList) => {
+    return (
+      jsonList.map((e, index) => <li key={index}>{e}</li>)
+    )
+  }
 
 
   return (
@@ -64,16 +73,24 @@ const Home = () => {
 
             :
 
-            <div>
+            <div className="ai-response">
 
-              <p>Restaurants: </p>
-              <p>{response.restaurants}</p>
+              <span className="ai-cards">
+
+                <p>Restaurants: </p>
+                <p className>{formatAIOutput(restaurantList)}</p>
+              </span>
+
+              <span className="ai-cards">
 
               <p>Clothes to bring:</p>
-              <p>{response.clothing}</p>
+              <p>{formatAIOutput(clothingList)}</p>
+              </span>
 
+              <span className="ai-cards">
               <p>Places to visit:</p>
-              <p>{response.visits}</p>
+              <p>{formatAIOutput(visitsList)}</p>
+              </span>
 
             </div>
 

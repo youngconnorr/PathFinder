@@ -46,3 +46,24 @@
 .user-title-register {
   margin-left: -50%;
 }
+
+.ai-response {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.ai-cards {
+  border-style: solid;
+  margin: 2em;
+  padding: 2em;
+  border-color: black;
+  border-radius: 5px;
+  display: block;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  
+}
