@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'knox',
-    
-    
 ]
 
 MIDDLEWARE = [

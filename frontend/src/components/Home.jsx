@@ -1,47 +1,80 @@
 // Home.jsx
-import { useState } from 'react';
-import { main } from './AILogic';
-
+import { useState, useEffect } from "react";
+import { main } from "./AILogic";
+import AxiosInstance from "./AxiosInstance";
 
 const Home = () => {
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
-  const [city, setCity] = useState('');
-  const [month, setMonth] = useState('');
+  const [city, setCity] = useState("");
+  const [month, setMonth] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const [saved, setSaved] = useState([]);
+  const [content, setContent] = useState("");
+  const [title, setTitle] = useState("");
+
+  useEffect(() => {
+    getSaved();
+  }, []);
+
+  const getSaved = () => {
+    setTitle(city);
+    setContent(response);
+    AxiosInstance.get(`saved/`)
+      .then((res) => res.data)
+      .then((data) => {
+        setSaved(data), console.log(data);
+      })
+      .catch((err) => alert(err));
+  };
+
+  const deleteSaved = (id) => {
+    AxiosInstance.delete(`saved/${id}/delete`)
+      .then((res) => {
+        if (res.status === 204) {
+          alert("Saved deleted!");
+        } else {
+          alert("Failed to delete");
+        }
+        getSaved();
+      })
+      .catch((error) => alert(error));
+  };
+
+  const createSaved = (e) => {
+    e.preventDefault();
+    AxiosInstance.post(`saved/`, { content, title }).then((res) => {
+      if (res.status === 201) {
+        alert("Saved!");
+      } else {
+        alert("Failed to save");
+      }
+      getSaved(); // Move getSaved() inside .then() to ensure it's called after the post request is successful
+    });
+  };
 
   const fetchData = async (city, month) => {
     const response = await main(city, month);
     const parsedResponse = JSON.parse(response);
-    setLoading(false)
+    setLoading(false);
     setResponse(parsedResponse);
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setSubmitted(true)
-    setLoading(true)
+    e.preventDefault();
+    setSubmitted(true);
+    setLoading(true);
     fetchData(city, month);
-  }
-
-  const handleChange1 = (input) => {
-    setCity(input.target.value)
-  }
-
-  const handleChange2 = (input) => {
-    setMonth(input.target.value)
-  }
+  };
 
   const restaurantList = response.restaurants;
   const clothingList = response.clothing;
   const visitsList = response.visits;
 
   const formatAIOutput = (jsonList) => {
-    return (
-      jsonList.map((e, index) => <li key={index}>{e}</li>)
-    )
-  }
-
+    return jsonList.map((e, index) => <li key={index}>{e}</li>);
+  };
 
   return (
     <div>
@@ -51,56 +84,45 @@ const Home = () => {
           type="text"
           placeholder="Where are you travelling to"
           value={city}
-          onChange={handleChange1}
+          onChange={(e) => setCity(e.target.value)}
         />
         <label>Month: </label>
         <input
           type="text"
-          placeholder="Where are you travelling to"
+          placeholder="What month"
           value={month}
-          onChange={handleChange2}
+          onChange={(e) => setMonth(e.target.value)}
         />
         <button type="submit">Submit</button>
       </form>
 
-      {submitted ?
-
+      {submitted ? (
         <div>
-
-          {loading ?
-
+          {loading ? (
             <p>loading...</p>
+          ) : (
+            <div>
+              <button onClick={createSaved}> Save note!</button>
+              <div className="ai-response">
+                <span className="ai-cards">
+                  <p>Restaurants: </p>
+                  <p className>{formatAIOutput(restaurantList)}</p>
+                </span>
 
-            :
+                <span className="ai-cards">
+                  <p>Clothes to bring:</p>
+                  <p>{formatAIOutput(clothingList)}</p>
+                </span>
 
-            <div className="ai-response">
-
-              <span className="ai-cards">
-
-                <p>Restaurants: </p>
-                <p className>{formatAIOutput(restaurantList)}</p>
-              </span>
-
-              <span className="ai-cards">
-
-              <p>Clothes to bring:</p>
-              <p>{formatAIOutput(clothingList)}</p>
-              </span>
-
-              <span className="ai-cards">
-              <p>Places to visit:</p>
-              <p>{formatAIOutput(visitsList)}</p>
-              </span>
-
+                <span className="ai-cards">
+                  <p>Places to visit:</p>
+                  <p>{formatAIOutput(visitsList)}</p>
+                </span>
+              </div>
             </div>
-
-          }
-
+          )}
         </div>
-        :
-
-        null}
-
+      ) : null}
     </div>
   );
 };

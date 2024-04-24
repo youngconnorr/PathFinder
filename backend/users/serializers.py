@@ -25,6 +25,9 @@ class LoginSerializer(serializers.Serializer):
     
     
 class SavedInfoSerializer(serializers.ModelSerializer):
+    
+    content = serializers.JSONField()
+    
     class Meta:
         model = SavedInfo
         fields = ["id", "title", "content", "created_at", "author"]

@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.base_user import BaseUserManager #so you can sign in with just email
+from django.contrib.auth.base_user import BaseUserManager
+
+#so you can sign in with just email
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
@@ -30,7 +32,7 @@ class CustomUser(AbstractUser):
 
 class SavedInfo(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
+    content = models.JSONField()
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE,  related_name="saved" ) #foreign key links an object that belongs to an object, in this case saved info is linked to User 
     
