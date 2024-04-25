@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AxiosInstance from "./AxiosInstance";
+import AxiosInstance from "./tools/AxiosInstance";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {

@@ -45,10 +45,13 @@ class RegisterViewset(viewsets.ViewSet):
     def create(self, request): #remember self is just "this"!
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
+            email = serializer.validated_data.get('email')
+            if User.objects.filter(email=email).exists():
+                return Response({"error": "Email already exists"}, status=400)
             serializer.save()
             return Response(serializer.data) #because the extra_kwargs is there we do not have a password passed through this
         else:
-            return Response(serializer.errors, status=400)
+            return Response({"error": "Email already exists"}, status=400)
         
 class UserViewset(viewsets.ViewSet):
     permission_classes = [permissions.IsAuthenticated] #allow all users

@@ -1,11 +1,11 @@
 import "../App";
 import { Box } from "@mui/material";
-import TextField from "./forms/TextFields";
-import CreateButton from "./forms/MyButtons";
-import PasswordField from "./forms/MyPasswordField";
+import TextField from "./tools/TextFields";
+import CreateButton from "./tools/MyButtons";
+import PasswordField from "./tools/MyPasswordField";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import AxiosInstance from "./AxiosInstance";
+import AxiosInstance from "./tools/AxiosInstance";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -42,11 +42,11 @@ const Register = () => {
       email: data.email,
       password: data.password,
     })
-      .then(() => {
-        navigate(`/login`);
-      })
       .catch((error) => {
         console.log(error);
+      })
+      .then(() => {
+        navigate(`/login`);
       });
   };
 

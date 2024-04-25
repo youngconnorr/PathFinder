@@ -12,14 +12,14 @@ router.register('saved', SavedInfoViewset, basename='saved')
 
 # Instead of registering the 'delete-saved' endpoint, you should nest it under 'saved'
 saved_router = DefaultRouter()
-saved_router.register('delete', SavedInfoDelete, basename='delete-saved')
+saved_router.register('', SavedInfoDelete, basename='delete-saved')
 
 # # Include the nested router's URLs under the 'saved' endpoint
 # router.registry.extend(saved_router.registry)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('saved/<int:pk>/', include(saved_router.urls))
+    path('saved/delete/<int:pk>/', include(saved_router.urls))
 ]
 
 
