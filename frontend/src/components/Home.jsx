@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { main } from "./tools/AILogic";
 import AxiosInstance from "./tools/AxiosInstance";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   // const [response, setResponse] = useState("");
@@ -50,7 +49,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home-page">
       <form onSubmit={handleSubmit}>
         <label>Location: </label>
         <input

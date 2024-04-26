@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <navbar className="navbar">
       {token ? (
         <div>
           <button>
@@ -28,7 +28,6 @@ const Navbar = () => {
             <div></div>
           ) : (
             <button>
-              {" "}
               <Link to="/profile">Profile</Link>
             </button>
           )}
@@ -36,19 +35,14 @@ const Navbar = () => {
       ) : (
         <div>
           <button>
-            {" "}
             <Link to="/login">Log in</Link>
           </button>
           <button>
-            {" "}
             <Link to="/register">Register</Link>
           </button>
         </div>
       )}
-      {/* <button> <Link to="/logout"> Log out</Link></button>
-      <button> <Link to="/login">Log in</Link></button>
-      <button> <Link to="/register">Register</Link></button> */}
-    </>
+    </navbar>
   );
 };
 
