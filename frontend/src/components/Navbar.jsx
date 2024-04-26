@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import AxiosInstance from "./tools/AxiosInstance";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const token = localStorage.getItem("Token");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isProfile = location.pathname === "/profile";
 
   const logoutUser = () => {
     AxiosInstance.post(`logoutall/`, {}).then(() => {
@@ -16,7 +19,20 @@ const Navbar = () => {
   return (
     <>
       {token ? (
-        <button onClick={logoutUser}> Log out</button>
+        <div>
+          <button>
+            <Link to="/home">Home</Link>
+          </button>
+          <button onClick={logoutUser}> Log out</button>
+          {isProfile ? (
+            <div></div>
+          ) : (
+            <button>
+              {" "}
+              <Link to="/profile">Profile</Link>
+            </button>
+          )}
+        </div>
       ) : (
         <div>
           <button>
