@@ -81,9 +81,10 @@ class SavedInfoViewset(viewsets.ModelViewSet):
                      
 class SavedInfoDelete(viewsets.ViewSet):
     serializer_class = SavedInfoSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     
     def get_queryset(self):
+        print("TEST")
         user = self.request.user #sets user to authenticated user
         return SavedInfo.objects.filter(author=user)
     

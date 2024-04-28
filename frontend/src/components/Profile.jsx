@@ -17,31 +17,19 @@ const Profile = () => {
       .catch((err) => alert(err));
   };
 
-  useEffect(() => {
-    getSaved();
-  }, []);
-
-  const getSaved = () => {
-    AxiosInstance.get(`saved/`)
-      .then((res) => res.data)
-      .then((data) => {
-        setSaved(data), console.log(data);
-      })
-      .catch((err) => alert(err));
+  const deleteSaved = (id) => {
+    console.log("test");
+    AxiosInstance.delete(`saved/delete/${id}`).then((res) => {
+      console.log("res: ", res);
+      if (res.status === 204) {
+        alert("Saved deleted!");
+      } else {
+        alert("Failed to delete");
+      }
+      showSaved();
+    });
+    // .catch((error) => alert(error));
   };
-
-  // const deleteSaved = (id) => {
-  //   AxiosInstance.delete(`saved/delete/${id}/`)
-  //     .then((res) => {
-  //       if (res.status === 204) {
-  //         alert("Saved deleted!");
-  //       } else {
-  //         alert("Failed to delete");
-  //       }
-  //       getSaved();
-  //     })
-  //     .catch((error) => alert(error));
-  // };
 
   return (
     <div>
@@ -58,10 +46,11 @@ const Profile = () => {
               </div>
             ))}
         </h2> */}
-            {/* <button onClick={deleteSaved(saved.id)}></button> */}
+            <button onClick={() => deleteSaved(saved.id)}></button>
           </div>
         ))}
       </div>
+      {/* <button onClick={deleteSaved(1)}></button> */}
     </div>
   );
 };

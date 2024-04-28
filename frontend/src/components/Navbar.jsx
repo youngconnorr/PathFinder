@@ -17,16 +17,14 @@ const Navbar = () => {
   };
 
   return (
-    <navbar className="navbar">
+    <div className="navbar">
       {token ? (
         <div>
           <button>
             <Link to="/home">Home</Link>
           </button>
           <button onClick={logoutUser}> Log out</button>
-          {isProfile ? (
-            <div></div>
-          ) : (
+          {isProfile ? null : (
             <button>
               <Link to="/profile">Profile</Link>
             </button>
@@ -42,7 +40,7 @@ const Navbar = () => {
           </button>
         </div>
       )}
-    </navbar>
+    </div>
   );
 };
 
