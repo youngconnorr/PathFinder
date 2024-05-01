@@ -10,8 +10,13 @@ import AxiosInstance from "./tools/AxiosInstance";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const defaultValues = {
+    email: "",
+    password: "",
+  };
+
   const navigate = useNavigate();
-  const { handleSubmit, control } = useForm();
+  const { handleSubmit, control } = useForm({ defaultValues });
   const [validUser, setValidUser] = useState(true);
 
   const submission = (data) => {
@@ -24,7 +29,7 @@ const Login = () => {
         console.log(response);
         setValidUser(true);
         localStorage.setItem("Token", response.data.token);
-        navigate(`/home`);
+        navigate(`/`);
       })
       .catch((error) => {
         setValidUser(false);

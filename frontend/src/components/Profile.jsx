@@ -9,48 +9,57 @@ const Profile = () => {
   }, []);
 
   const showSaved = () => {
+    // Fetch saved items for the current user
     AxiosInstance.get(`saved/`)
       .then((res) => res.data)
       .then((data) => {
-        setSaved(data), console.log(data);
+        setSaved(data);
+      })
+      .then(() => {
+        console.log(saved);
       })
       .catch((err) => alert(err));
   };
 
   const deleteSaved = (id) => {
     console.log("test");
-    AxiosInstance.delete(`saved/delete/${id}`).then((res) => {
-      console.log("res: ", res);
-      if (res.status === 204) {
-        alert("Saved deleted!");
-      } else {
-        alert("Failed to delete");
-      }
-      showSaved();
+    AxiosInstance.delete(`saved/${id}`).then(() => {
+      const updatedSaved = saved.filter((item) => item.id !== id);
+      setSaved(updatedSaved);
     });
-    // .catch((error) => alert(error));
+    console.log(saved);
   };
 
   return (
     <div>
       <h2>Saved:</h2>
-      <div className="all-saved-container">
-        {saved.map((saved) => (
-          <div className="saved-container" key={saved.id}>
-            <h1 className="saved-title">{saved.title}</h1>
-            {/* <h2 className="saved-content">
+      {saved.length === 0 ? (
+        <p>Looks like you need to generate some itineraries!</p>
+      ) : (
+        <div className="all-saved-container">
+          {saved.map((saved) => (
+            <div className="saved-container" key={saved.id}>
+              <h1 className="saved-title">{saved.title}</h1>
+              {/* <h2 className="saved-content">
           {Object.entries(saved.content).map(([category, items]) => (
-              <div key={category} className="saved-items">
-              <h1>{category}</h1>
-              <p>{items}</p>
+            <div key={category} className="saved-items">
+            <h1>{category}</h1>
+            <p>{items}</p>
               </div>
             ))}
-        </h2> */}
-            <button onClick={() => deleteSaved(saved.id)}></button>
-          </div>
-        ))}
-      </div>
-      {/* <button onClick={deleteSaved(1)}></button> */}
+          </h2> */}
+              <button
+                onClick={() => {
+                  deleteSaved(saved.id);
+                }}
+              >
+                {" "}
+                delete Saved
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

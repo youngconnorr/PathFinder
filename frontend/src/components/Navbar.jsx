@@ -21,7 +21,10 @@ const Navbar = () => {
       {token ? (
         <div>
           <button>
-            <Link to="/home">Home</Link>
+            <Link to="/">Landing</Link>
+          </button>
+          <button>
+            <Link to="/generate">Generate</Link>
           </button>
           <button onClick={logoutUser}> Log out</button>
           {isProfile ? null : (

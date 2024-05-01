@@ -1,4 +1,4 @@
-import Home from "./components/Home";
+import Generate from "./components/Generate";
 import Register from "./components/Register";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
@@ -26,7 +26,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<Profile />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/generate" element={<Generate />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
             </Route>

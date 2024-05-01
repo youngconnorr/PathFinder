@@ -7,7 +7,7 @@ const AxiosInstance = axios.create({
   baseURL: baseUrl,
 
   //time between button press and post
-  timeout: 5000,
+  timeout: 1000,
   headers: {
     "Content-Type": "application/json", //what is being sent from frontend
     accept: "application/json",

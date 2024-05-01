@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets, permissions, generics
+from rest_framework import viewsets, permissions
 from .serializers import *
 from .models import *
 from rest_framework.response import Response
@@ -64,28 +64,39 @@ class UserViewset(viewsets.ViewSet):
         return Response(serializer.data)
 
 
-class SavedInfoViewset(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated]
-    serializer_class = SavedInfoSerializer
-    
-    def get_queryset(self):
-        user = self.request.user #sets user to authenticated user
-        return SavedInfo.objects.filter(author=user) #return all savedinfo by a certain user
-    
-    def perform_create(self, serializer):
-        if serializer.is_valid():
-            serializer.save(author=self.request.user) #manually adding user because it is read only and is not going to be passed in through model
-        else:
-            print(serializer.errors)
-     
-                     
-class SavedInfoDelete(viewsets.ViewSet):
-    serializer_class = SavedInfoSerializer
+class SavedInfoViewset(viewsets.ViewSet):
+    # permission_classes = [permissions.IsAuthenticated]
     permission_classes = [permissions.AllowAny]
+    queryset = SavedInfo.objects.all()
+    serializer_class = SavedInfoSerializer
     
     def get_queryset(self):
-        print("TEST")
-        user = self.request.user #sets user to authenticated user
-        return SavedInfo.objects.filter(author=user)
+        user = self.request.user  # Get the authenticated user
+        return SavedInfo.objects.filter(author=user)  # Filter SavedInfo objects by the authenticated user
+
+    def list(self, request):
+        queryset = self.get_queryset()
+        serializer = SavedInfoSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+    def create(self, request):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            serializer.save(author=self.request.user)
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=400)
+        
+    def retrieve(self, request, pk=None):
+        saved = self.queryset.get(pk=pk)
+        serializer = self.serializer_class(saved)
+        return Response(serializer.data)
+
+    def destroy(self, request, pk=None):
+        saved = self.queryset.get(pk=pk)
+        saved.delete()
+        return Response(status=204)
+    
     
     

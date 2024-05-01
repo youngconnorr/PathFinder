@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { main } from "./tools/AILogic";
 import AxiosInstance from "./tools/AxiosInstance";
+import cities from "cities.json";
 
 const Home = () => {
   // const [response, setResponse] = useState("");
@@ -14,16 +15,25 @@ const Home = () => {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
 
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [filteredCities, setFilteredCities] = useState([]);
+
+  const citySet = new Set(cities.map((city) => city.name.toLowerCase()));
+
+  // Update filteredCities based on search term
+  // const handleCitySearch = (event) => {
+  //   const searchValue = event.target.value.toLowerCase();
+  //   setSearchTerm(searchValue);
+
+  //   const filtered = citySet.filter((city) =>
+  //     city.name.toLowerCase().includes(searchValue)
+  //   );
+  //   setFilteredCities(filtered);
+  // };
+
   const createSaved = (e) => {
     e.preventDefault();
-    AxiosInstance.post(`saved/`, { content, title }).then((res) => {
-      if (res.status === 201) {
-        alert("Saved!");
-        // getSaved();
-      } else {
-        alert("Failed to save");
-      }
-    });
+    AxiosInstance.post(`saved/`, { content, title });
   };
 
   const fetchData = async (city, month) => {
@@ -35,9 +45,13 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setLoading(true);
-    fetchData(city, month);
+    if (citySet.has(city.toLowerCase())) {
+      setSubmitted(true);
+      setLoading(true);
+      fetchData(city, month);
+    } else {
+      console.log("invalid city");
+    }
   };
 
   const restaurantList = content.restaurants;
@@ -51,6 +65,19 @@ const Home = () => {
   return (
     <div className="home-page">
       <form onSubmit={handleSubmit}>
+        {/* <div>
+          <input
+            type="text"
+            placeholder="Search for a city..."
+            value={searchTerm}
+            onChange={handleCitySearch}
+          />
+          <select>
+            {filteredCities.map((city) => (
+              <option key={city.name}>{city.name}</option>
+            ))}
+          </select>
+        </div> */}
         <label>Location: </label>
         <input
           type="text"

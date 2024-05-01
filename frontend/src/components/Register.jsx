@@ -12,6 +12,10 @@ import * as yup from "yup";
 
 const Register = () => {
   const navigate = useNavigate();
+  const defaultValues = {
+    email: "",
+    password: "",
+  };
 
   const schema = yup.object({
     email: yup
@@ -35,7 +39,10 @@ const Register = () => {
       .oneOf([yup.ref("password"), null], "Passwords must match"),
   });
 
-  const { handleSubmit, control } = useForm({ resolver: yupResolver(schema) }); //handleSubmit is checked by axios and control is from text and password fields
+  const { handleSubmit, control } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues,
+  }); //handleSubmit is checked by axios and control is from text and password fields
 
   const submission = (data) => {
     AxiosInstance.post(`register/`, {

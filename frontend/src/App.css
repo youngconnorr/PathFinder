@@ -118,8 +118,7 @@
   transition: all 0.3s ease;
 }
 
-.navbar button:hover,
-.navbar a:hover {
+.navbar button:hover {
   background-color: #555;
   border-radius: 5px;
 }
