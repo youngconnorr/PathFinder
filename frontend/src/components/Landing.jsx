@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Landing = () => {
-  const [value, setValue] = useState("fruit");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
   // const token = localStorage.getItem("Token");
 
   return (
