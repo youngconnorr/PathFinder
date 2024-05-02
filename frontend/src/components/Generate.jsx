@@ -1,39 +1,32 @@
-// Home.jsx
 import { useState } from "react";
 import { main } from "./tools/AILogic";
 import AxiosInstance from "./tools/AxiosInstance";
-import cities from "cities.json";
+import CitySelector from "./tools/CitySelector";
 
-const Home = () => {
-  // const [response, setResponse] = useState("");
+const Generate = () => {
   const [loading, setLoading] = useState(false);
-  const [city, setCity] = useState("");
   const [month, setMonth] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [selectedCity, setSelectedCity] = useState("");
 
-  // const [saved, setSaved] = useState([]);
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
 
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const [filteredCities, setFilteredCities] = useState([]);
-
-  const citySet = new Set(cities.map((city) => city.name.toLowerCase()));
-
-  // Update filteredCities based on search term
-  // const handleCitySearch = (event) => {
-  //   const searchValue = event.target.value.toLowerCase();
-  //   setSearchTerm(searchValue);
-
-  //   const filtered = citySet.filter((city) =>
-  //     city.name.toLowerCase().includes(searchValue)
-  //   );
-  //   setFilteredCities(filtered);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setLoading(true);
+    fetchData(selectedCity, month);
+  };
 
   const createSaved = (e) => {
     e.preventDefault();
     AxiosInstance.post(`saved/`, { content, title });
+  };
+
+  const handleCityChange = (city) => {
+    console.log(city);
+    setSelectedCity(city);
   };
 
   const fetchData = async (city, month) => {
@@ -41,17 +34,6 @@ const Home = () => {
     setTitle(city);
     setContent(JSON.parse(JSONresponse));
     setLoading(false);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (citySet.has(city.toLowerCase())) {
-      setSubmitted(true);
-      setLoading(true);
-      fetchData(city, month);
-    } else {
-      console.log("invalid city");
-    }
   };
 
   const restaurantList = content.restaurants;
@@ -65,26 +47,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <form onSubmit={handleSubmit}>
-        {/* <div>
-          <input
-            type="text"
-            placeholder="Search for a city..."
-            value={searchTerm}
-            onChange={handleCitySearch}
-          />
-          <select>
-            {filteredCities.map((city) => (
-              <option key={city.name}>{city.name}</option>
-            ))}
-          </select>
-        </div> */}
-        <label>Location: </label>
-        <input
-          type="text"
-          placeholder="Where are you travelling to"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
+        <CitySelector onInputChange={handleCityChange} />
         <label>Month: </label>
         <input
           type="text"
@@ -126,4 +89,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Generate;
