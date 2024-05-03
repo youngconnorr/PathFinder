@@ -54,7 +54,7 @@ const CitySelector = ({ onInputChange }) => {
       </select>
       {states.length === 0 ? null : (
         <div>
-          <label htmlFor="state">State:</label>
+          <label htmlFor="state">Region:</label>
           <select onChange={(e) => handleStateInput(e.target.value)}>
             <option value="">Select a State:</option>
 

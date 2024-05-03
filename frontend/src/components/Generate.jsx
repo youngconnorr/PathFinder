@@ -3,6 +3,7 @@ import { main } from "./tools/AILogic";
 import AxiosInstance from "./tools/AxiosInstance";
 import CitySelector from "./tools/CitySelector";
 import DateSelector from "./tools/DateSelector";
+import GuestsNumber from "./tools/GuestsNumber";
 
 const Generate = () => {
   //dynamic states of page
@@ -13,6 +14,10 @@ const Generate = () => {
   //user inputs to give to AI
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [adultNum, setAdultNum] = useState(0);
+  const [childNum, setChildNum] = useState(0);
+  const [infantNum, setInfantNum] = useState(0);
+  const [petNum, setPetNum] = useState(0);
 
   //data stored
   const [content, setContent] = useState("");
@@ -20,9 +25,23 @@ const Generate = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setLoading(true);
-    fetchData(selectedCity, selectedMonth);
+    if (
+      selectedCity === "" ||
+      (petNum !== 0 && childNum === 0 && adultNum === 0 && infantNum === 0)
+    ) {
+      console.log("fill out human categories or missing chosen city");
+    } else {
+      setSubmitted(true);
+      setLoading(true);
+      fetchData(
+        selectedCity,
+        selectedMonth,
+        adultNum,
+        childNum,
+        infantNum,
+        petNum
+      );
+    }
   };
 
   const createSaved = (e) => {
@@ -40,8 +59,23 @@ const Generate = () => {
     setSelectedMonth(month.getMonth() + 1);
   };
 
-  const fetchData = async (city, month) => {
-    const JSONresponse = await main(city, month);
+  const handleGuestNumber = (adults, children, infants, pets) => {
+    console.log(adults, children, infants, pets);
+    setAdultNum(adults);
+    setChildNum(children);
+    setInfantNum(infants);
+    setPetNum(pets);
+  };
+
+  const fetchData = async (city, month, adults, children, infants, pets) => {
+    const JSONresponse = await main(
+      city,
+      month,
+      adults,
+      children,
+      infants,
+      pets
+    );
     setTitle(city);
     setContent(JSON.parse(JSONresponse));
     setLoading(false);
@@ -57,11 +91,18 @@ const Generate = () => {
 
   return (
     <div className="home-page">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="AI-form">
         <CitySelector onInputChange={handleCityChange} />
-        <DateSelector datePicked={handleMonthChange} />
+        <div className="calendar">
+          <DateSelector datePicked={handleMonthChange} />
+        </div>
+        <div className="guest-picker">
+          <GuestsNumber guestsNumber={handleGuestNumber} />
+        </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-ai">
+          Submit
+        </button>
       </form>
 
       {submitted ? (

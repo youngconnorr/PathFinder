@@ -131,3 +131,43 @@
 .navbar .profile-button {
   margin-left: 10px;
 }
+
+.AI-form {
+  display: flex;
+}
+
+.calendar {
+  margin-left: 10px;
+}
+
+.guest {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.guests-picker {
+  display: flex;
+}
+
+.guest-button {
+  height: 20px;
+}
+
+.guest-mod {
+  display: flex;
+  margin-left: 2px;
+  transform: translateY(20px);
+}
+
+.submit-ai {
+  max-height: 20px;
+  margin-left: 0;
+}
+
+.guest-num-display {
+  margin-right: 10px;
+  padding: 0px 0px 30px 10px;
+}

@@ -15,7 +15,13 @@ const DateSelector = ({ datePicked }) => {
   }, [startDate, datePicked]);
 
   return (
-    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+    <div>
+      When are you travelling?
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+      />
+    </div>
   );
 };
 
