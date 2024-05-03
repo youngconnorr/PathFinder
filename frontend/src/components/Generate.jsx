@@ -2,13 +2,19 @@ import { useState } from "react";
 import { main } from "./tools/AILogic";
 import AxiosInstance from "./tools/AxiosInstance";
 import CitySelector from "./tools/CitySelector";
+import DateSelector from "./tools/DateSelector";
 
 const Generate = () => {
+  //dynamic states of page
   const [loading, setLoading] = useState(false);
-  const [month, setMonth] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  // const [showChosenCity, setShowChosenCity] = useState(false);
+
+  //user inputs to give to AI
+  const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
 
+  //data stored
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
 
@@ -16,7 +22,7 @@ const Generate = () => {
     e.preventDefault();
     setSubmitted(true);
     setLoading(true);
-    fetchData(selectedCity, month);
+    fetchData(selectedCity, selectedMonth);
   };
 
   const createSaved = (e) => {
@@ -27,6 +33,11 @@ const Generate = () => {
   const handleCityChange = (city) => {
     console.log(city);
     setSelectedCity(city);
+  };
+
+  const handleMonthChange = (month) => {
+    console.log(month.getMonth() + 1);
+    setSelectedMonth(month.getMonth() + 1);
   };
 
   const fetchData = async (city, month) => {
@@ -48,13 +59,8 @@ const Generate = () => {
     <div className="home-page">
       <form onSubmit={handleSubmit}>
         <CitySelector onInputChange={handleCityChange} />
-        <label>Month: </label>
-        <input
-          type="text"
-          placeholder="What month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-        />
+        <DateSelector datePicked={handleMonthChange} />
+
         <button type="submit">Submit</button>
       </form>
 
