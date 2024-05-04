@@ -4,6 +4,7 @@ import AxiosInstance from "./tools/AxiosInstance";
 import CitySelector from "./tools/CitySelector";
 import DateSelector from "./tools/DateSelector";
 import GuestsNumber from "./tools/GuestsNumber";
+import BudgetNumber from "./tools/BudgetNumber";
 
 const Generate = () => {
   //dynamic states of page
@@ -18,6 +19,8 @@ const Generate = () => {
   const [childNum, setChildNum] = useState(0);
   const [infantNum, setInfantNum] = useState(0);
   const [petNum, setPetNum] = useState(0);
+  const [dollarNum, setDollarNum] = useState("");
+  const [budget, setBudget] = useState("");
 
   //data stored
   const [content, setContent] = useState("");
@@ -39,7 +42,9 @@ const Generate = () => {
         adultNum,
         childNum,
         infantNum,
-        petNum
+        petNum,
+        budget,
+        dollarNum
       );
     }
   };
@@ -67,14 +72,36 @@ const Generate = () => {
     setPetNum(pets);
   };
 
-  const fetchData = async (city, month, adults, children, infants, pets) => {
+  const handleBudget = (budget) => {
+    if (budget === "0-20$") {
+      setDollarNum("$");
+    } else if (budget === "20-40$") {
+      setDollarNum("$$");
+    } else if (budget === "40$+") {
+      setDollarNum("$$$");
+    }
+    setBudget(budget);
+  };
+
+  const fetchData = async (
+    city,
+    month,
+    adults,
+    children,
+    infants,
+    pets,
+    budget,
+    dollar
+  ) => {
     const JSONresponse = await main(
       city,
       month,
       adults,
       children,
       infants,
-      pets
+      pets,
+      budget,
+      dollar
     );
     setTitle(city);
     setContent(JSON.parse(JSONresponse));
@@ -98,6 +125,9 @@ const Generate = () => {
         </div>
         <div className="guest-picker">
           <GuestsNumber guestsNumber={handleGuestNumber} />
+        </div>
+        <div className="budget-chooser">
+          <BudgetNumber chosenBudget={handleBudget} />
         </div>
 
         <button type="submit" className="submit-ai">
