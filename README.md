@@ -1,4 +1,4 @@
-# Travel Planner 🌍✈️
+# Path Finder 🌍✈️
 
 Welcome to Travel Planner, a web application that helps you easily plan your travel itinerary! 📅
 
@@ -6,6 +6,7 @@ Welcome to Travel Planner, a web application that helps you easily plan your tra
 
 - React.js
 - Django Rest Framework
+- CSS
 - OpenAI API
 
 ## Features 🚀
