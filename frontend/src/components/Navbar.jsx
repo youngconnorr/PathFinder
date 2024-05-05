@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import AxiosInstance from "./tools/AxiosInstance";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
       {token ? (
         <div>
           <button>
-            <Link to="/">Landing</Link>
+            <Link to="/">Path Finder</Link>
           </button>
           <button>
             <Link to="/generate">Generate</Link>

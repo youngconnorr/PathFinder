@@ -1,3 +1,168 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Hide scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the handle */
+  border-radius: 4px; /* rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* darker color on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* background of the scrollbar track */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background: #f0f0f0; /* lighter color on hover */
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: transparent; /* background of the scrollbar corner */
+}
+
+body {
+  overflow-x: hidden;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #a2d2ff;
@@ -16,6 +181,7 @@
 }
 
 .user-cards {
+  padding-top: 40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 400px;
@@ -30,11 +196,12 @@
 }
 
 .register-card {
+  padding-top: 25px;
   height: 500px;
 }
 
 .item-box {
-  padding: 5px;
+  padding: 10px;
 }
 
 .account-question-link {
@@ -99,7 +266,6 @@
 }
 
 .navbar {
-  margin: -8px;
   background-color: #333;
   padding: 10px;
   display: flex;
@@ -170,4 +336,92 @@
 .guest-num-display {
   margin-right: 10px;
   padding: 0px 0px 30px 10px;
+}
+
+.landing-sections {
+  height: 100vh;
+  width: 100%;
+}
+
+.section-1 {
+  background-color: white;
+}
+
+.section-2 {
+  background-color: #b5e2fa;
+}
+
+.section-3 {
+  background-color: #0fa3b1;
+}
+
+.card-landing {
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  margin: 30vh;
+  margin-right: 100px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.website-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  white-space: nowrap;
+  overflow-x: scroll;
+  white-space: nowrap;
+  height: 100vh;
+}
+
+.carousel-card-photo {
+  /* position: absolute; */
+  width: 200px;
+  height: 200px;
+}
+
+.carousel-cards {
+  cursor: pointer;
+  border-style: solid;
+  padding: 2rem;
+  width: 400px;
+  height: 400px;
+}
+
+.reviews {
+  display: flex;
+  /* overflow-x: scroll; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.review-card {
+}
+
+.review-name,
+.review-city,
+.review-country,
+.review-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
