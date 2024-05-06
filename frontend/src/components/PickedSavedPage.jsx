@@ -32,11 +32,16 @@ const PickedSavedPage = () => {
       ) : (
         <div className="saved-container" key={saved.id}>
           <h1 className="saved-title">{saved.title}</h1>
+          <br />
           <h2 className="saved-content">
             {Object.entries(saved.content).map(([category, items]) => (
               <div key={category} className="saved-items">
                 <h1>{category}</h1>
-                <p>{items}</p>
+                <br />
+                {items.map((item) => (
+                  <p key={item.index}>{item}</p>
+                ))}
+                <br />
               </div>
             ))}
           </h2>
