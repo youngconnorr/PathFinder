@@ -3,10 +3,6 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
 applet,
 object,
 iframe,
@@ -83,80 +79,12 @@ summary,
 time,
 mark,
 audio,
-video {
+video div,
+span,
+html,
+body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Hide scrollbar track */
-::-webkit-scrollbar {
-  width: 8px; /* width of the scrollbar */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; /* color of the handle */
-  border-radius: 4px; /* rounded corners */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* darker color on hover */
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent; /* background of the scrollbar track */
-}
-
-/* Track on hover */
-::-webkit-scrollbar-track:hover {
-  background: #f0f0f0; /* lighter color on hover */
-}
-
-/* Corner */
-::-webkit-scrollbar-corner {
-  background: transparent; /* background of the scrollbar corner */
 }
 
 body {
@@ -165,7 +93,7 @@ body {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #888;
+  background-color: #bde0fe;
 }
 
 .user-signin-bg {
@@ -259,10 +187,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-}
-
-.home-page {
-  margin-top: 50px;
 }
 
 .navbar {
