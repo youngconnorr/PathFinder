@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Profile from "./components/Profile";
+import PickedSavedPage from "./components/PickedSavedPage";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<Profile />} />
+              <Route path="/view-saved" element={<PickedSavedPage />} />
               <Route path="/generate" element={<Generate />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />

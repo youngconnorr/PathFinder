@@ -1,8 +1,14 @@
 import AxiosInstance from "./tools/AxiosInstance";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+// import PickedSavedPage from "./PickedSavedPage";
 
 const Profile = () => {
   const [saved, setSaved] = useState([]);
+  const navigate = useNavigate();
+  // const location = useLocation();
+
+  // const isViewSaved = location.pathname === "/view-saved";
 
   useEffect(() => {
     showSaved();
@@ -30,6 +36,11 @@ const Profile = () => {
     console.log(saved);
   };
 
+  const viewSaved = (id) => {
+    console.log(id);
+    navigate("/view-saved", { state: { id: id } });
+  };
+
   return (
     <div>
       <h2>Saved:</h2>
@@ -40,14 +51,6 @@ const Profile = () => {
           {saved.map((saved) => (
             <div className="saved-container" key={saved.id}>
               <h1 className="saved-title">{saved.title}</h1>
-              {/* <h2 className="saved-content">
-          {Object.entries(saved.content).map(([category, items]) => (
-            <div key={category} className="saved-items">
-            <h1>{category}</h1>
-            <p>{items}</p>
-              </div>
-            ))}
-          </h2> */}
               <button
                 onClick={() => {
                   deleteSaved(saved.id);
@@ -56,6 +59,7 @@ const Profile = () => {
                 {" "}
                 delete Saved
               </button>
+              <button onClick={() => viewSaved(saved.id)}>View saved</button>
             </div>
           ))}
         </div>
