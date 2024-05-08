@@ -5,12 +5,13 @@ import CitySelector from "./tools/CitySelector";
 import DateSelector from "./tools/DateSelector";
 import GuestsNumber from "./tools/GuestsNumber";
 import BudgetNumber from "./tools/BudgetNumber";
-// import MapsTool from "./tools/GoogleMaps";
+import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
   //dynamic states of page
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [mapLoad, setMapLoad] = useState(false);
   // const [showChosenCity, setShowChosenCity] = useState(false);
 
   //user inputs to give to AI
@@ -36,6 +37,7 @@ const Generate = () => {
     ) {
       console.log("fill out human categories or missing chosen city");
     } else {
+      setMapLoad(false);
       setSubmitted(true);
       setLoading(true);
       fetchData(
@@ -106,8 +108,10 @@ const Generate = () => {
       dollar
     );
     setTitle(city);
+    console.log(JSONresponse);
     setContent(JSON.parse(JSONresponse));
     setLoading(false);
+    setMapLoad(true);
   };
 
   const restaurantList = content.restaurants;
@@ -178,9 +182,12 @@ const Generate = () => {
           </section>
         ) : null}
       </div>
-      {/* <div className="results-section">
-        <MapsTool />
-      </div> */}
+      {/* {mapLoad ? (
+        <div className="results-section">
+          <MapsTool props={selectedCity} />
+        </div>
+      ) : null} */}
+      <MapsTool props={selectedCity} />
     </>
   );
 };
