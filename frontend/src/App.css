@@ -338,9 +338,6 @@ body {
   width: 100vw;
 }
 
-.review-card {
-}
-
 .review-name,
 .review-city,
 .review-country,
@@ -348,4 +345,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.generate-section {
+  height: 100vh;
+}
+
+.results-section {
+  display: grid;
+  height: 100vh;
+  background-color: pink;
 }

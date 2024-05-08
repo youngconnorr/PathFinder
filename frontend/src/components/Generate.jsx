@@ -5,6 +5,7 @@ import CitySelector from "./tools/CitySelector";
 import DateSelector from "./tools/DateSelector";
 import GuestsNumber from "./tools/GuestsNumber";
 import BudgetNumber from "./tools/BudgetNumber";
+// import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
   //dynamic states of page
@@ -30,7 +31,8 @@ const Generate = () => {
     e.preventDefault();
     if (
       selectedCity === "" ||
-      (petNum !== 0 && childNum === 0 && adultNum === 0 && infantNum === 0)
+      (petNum == 0 && childNum === 0 && adultNum === 0 && infantNum === 0) ||
+      (petNum != 0 && childNum === 0 && adultNum === 0 && infantNum === 0)
     ) {
       console.log("fill out human categories or missing chosen city");
     } else {
@@ -109,60 +111,77 @@ const Generate = () => {
   };
 
   const restaurantList = content.restaurants;
-  const clothingList = content.clothing;
-  const visitsList = content.visits;
+  const lodgingList = content.lodging;
+  const mallList = content.malls;
+  const placesList = content.places;
 
   const formatAIOutput = (jsonList) => {
-    return jsonList.map((e, index) => <li key={index}>{e}</li>);
+    return jsonList.map((list, index) => (
+      <div key={index}>
+        <strong>{list[0]}</strong>
+        <div>{list[1]}</div>
+      </div>
+    ));
+    // console.log(jsonList);
   };
 
   return (
-    <div className="home-page">
-      <form onSubmit={handleSubmit} className="AI-form">
-        <CitySelector onInputChange={handleCityChange} />
-        <div className="calendar">
-          <DateSelector datePicked={handleMonthChange} />
-        </div>
-        <div className="guest-picker">
-          <GuestsNumber guestsNumber={handleGuestNumber} />
-        </div>
-        <div className="budget-chooser">
-          <BudgetNumber chosenBudget={handleBudget} />
-        </div>
+    <>
+      <div className="generate-section">
+        <form onSubmit={handleSubmit} className="AI-form">
+          <CitySelector onInputChange={handleCityChange} />
+          <div className="calendar">
+            <DateSelector datePicked={handleMonthChange} />
+          </div>
+          <div className="guest-picker">
+            <GuestsNumber guestsNumber={handleGuestNumber} />
+          </div>
+          <div className="budget-chooser">
+            <BudgetNumber chosenBudget={handleBudget} />
+          </div>
 
-        <button type="submit" className="submit-ai">
-          Submit
-        </button>
-      </form>
+          <button type="submit" className="submit-ai">
+            Submit
+          </button>
+        </form>
 
-      {submitted ? (
-        <div>
-          {loading ? (
-            <p>loading...</p>
-          ) : (
-            <div>
-              <button onClick={createSaved}>Save note!</button>
-              <div className="ai-response">
-                <span className="ai-cards">
-                  <p>Restaurants: </p>
-                  <p>{formatAIOutput(restaurantList)}</p>
-                </span>
+        {submitted ? (
+          <div>
+            {loading ? (
+              <p>loading...</p>
+            ) : (
+              <div>
+                <button onClick={createSaved}>Save note!</button>
+                <div className="ai-response">
+                  <span className="ai-cards">
+                    <p>Lodging: </p>
+                    <p>{formatAIOutput(lodgingList)}</p>
+                  </span>
 
-                <span className="ai-cards">
-                  <p>Clothes to bring:</p>
-                  <p>{formatAIOutput(clothingList)}</p>
-                </span>
+                  <span className="ai-cards">
+                    <p>Restaurants: </p>
+                    <p>{formatAIOutput(restaurantList)}</p>
+                  </span>
 
-                <span className="ai-cards">
-                  <p>Places to visit:</p>
-                  <p>{formatAIOutput(visitsList)}</p>
-                </span>
+                  <span className="ai-cards">
+                    <p>Malls:</p>
+                    <p>{formatAIOutput(mallList)}</p>
+                  </span>
+
+                  <span className="ai-cards">
+                    <p>Places to visit:</p>
+                    <p>{formatAIOutput(placesList)}</p>
+                  </span>
+                </div>
               </div>
-            </div>
-          )}
-        </div>
-      ) : null}
-    </div>
+            )}
+          </div>
+        ) : null}
+      </div>
+      {/* <div className="results-section">
+        <MapsTool />
+      </div> */}
+    </>
   );
 };
 

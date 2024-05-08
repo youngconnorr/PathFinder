@@ -15,21 +15,10 @@ const BudgetNumber = ({ chosenBudget }) => {
       className="budget-picker"
       onChange={(e) => setBudget(e.target.value)}
     >
-      <option value="">
-        <h2>Choose your budget</h2>
-      </option>
-      <option value="0-20$">
-        <h2>Low </h2>
-        <h3>0-500$</h3>
-      </option>
-      <option value="20-40$">
-        <h2>Medium </h2>
-        <h3>500-1500$</h3>
-      </option>
-      <option value="40$+">
-        <h2>High </h2>
-        <h3>1500+$</h3>
-      </option>
+      <option value="">Choose your budget</option>
+      <option value="0-20$">Low 0-500$</option>
+      <option value="20-40$">Medium 500-1500$</option>
+      <option value="40$+">High 1500+</option>
     </select>
   );
 };
