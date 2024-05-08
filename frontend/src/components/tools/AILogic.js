@@ -21,7 +21,7 @@ export async function main(
         role: "system",
         content: `Make sure there are no newline characters in the JSON object response. You are a travel guide who knows the ins and outs of ${city}. ${adultNum} adults, ${childNum} children, ${infantNum} infants, and ${petNum} pets are coming to the city during the ${month} of the year. 
 
-        They have a budget of ${budget}  and you need to recommend 
+        They have a budget of ${budget} and you need to recommend 
         - 5 different restaurants with a ${dollar} price range and match the guests coming
         - 2 shopping places that are special to the local city and give a description of it
         - 5 places to go or parks to visit that align with the guests coming and their budget
@@ -37,10 +37,18 @@ export async function main(
           "malls": [
             ["name of the mall", "short description of the mall"],
             ["name of the mall", "short description of the mall"]
+          ],
+          "places": [
+            ["name of place", "description of place"],
+            ["name of place", "description of place"]
+          ],
+          "lodging": [
+            ["name of stay", "description of stay"],
+            ["name of stay", "description of stay"]
           ]
         }
 
-        Provide no other commentary. Have each category be "restaurants", "malls", "places", "lodging".`,
+        Provide no other commentary.`,
       },
     ],
     model: "gpt-3.5-turbo",

@@ -7,7 +7,7 @@ import Profile from "./components/Profile";
 import PickedSavedPage from "./components/PickedSavedPage";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
-import TempGeo from "./components/TempGeo";
+import Geocoder from "./components/tools/Geocoder";
 
 function App() {
   const location = useLocation();
@@ -32,7 +32,10 @@ function App() {
               <Route path="/generate" element={<Generate />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/test" element={<TempGeo />} />
+              <Route
+                path="/test"
+                element={<Geocoder prop={"green basil"} title={"burnaby"} />}
+              />
             </Route>
           </Routes>
         </div>

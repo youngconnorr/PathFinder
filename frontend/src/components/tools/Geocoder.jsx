@@ -1,22 +1,24 @@
 import { APIProvider, useMapsLibrary } from "@vis.gl/react-google-maps";
 import { useState, useEffect } from "react";
 
-export default function Page() {
+export default function Geocoder(prop) {
   return (
     <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-      <Geocoding city={"Ten Foot Henry"} />
+      <Geocoding city={prop.title} thing={prop.prop} />
     </APIProvider>
   );
 }
 
 function Geocoding(city) {
+  const fullAddress = city.thing + ", " + city.city;
+  console.log(fullAddress);
   const geocodingApiLoaded = useMapsLibrary("geocoding");
   const [geocodingService, setGeocodingService] = useState();
   const [geocodingResult, setGeocodingResult] = useState();
   const [address, setAddress] = useState("");
 
   useEffect(() => {
-    setAddress(city.city);
+    setAddress(fullAddress);
     if (!geocodingApiLoaded) return;
     setGeocodingService(new window.google.maps.Geocoder());
   }, [geocodingApiLoaded]);

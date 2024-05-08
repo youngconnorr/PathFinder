@@ -6,6 +6,7 @@ import DateSelector from "./tools/DateSelector";
 import GuestsNumber from "./tools/GuestsNumber";
 import BudgetNumber from "./tools/BudgetNumber";
 import MapsTool from "./tools/GoogleMaps";
+import Geocoder from "./tools/Geocoder";
 
 const Generate = () => {
   //dynamic states of page
@@ -55,7 +56,9 @@ const Generate = () => {
 
   const createSaved = (e) => {
     e.preventDefault();
-    AxiosInstance.post(`saved/`, { content, title });
+    AxiosInstance.post(`saved/`, { content, title }).then(() =>
+      alert("saved!")
+    );
   };
 
   const handleCityChange = (city) => {
@@ -123,6 +126,7 @@ const Generate = () => {
     return jsonList.map((list, index) => (
       <div key={index}>
         <strong>{list[0]}</strong>
+        <Geocoder prop={list[0]} title={selectedCity} />
         <div>{list[1]}</div>
       </div>
     ));
@@ -187,7 +191,6 @@ const Generate = () => {
           <MapsTool props={selectedCity} />
         </div>
       ) : null} */}
-      <MapsTool props={selectedCity} />
     </>
   );
 };
