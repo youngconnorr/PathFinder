@@ -19,6 +19,7 @@ const PickedSavedPage = () => {
       .then((res) => res.data)
       .then((data) => {
         setSaved(data);
+        console.log(data);
       })
       .then(() => {
         console.log(saved);
@@ -39,7 +40,12 @@ const PickedSavedPage = () => {
                 <h1>{category}</h1>
                 <br />
                 {items.map((item) => (
-                  <p key={item.index}>{item}</p>
+                  <span key={item.index}>
+                    <br />
+                    <p style={{ color: "red" }}>{item[0]}</p>
+                    <br />
+                    <p>{item[1]}</p>
+                  </span>
                 ))}
                 <br />
               </div>

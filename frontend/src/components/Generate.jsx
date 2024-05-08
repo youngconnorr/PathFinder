@@ -146,7 +146,7 @@ const Generate = () => {
         </form>
 
         {submitted ? (
-          <div>
+          <section>
             {loading ? (
               <p>loading...</p>
             ) : (
@@ -175,7 +175,7 @@ const Generate = () => {
                 </div>
               </div>
             )}
-          </div>
+          </section>
         ) : null}
       </div>
       {/* <div className="results-section">
