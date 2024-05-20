@@ -48,7 +48,14 @@ export async function main(
           ]
         }
 
-        Provide no other commentary.`,
+        Provide no other commentary. 
+        Avoid this error: 
+        
+        Uncaught (in promise) SyntaxError: Unexpected token ']', ..."xxx."],
+      ],
+      "xxx"... is not valid JSON
+        at JSON.parse (<anonymous>)
+        at fetchData (Generate.jsx:109:21)`,
       },
     ],
     model: "gpt-3.5-turbo",

@@ -1,46 +1,64 @@
-import { APIProvider, useMapsLibrary } from "@vis.gl/react-google-maps";
-import { useState, useEffect } from "react";
+// import { APIProvider, useMapsLibrary } from "@vis.gl/react-google-maps";
+// import { useState, useEffect } from "react";
+// // import MapsTool from "./MapsTool";
 
-export default function Geocoder(prop) {
-  return (
-    <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-      <Geocoding city={prop.title} thing={prop.prop} />
-    </APIProvider>
-  );
-}
+// /* eslint-disable react/prop-types */
 
-function Geocoding(city) {
-  const fullAddress = city.thing + ", " + city.city;
-  console.log(fullAddress);
-  const geocodingApiLoaded = useMapsLibrary("geocoding");
-  const [geocodingService, setGeocodingService] = useState();
-  const [geocodingResult, setGeocodingResult] = useState();
-  const [address, setAddress] = useState("");
+// export default function Geocoder(locations) {
+//   const locationList = locations.location;
+//   const [geocodedLocations, setGeocodedLocations] = useState();
+//   const parsedList = JSON.stringify(locationList);
+//   const addToGeocodedLocations = (newItem) => {
+//     if (!geocodedLocations.includes(newItem)) {
+//       setGeocodedLocations((prevList) => [...prevList, newItem]);
+//     }
+//   };
 
-  useEffect(() => {
-    setAddress(fullAddress);
-    if (!geocodingApiLoaded) return;
-    setGeocodingService(new window.google.maps.Geocoder());
-  }, [geocodingApiLoaded]);
+//   return (
+//     <div>
+//       I am ran so much!
+//       {parsedList}
+//       {/* <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
+//         {locationList.map((category, index) =>
+//           category.map((categoryPart, innerIndex) => (
+//             <Geocoding
+//               key={`${index}-${innerIndex}`}
+//               thing={categoryPart.thing}
+//               city={categoryPart.city}
+//               addGeoItem={addToGeocodedLocations}
+//             />
+//           ))
+//         )}
+//       </APIProvider> */}
+//       {console.log("List of geolocations:" + JSON.stringify(geocodedLocations))}
+//     </div>
+//   );
+// }
 
-  useEffect(() => {
-    if (!geocodingService || !address) return;
-    geocodingService.geocode({ address }, (results, status) => {
-      if (results && status === "OK") {
-        setGeocodingResult(results[0]);
-      }
-    });
-  }, [geocodingService, address]);
+// // const Geocoding = (prop) => {
+// //   const fullAddress = prop.thing + ", " + prop.city;
+// //   const geocodingApiLoaded = useMapsLibrary("geocoding");
+// //   const [geocodingService, setGeocodingService] = useState();
+// //   const [address, setAddress] = useState("");
 
-  if (!geocodingService) return <div>loading...</div>;
-  if (geocodingResult === undefined) return <div>Geocoding...</div>;
+// //   useEffect(() => {
+// //     if (!geocodingApiLoaded) return;
+// //     setGeocodingService(new window.google.maps.Geocoder());
+// //     setAddress(fullAddress);
+// //   }, [geocodingApiLoaded, fullAddress]);
 
-  return (
-    <div>
-      <h1>{geocodingResult.formatted_address}</h1>
-      <p>Latitude{geocodingResult.geometry.location.lat()}</p>
-      <p>Longitude{geocodingResult.geometry.location.lng()}</p>
-    </div>
-    //pass this info to props of google maps component!
-  );
-}
+// //   useEffect(() => {
+// //     if (!geocodingService) return;
+// //     geocodingService.geocode({ address }, (results, status) => {
+// //       if (results && status === "OK") {
+// //         const lat = results[0].geometry.location.lat();
+// //         const lng = results[0].geometry.location.lng();
+// //         prop.addGeoItem({ lat, lng });
+// //       }
+// //     });
+// //   }, [geocodingService, address, addGeoItem]);
+
+// //   if (!geocodingService) return <div>loading...</div>;
+
+// //   return null;
+// // };
