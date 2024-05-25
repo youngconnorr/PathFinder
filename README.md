@@ -1,6 +1,6 @@
 # Path Finder 🌍✈️
 
-Welcome to Travel Planner, a web application that helps you easily plan your travel itinerary! 📅
+Welcome to Path Finder, a web application that helps you easily plan your travel itinerary! 📅
 
 ## Technologies Used 💻
 
