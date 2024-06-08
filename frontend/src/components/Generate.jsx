@@ -74,6 +74,17 @@ const Generate = () => {
     setPetNum(pets);
   };
 
+  function jsonChecker(json) {
+    try {
+      JSON.parse(json);
+    } catch (e) {
+      setLoading(false);
+      alert("There was a generation error, please retry");
+      throw new Error("There was a generation error, please retry");
+    }
+    return JSON.parse(json);
+  }
+
   const handleBudget = (budget) => {
     if (budget === "0-20$") {
       setDollarNum("$");
@@ -106,7 +117,7 @@ const Generate = () => {
       dollar
     );
     setTitle(city);
-    setContent(JSON.parse(JSONresponse));
+    setContent(jsonChecker(JSONresponse));
     setLoading(false);
   };
 
