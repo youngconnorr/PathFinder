@@ -1,28 +1,34 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { itineraryList } from "./tools/ItineraryList";
 import { reviewList } from "./tools/ReviewList";
+import Generate from "./Generate";
 
 const Landing = () => {
+  const token = localStorage.getItem("Token");
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 1) {
+      // Add sticky class after scrolling 50px
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  });
+
   return (
     <div>
       <section className="landing-sections section-1">
-        <h1 className="website-name">Path Finder</h1>
-        <div className="landing-cards">
-          <span className="card-landing">
-            <h2>Choose</h2>
-          </span>
-          <span className="card-landing">
-            <h2>Generate</h2>
-          </span>
-          <span className="card-landing">
-            <h2>Travel</h2>
-          </span>
+        <div className="website-tagline">
+          <h1 className="">CHART YOUR COURSE FROM</h1>
+          <h1 className="">DREAMS TO DESTINATIONS</h1>
+          {token ? null : (
+            <div className="landing-page-generate">
+              <Generate />
+            </div>
+          )}
         </div>
-        <span className="register-btn">
-          <button>
-            <Link to="/register">Start planning</Link>
-          </button>
-        </span>
       </section>
       <section className="landing-sections section-2">
         <div className="carousel">

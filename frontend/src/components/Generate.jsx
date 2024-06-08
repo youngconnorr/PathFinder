@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { main } from "./tools/AILogic";
+import { Link } from "react-router-dom";
 import AxiosInstance from "./tools/AxiosInstance";
 import CitySelector from "./tools/CitySelector";
 import DateSelector from "./tools/DateSelector";
@@ -8,6 +9,7 @@ import BudgetNumber from "./tools/BudgetNumber";
 // import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
+  const token = localStorage.getItem("Token");
   //dynamic states of page
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -79,7 +81,7 @@ const Generate = () => {
       JSON.parse(json);
     } catch (e) {
       setLoading(false);
-      alert("There was a generation error, please retry");
+      // alert("There was a generation error, please retry");
       throw new Error("There was a generation error, please retry");
     }
     return JSON.parse(json);
@@ -151,14 +153,20 @@ const Generate = () => {
             <BudgetNumber chosenBudget={handleBudget} />
           </div>
 
-          <button type="submit" className="submit-ai">
-            Submit
-          </button>
+          {token ? (
+            <button type="submit" className="submit-ai">
+              Submit
+            </button>
+          ) : (
+            <button className="submit-ai">
+              <Link to="/login">Submit</Link>
+            </button>
+          )}
         </form>
 
         {submitted ? (
           <section>
-            {loading ? (
+            {loading && content ? (
               <p>loading...</p>
             ) : (
               <div>

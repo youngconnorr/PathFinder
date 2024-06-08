@@ -42,7 +42,7 @@ const CitySelector = ({ onInputChange }) => {
 
   return (
     <div>
-      <label htmlFor="country">Country:</label>
+      <label htmlFor="country">Location </label>
       <select onChange={(e) => handleCountryInput(e.target.value)}>
         <option value="">Select a Country:</option>
 
@@ -54,7 +54,7 @@ const CitySelector = ({ onInputChange }) => {
       </select>
       {states.length === 0 ? null : (
         <div>
-          <label htmlFor="state">Region:</label>
+          <label htmlFor="state">Region </label>
           <select onChange={(e) => handleStateInput(e.target.value)}>
             <option value="">Select a State:</option>
 
@@ -68,7 +68,7 @@ const CitySelector = ({ onInputChange }) => {
       )}
       {cities.length === 0 ? null : (
         <div>
-          <label htmlFor="city">city:</label>
+          <label htmlFor="city">City </label>
           <select onChange={(e) => setCurrentCity(e.target.value)}>
             <option value="">Select a city:</option>
             {cities.map((city) => (

@@ -36,6 +36,11 @@ const Navbar = () => {
       ) : (
         <div>
           <button>
+            <Link to="/">
+              <b>PathFinder</b>
+            </Link>
+          </button>
+          <button>
             <Link to="/login">Log in</Link>
           </button>
         </div>

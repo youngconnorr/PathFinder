@@ -93,7 +93,11 @@ body {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #bde0fe;
+  background-color: lightblue;
+}
+
+h1 {
+  font-size: 3.5em;
 }
 
 .user-signin-bg {
@@ -190,11 +194,15 @@ body {
 }
 
 .navbar {
-  background-color: #333;
+  /* background: transparent; */
+  /* background-image: url("./assets/background-1.jpg"); */
+  position: absolute;
+  width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .navbar button,
@@ -268,11 +276,16 @@ body {
 }
 
 .section-1 {
-  background-color: white;
+  color: white;
+  height: 100vh;
+  background-image: url("./assets/background-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .section-2 {
-  background-color: #b5e2fa;
+  height: fit-content;
+  background-color: white;
 }
 
 .section-3 {
@@ -301,8 +314,9 @@ body {
   justify-content: center;
 }
 
-.website-name {
-  display: flex;
+.website-tagline {
+  margin-left: 50px;
+  transform: translateY(60vh);
   align-items: center;
   justify-content: center;
 }
@@ -348,11 +362,22 @@ body {
 }
 
 .generate-section {
+  transform: translateY(200px);
   height: 100vh;
+}
+
+.landing-page-generate {
+  transform: translateY(-200px) !important;
 }
 
 .results-section {
   display: grid;
   height: 100vh;
   background-color: pink;
+}
+
+.sticky {
+  z-index: 1;
+  position: fixed;
+  background-color: rgb(177, 199, 214);
 }
