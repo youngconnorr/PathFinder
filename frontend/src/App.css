@@ -231,7 +231,43 @@ h1 {
 }
 
 .AI-form {
+  margin-top: 50px;
+  border: 1px solid black;
+  height: 80px;
+  padding: 0px 30px;
+  margin-right: 50px;
+  background: white;
+  color: black;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.form-item {
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-left: 1px solid black;
+}
+
+select {
+  /* Base styles for the select element */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #333;
+  /* Adjust width as needed */
+}
+
+.budget-picker:focus {
+  /* Styling for focus state */
+  outline: none;
+  border-color: #999;
 }
 
 .calendar {

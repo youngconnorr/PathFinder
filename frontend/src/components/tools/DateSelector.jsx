@@ -7,6 +7,26 @@ import "react-datepicker/dist/react-datepicker.css";
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 /* eslint-disable react/prop-types */
 
+// const DateSelector = ({ datePicked }) => {
+//   const [startDate, setStartDate] = useState(new Date());
+
+//   useEffect(() => {
+//     datePicked(startDate);
+//   }, [startDate, datePicked]);
+
+//   return (
+//     <div>
+//       When are you travelling?
+//       <DatePicker
+//         selected={startDate}
+//         onChange={(date) => setStartDate(date)}
+//       />
+//     </div>
+//   );
+// };
+
+// export default DateSelector;
+
 const DateSelector = ({ datePicked }) => {
   const [startDate, setStartDate] = useState(new Date());
 
@@ -14,13 +34,36 @@ const DateSelector = ({ datePicked }) => {
     datePicked(startDate);
   }, [startDate, datePicked]);
 
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <div>
-      When are you travelling?
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-      />
+      Month of Travel
+      <select
+        name="MonthPicker"
+        id="month-picker"
+        className="month-picker"
+        onChange={(e) => setStartDate(e.target.value)}
+        style={{ marginLeft: "40px" }}
+      >
+        <option value="">Pick Month of Travel</option>
+        {months.map((month) => (
+          <option key={months.indexOf(month)}>{month}</option>
+        ))}
+      </select>
     </div>
   );
 };

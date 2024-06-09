@@ -44,7 +44,7 @@ const CitySelector = ({ onInputChange }) => {
     <div>
       <label htmlFor="country">Location </label>
       <select onChange={(e) => handleCountryInput(e.target.value)}>
-        <option value="">Select a Country:</option>
+        <option value="">Type in Country:</option>
 
         {countries.map((country) => (
           <option key={country.isoCode} value={country.isoCode}>
@@ -56,7 +56,7 @@ const CitySelector = ({ onInputChange }) => {
         <div>
           <label htmlFor="state">Region </label>
           <select onChange={(e) => handleStateInput(e.target.value)}>
-            <option value="">Select a State:</option>
+            <option value="">Type in Region:</option>
 
             {states.map((state) => (
               <option key={state.isoCode} value={state.isoCode}>
@@ -70,7 +70,7 @@ const CitySelector = ({ onInputChange }) => {
         <div>
           <label htmlFor="city">City </label>
           <select onChange={(e) => setCurrentCity(e.target.value)}>
-            <option value="">Select a city:</option>
+            <option value="">Type in City:</option>
             {cities.map((city) => (
               <option key={city.name} value={city.name}>
                 {city.name}

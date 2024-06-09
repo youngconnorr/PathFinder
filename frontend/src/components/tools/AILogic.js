@@ -19,7 +19,7 @@ export async function main(
     messages: [
       {
         role: "system",
-        content: `Make sure there are no newline characters in the JSON object response. You are a travel guide who knows the ins and outs of ${city}. ${adultNum} adults, ${childNum} children, ${infantNum} infants, and ${petNum} pets are coming to the city during the ${month} of the year. 
+        content: `Make sure there are no newline characters in the JSON object response. You are a travel guide who knows the ins and outs of ${city}. ${adultNum} adults, ${childNum} children, ${infantNum} infants, and ${petNum} pets are coming to the city during ${month}. 
 
         They have a budget of ${budget} and you need to recommend 
         - 5 different restaurants with a ${dollar} price range and match the guests coming
