@@ -391,8 +391,8 @@ select:hover {
 }
 
 .section-2 {
-  height: 480px;
-  background-color: white;
+  height: 74vh;
+  background-color: rgb(135, 158, 106);
 }
 
 .section-3 {
@@ -457,8 +457,10 @@ select:hover {
 }
 
 .carousel-cards {
-  cursor: pointer;
-  border-style: solid;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
   padding: 2rem;
   margin: 0 20px;
   width: 300px;
