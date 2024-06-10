@@ -67,7 +67,7 @@ const Landing = () => {
           {reviewList.map((review, index) => (
             <div
               key={review.id}
-              className={`review-card ${
+              className={`review-card  img-fade ${
                 currRatingIndex === index ? "active" : "hidden"
               }`}
             >

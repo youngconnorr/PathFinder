@@ -174,11 +174,17 @@ a:hover::after {
 
 .guest-menu-btn {
   width: 100px;
+  border: 1px solid rgb(191, 189, 189);
+}
+
+.guest-menu-btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s ease-in-out;
 }
 
 .login-btn:hover,
-.register-btn:hover,
-.guest-menu-btn:hover {
+.register-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
@@ -324,6 +330,11 @@ select {
   /* Adjust width as needed */
 }
 
+select:hover {
+  border: 1px solid black;
+  transition: 0.5s ease;
+}
+
 .budget-picker:focus {
   /* Styling for focus state */
   outline: none;
@@ -385,6 +396,7 @@ select {
 }
 
 .section-3 {
+  height: 80vh;
   background-color: pink;
 }
 
@@ -455,6 +467,12 @@ select {
   align-items: center;
 }
 
+.review-card {
+  margin-left: 35%;
+  margin-top: 100px;
+  width: 500px;
+}
+
 .generate-section {
   transform: translateY(200px);
   height: 100vh;
@@ -476,11 +494,12 @@ select {
   background-color: rgb(177, 199, 214);
 }
 
-.active {
-  opacity: 1;
+.img-fade {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.hidden {
-  opacity: 0;
-  display: none;
+.img-fade.active {
+  opacity: 1;
 }
