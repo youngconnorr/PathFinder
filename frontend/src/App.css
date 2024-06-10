@@ -163,7 +163,8 @@ a:hover::after {
 }
 
 .login-btn,
-.register-btn {
+.register-btn,
+.guest-menu-btn {
   width: 150px;
   height: 40px;
   border: 1px solid black;
@@ -171,12 +172,17 @@ a:hover::after {
   border-radius: 50px;
 }
 
+.guest-menu-btn {
+  width: 100px;
+}
+
 .login-btn:hover,
-.register-btn:hover {
+.register-btn:hover,
+.guest-menu-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
-  transition: 0.3s background-color ease-in-out;
   border-color: rgb(90, 122, 98);
+  transition: 0.3s ease-in-out;
 }
 
 .register-card {
@@ -379,7 +385,7 @@ select {
 }
 
 .section-3 {
-  background-color: #0fa3b1;
+  background-color: pink;
 }
 
 .card-landing {
@@ -436,9 +442,7 @@ select {
 }
 
 .reviews {
-  display: flex;
-  /* overflow-x: scroll; */
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
 }
 
@@ -470,4 +474,13 @@ select {
   z-index: 1;
   position: fixed;
   background-color: rgb(177, 199, 214);
+}
+
+.active {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
 }

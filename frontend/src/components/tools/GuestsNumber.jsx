@@ -15,8 +15,14 @@ const GuestsNumber = ({ guestsNumber }) => {
   return (
     <section>
       <div style={{ display: "flex" }}>
-        <div className="guest">Guests</div>
-        <button type="button" onClick={() => setShow(!show)}>
+        <div className="guest" style={{ marginTop: "8px" }}>
+          Guests
+        </div>
+        <button
+          type="button"
+          onClick={() => setShow(!show)}
+          className="guest-menu-btn"
+        >
           Show menu
         </button>
       </div>

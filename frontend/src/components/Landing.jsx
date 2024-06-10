@@ -2,9 +2,24 @@
 import { itineraryList } from "./tools/ItineraryList";
 import { reviewList } from "./tools/ReviewList";
 import Generate from "./Generate";
+import { useState } from "react";
 
 const Landing = () => {
   const token = localStorage.getItem("Token");
+  const [currRatingIndex, setCurrRatingIndex] = useState(0);
+
+  const nextRating = () => {
+    setCurrRatingIndex((currIndex) =>
+      currIndex === reviewList.length - 1 ? 0 : currIndex + 1
+    );
+    console.log("PLEASE");
+  };
+
+  const prevRating = () => {
+    setCurrRatingIndex((currIndex) =>
+      currIndex === 0 ? reviewList.length - 1 : currIndex - 1
+    );
+  };
 
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
   window.addEventListener("scroll", function () {
@@ -49,8 +64,13 @@ const Landing = () => {
       </section>
       <section className="landing-sections section-3">
         <div className="reviews">
-          {reviewList.map((review) => (
-            <div key={review.id} className="review-card">
+          {reviewList.map((review, index) => (
+            <div
+              key={review.id}
+              className={`review-card ${
+                currRatingIndex === index ? "active" : "hidden"
+              }`}
+            >
               <h1 className="review-name">{review.name}</h1>
               <h2 className="review-city">{review.city}</h2>
               <h3 className="review-country">{review.country}</h3>
@@ -58,6 +78,8 @@ const Landing = () => {
             </div>
           ))}
         </div>
+        <button onClick={prevRating}>back</button>
+        <button onClick={nextRating}>forward</button>
       </section>
     </div>
   );
