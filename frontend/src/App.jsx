@@ -5,7 +5,7 @@ import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Profile from "./components/Profile";
 import PickedSavedPage from "./components/PickedSavedPage";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
 // import Geocoder from "./components/tools/Geocoder";
 
@@ -17,10 +17,19 @@ function App() {
   return (
     <>
       {noNavbar ? (
-        <Routes>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <div>
+          <div className="navbar">
+            <button>
+              <Link to="/">
+                <b>PathFinder</b>
+              </Link>
+            </button>
+          </div>
+          <Routes>
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
       ) : (
         <div>
           <Navbar />

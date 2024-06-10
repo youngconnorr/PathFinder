@@ -2,7 +2,6 @@ import "../App";
 import { Box } from "@mui/material";
 import { useState } from "react";
 import TextField from "./tools/TextFields";
-import CreateButton from "./tools/MyButtons";
 import PasswordField from "./tools/MyPasswordField";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -38,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className="user-signin-bg">
+    <div className="signin-bg">
       <form onSubmit={handleSubmit(submission)}>
         <Box className="user-cards">
           <Box className="item-box">
@@ -59,7 +58,10 @@ const Login = () => {
           </Box>
 
           <Box className="item-box">
-            <CreateButton label="Login" type={"submit"} />
+            <button type="submit" className="login-btn">
+              LOGIN
+            </button>
+            {/* <CreateButton label="Login" type={"submit"} /> */}
           </Box>
           <Box className="item-box">
             <Link to="/register">No Account? Please register!</Link>

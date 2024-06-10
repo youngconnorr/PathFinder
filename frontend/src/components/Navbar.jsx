@@ -21,7 +21,7 @@ const Navbar = () => {
       {token ? (
         <div>
           <button>
-            <Link to="/">Path Finder</Link>
+            <Link to="/">PathFinder</Link>
           </button>
           <button>
             <Link to="/generate">Generate</Link>

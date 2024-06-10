@@ -58,7 +58,7 @@ const Register = () => {
   };
 
   return (
-    <div className="user-signin-bg">
+    <div className="signin-bg">
       <form onSubmit={handleSubmit(submission)}>
         <Box className="user-cards register-card">
           <Box className="item-box">
@@ -86,7 +86,10 @@ const Register = () => {
           </Box>
 
           <Box className="item-box">
-            <CreateButton label="Register" type={"submit"} />
+            <button type="submit" className="register-btn">
+              REGISTER
+            </button>
+            {/* <CreateButton label="Register" type={"submit"} /> */}
           </Box>
           <Box className="item-box account-question-link">
             <Link to="/login">Already have account? Login!</Link>
