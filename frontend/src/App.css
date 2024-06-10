@@ -97,7 +97,7 @@ body {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 3.2vw;
 }
 
 h2 {
@@ -384,14 +384,14 @@ select:hover {
 
 .section-1 {
   color: white;
-  height: 100vh;
+  height: 110vh;
   background-image: url("./assets/background-1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .section-2 {
-  height: fit-content;
+  height: 480px;
   background-color: white;
 }
 
@@ -434,9 +434,20 @@ select:hover {
   align-items: center;
   height: fit-content;
   white-space: nowrap;
-  overflow-x: scroll;
-  white-space: nowrap;
-  height: 100vh;
+  /* overflow: hidden; */
+  /* overflow-x: scroll; */
+  /* height: 100vh; */
+  margin-top: 30px;
+  animation: 40s slide infinite linear;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .carousel-card-photo {
@@ -449,13 +460,16 @@ select:hover {
   cursor: pointer;
   border-style: solid;
   padding: 2rem;
-  width: 400px;
-  height: 400px;
+  margin: 0 20px;
+  width: 300px;
+  height: 340px;
 }
 
 .reviews {
-  height: 50vh;
-  width: 100vw;
+  margin: 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .review-name,
@@ -468,10 +482,19 @@ select:hover {
 }
 
 .review-card {
-  margin-left: 35%;
   margin-top: 100px;
-  width: 500px;
 }
+
+/* .review-btns {
+  display: flex;
+  align-items: center;
+  transform: translateY(-80px);
+}
+
+.review-back-btn {
+  margin-right: 600px;
+  margin-left: 250px;
+} */
 
 .generate-section {
   transform: translateY(200px);
@@ -495,11 +518,12 @@ select:hover {
 }
 
 .img-fade {
-  position: absolute;
+  display: none;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: display 0.5s ease;
 }
 
 .img-fade.active {
+  display: inline;
   opacity: 1;
 }

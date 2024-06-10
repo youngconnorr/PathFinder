@@ -46,40 +46,62 @@ const Landing = () => {
         </div>
       </section>
       <section className="landing-sections section-2">
-        <div className="carousel">
-          {itineraryList.map((card) => (
-            <div key={card.id} className="carousel-cards">
-              <img
-                src={card.photo}
-                alt="photo"
-                className="carousel-card-photo"
-              />
-              <h1>{card.city}</h1>
-              <p>{card.country}</p>
-              <p>{card.name}</p>
-              <p>{card.stars} stars</p>
-            </div>
-          ))}
+        <div style={{ display: "flex" }}>
+          <div className="carousel">
+            {itineraryList.map((card) => (
+              <div key={card.id} className="carousel-cards">
+                <img
+                  src={card.photo}
+                  alt="photo"
+                  className="carousel-card-photo"
+                />
+                <h1>{card.city}</h1>
+                <p>{card.country}</p>
+                <p>{card.name}</p>
+                <p>{card.stars} stars</p>
+              </div>
+            ))}
+          </div>
+          <div className="carousel">
+            {itineraryList.map((card) => (
+              <div key={card.id} className="carousel-cards">
+                <img
+                  src={card.photo}
+                  alt="photo"
+                  className="carousel-card-photo"
+                />
+                <h1>{card.city}</h1>
+                <p>{card.country}</p>
+                <p>{card.name}</p>
+                <p>{card.stars} stars</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="landing-sections section-3">
+      <section className="section-3">
         <div className="reviews">
-          {reviewList.map((review, index) => (
-            <div
-              key={review.id}
-              className={`review-card  img-fade ${
-                currRatingIndex === index ? "active" : "hidden"
-              }`}
-            >
-              <h1 className="review-name">{review.name}</h1>
-              <h2 className="review-city">{review.city}</h2>
-              <h3 className="review-country">{review.country}</h3>
-              <p className="review-content">{review.content}</p>
-            </div>
-          ))}
+          <button onClick={prevRating} className="review-back-btn">
+            back
+          </button>
+          <div>
+            {reviewList.map((review, index) => (
+              <div
+                key={review.id}
+                className={`review-card  img-fade ${
+                  currRatingIndex === index ? "active" : "hidden"
+                }`}
+              >
+                <h1 className="review-name">{review.name}</h1>
+                <h2 className="review-city">{review.city}</h2>
+                <h3 className="review-country">{review.country}</h3>
+                <p className="review-content">{review.content}</p>
+              </div>
+            ))}
+          </div>
+          <button onClick={nextRating}>forward</button>
         </div>
-        <button onClick={prevRating}>back</button>
-        <button onClick={nextRating}>forward</button>
+        <div className="review-btns"></div>
       </section>
     </div>
   );
