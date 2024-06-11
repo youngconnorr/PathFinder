@@ -7,6 +7,7 @@ import Profile from "./components/Profile";
 import PickedSavedPage from "./components/PickedSavedPage";
 import { Routes, Route, useLocation, Link } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
+import About from "./components/About";
 // import Geocoder from "./components/tools/Geocoder";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             </button>
           </div>
           <Routes>
+            <Route path="/about" element={<About />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
           </Routes>
@@ -36,6 +38,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route element={<ProtectedRoute />}>
+              <Route path="/about" element={<About />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/view-saved" element={<PickedSavedPage />} />
               <Route path="/generate" element={<Generate />} />
