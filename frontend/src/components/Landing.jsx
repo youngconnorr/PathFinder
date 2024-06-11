@@ -3,6 +3,7 @@ import { itineraryList } from "./tools/ItineraryList";
 import { reviewList } from "./tools/ReviewList";
 import Generate from "./Generate";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const token = localStorage.getItem("Token");
@@ -38,7 +39,14 @@ const Landing = () => {
         <div className="website-tagline">
           <h1 className="">CHART YOUR COURSE FROM</h1>
           <h1 className="">DREAMS TO DESTINATIONS</h1>
-          {token ? null : (
+          <p style={{ marginTop: "10px" }}>
+            Personalized travel itinerary made easy
+          </p>
+          {token ? (
+            <button className="create-now-btn">
+              <Link to="/generate">Create now</Link>
+            </button>
+          ) : (
             <div className="landing-page-generate">
               <Generate />
             </div>

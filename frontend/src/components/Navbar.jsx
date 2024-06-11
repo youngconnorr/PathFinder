@@ -19,30 +19,46 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {token ? (
-        <div>
-          <button>
-            <Link to="/">PathFinder</Link>
-          </button>
-          <button>
-            <Link to="/generate">Generate</Link>
-          </button>
-          <button onClick={logoutUser}> Log out</button>
-          {isProfile ? null : (
+        <>
+          <div>
             <button>
-              <Link to="/profile">Profile</Link>
+              <Link to="/">PathFinder</Link>
             </button>
-          )}
-        </div>
+          </div>
+          <div>
+            <button>
+              <Link to="/generate">Generate</Link>
+            </button>
+            <button>
+              <Link to="/about">About Us</Link>
+            </button>
+            <button onClick={logoutUser}>
+              <Link>Log out</Link>
+            </button>
+            {isProfile ? null : (
+              <button>
+                <Link to="/profile">Profile</Link>
+              </button>
+            )}
+          </div>
+        </>
       ) : (
-        <div>
-          <button>
-            <Link to="/">
-              <b>PathFinder</b>
-            </Link>
-          </button>
-          <button>
-            <Link to="/login">Log in</Link>
-          </button>
+        <div className="navbar-no-account">
+          <div>
+            <button>
+              <Link to="/">
+                <b>PathFinder</b>
+              </Link>
+            </button>
+          </div>
+          <div>
+            <button>
+              <Link to="/about">About Us</Link>
+            </button>
+            <button>
+              <Link to="/login">Log in</Link>
+            </button>
+          </div>
         </div>
       )}
     </div>

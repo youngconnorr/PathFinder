@@ -14,7 +14,7 @@ const GuestsNumber = ({ guestsNumber }) => {
 
   return (
     <section>
-      <div style={{ display: "flex" }}>
+      <div className="pre-guest-btn">
         <div className="guest" style={{ marginTop: "8px" }}>
           Guests
         </div>

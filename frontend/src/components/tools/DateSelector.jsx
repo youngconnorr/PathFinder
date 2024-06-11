@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import DatePicker from "react-datepicker";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+// import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -50,8 +52,8 @@ const DateSelector = ({ datePicked }) => {
   ];
 
   return (
-    <div>
-      Month of Travel
+    <div className="form-item">
+      <FontAwesomeIcon icon={faCalendar} />
       <select
         name="MonthPicker"
         id="month-picker"

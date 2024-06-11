@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 /* eslint-disable react/prop-types */
 
 const BudgetNumber = ({ chosenBudget }) => {
@@ -9,8 +11,8 @@ const BudgetNumber = ({ chosenBudget }) => {
   }, [budget, chosenBudget]);
 
   return (
-    <div>
-      Budget
+    <div className="form-item">
+      <FontAwesomeIcon icon={faDollarSign} />
       <select
         name="Budget"
         id="budget"

@@ -43,9 +43,11 @@ const CitySelector = ({ onInputChange }) => {
   return (
     <div>
       <label htmlFor="country">Location </label>
-      <select onChange={(e) => handleCountryInput(e.target.value)}>
+      <select
+        onChange={(e) => handleCountryInput(e.target.value)}
+        className="select-box"
+      >
         <option value="">Type in Country:</option>
-
         {countries.map((country) => (
           <option key={country.isoCode} value={country.isoCode}>
             {country.name}
@@ -79,6 +81,10 @@ const CitySelector = ({ onInputChange }) => {
           </select>
         </div>
       )}
+      <p style={{ color: "white" }}>
+        {currentCity}
+        {currentCountry}
+      </p>
     </div>
   );
 };

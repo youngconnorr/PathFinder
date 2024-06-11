@@ -173,6 +173,7 @@ a:hover::after {
 }
 
 .guest-menu-btn {
+  margin-left: 20px;
   width: 100px;
   border: 1px solid rgb(191, 189, 189);
 }
@@ -181,6 +182,14 @@ a:hover::after {
   cursor: pointer;
   border: 1px solid black;
   transition: 0.3s ease-in-out;
+}
+
+.pre-guest-btn {
+  /* border: 1px solid black; */
+  padding: 10px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .login-btn:hover,
@@ -292,14 +301,24 @@ a:hover::after {
   outline: none;
 }
 
-.navbar .profile-button {
-  margin-left: 10px;
+.navbar-no-account {
+  margin: 0 10px;
+  width: 100vw;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.create-now-btn {
+  color: white;
+  margin-top: 50px;
 }
 
 .AI-form {
-  margin-top: 50px;
+  margin-top: 30px;
   border: 1px solid black;
-  height: 80px;
+  height: 60px;
   padding: 0px 30px;
   margin-right: 50px;
   background: white;
@@ -311,7 +330,7 @@ a:hover::after {
 }
 
 .form-item {
-  padding-left: 50px;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,7 +340,7 @@ a:hover::after {
 
 select {
   /* Base styles for the select element */
-  background-color: #fff;
+  appearance: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px 10px;
@@ -347,10 +366,7 @@ select:hover {
 
 .guest {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
   justify-content: space-between;
-  width: 200px;
 }
 
 .guests-picker {
@@ -368,8 +384,7 @@ select:hover {
 }
 
 .submit-ai {
-  max-height: 20px;
-  margin-left: 0;
+  background-color: transparent;
 }
 
 .guest-num-display {
@@ -384,7 +399,7 @@ select:hover {
 
 .section-1 {
   color: white;
-  height: 110vh;
+  height: 100vh;
   background-image: url("./assets/background-1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -424,7 +439,7 @@ select:hover {
 
 .website-tagline {
   margin-left: 50px;
-  transform: translateY(60vh);
+  transform: translateY(52vh);
   align-items: center;
   justify-content: center;
 }
@@ -438,7 +453,7 @@ select:hover {
   /* overflow-x: scroll; */
   /* height: 100vh; */
   margin-top: 30px;
-  animation: 40s slide infinite linear;
+  animation: 60s slide infinite linear;
 }
 
 @keyframes slide {

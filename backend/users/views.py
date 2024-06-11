@@ -21,6 +21,7 @@ class LoginViewset(viewsets.ViewSet):
             password = serializer.validated_data['password']
             
             user = authenticate(request , email=email, password=password)
+        
             
             if user: #if user is there or not
                 _, token = AuthToken.objects.create(user) #auth token is name of database
