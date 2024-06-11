@@ -394,6 +394,7 @@ select:hover {
 
 .section-1 {
   color: white;
+  border-radius: 0 0 30px 30px;
   height: 100vh;
   background-image: url("./assets/background-1.jpg");
   background-repeat: no-repeat;
@@ -441,7 +442,7 @@ select:hover {
 
 .carousel-section {
   width: 80%;
-  height: fit-content;
+  height: 70%;
   background-image: url("./assets/background-2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -479,7 +480,8 @@ select:hover {
 
 .carousel-headline {
   color: white;
-  margin-left: 50px;
+  margin-left: 20px;
+  margin-bottom: 50px;
   /* display: grid;
   align-items: center;
   justify-content: center; */
@@ -512,9 +514,9 @@ select:hover {
   border-radius: 40px;
   padding: 2rem;
   margin: 0 20px;
-  width: 300px;
+  width: 250px;
   perspective: 1px;
-  height: 340px;
+  height: 300px;
 }
 
 /* .carousel-writing {
@@ -570,7 +572,7 @@ select:hover {
 .sticky {
   z-index: 100;
   position: fixed;
-  background-color: rgb(177, 199, 214);
+  background-color: rgba(66, 86, 78, 0.58);
 }
 
 .img-fade {
