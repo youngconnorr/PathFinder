@@ -22,6 +22,15 @@ const Landing = () => {
     );
   };
 
+  const starCount = (stars) => {
+    let starList = [];
+    for (let i = 0; i < stars; i++) {
+      starList.push(<p key={i}>⭐</p>);
+    }
+
+    return starList;
+  };
+
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
@@ -53,39 +62,56 @@ const Landing = () => {
           )}
         </div>
       </section>
-      <section className="landing-sections section-2">
-        <div style={{ display: "flex" }}>
-          <div className="carousel">
-            {itineraryList.map((card) => (
-              <div key={card.id} className="carousel-cards">
-                <img
-                  src={card.photo}
-                  alt="photo"
-                  className="carousel-card-photo"
-                />
-                <h1>{card.city}</h1>
-                <p>{card.country}</p>
-                <p>{card.name}</p>
-                <p>{card.stars} stars</p>
-              </div>
-            ))}
+      <section className="section-2">
+        <div className="white-blocks">jj</div>
+        <section className="landing-sections carousel-section">
+          <div className="carousel-headline">
+            <div className="carousel-title">
+              <h1>Get</h1>
+              <h1> Inspired</h1>
+            </div>
+            <h3>Trips from fellow travellers</h3>
           </div>
-          <div className="carousel">
-            {itineraryList.map((card) => (
-              <div key={card.id} className="carousel-cards">
-                <img
-                  src={card.photo}
-                  alt="photo"
-                  className="carousel-card-photo"
-                />
-                <h1>{card.city}</h1>
-                <p>{card.country}</p>
-                <p>{card.name}</p>
-                <p>{card.stars} stars</p>
-              </div>
-            ))}
+          <div className="carousel-div">
+            <div className="carousel">
+              {itineraryList.map((card) => (
+                <div key={card.id} className="carousel-cards">
+                  <img
+                    src={card.photo}
+                    alt="photo"
+                    className="carousel-card-photo"
+                  />
+                  <h2>{card.city}</h2>
+                  <p>{card.country}</p>
+                  <p>{card.name}</p>
+                  <p style={{ display: "flex" }}>
+                    <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="carousel">
+              {itineraryList.map((card) => (
+                <div key={card.id} className="carousel-cards">
+                  <img
+                    src={card.photo}
+                    alt="photo"
+                    className="carousel-card-photo"
+                  />
+                  <div className="carousel-writing">
+                    <h1>{card.city}</h1>
+                    <p>{card.country}</p>
+                    <p>{card.name}</p>
+                    <p style={{ display: "flex" }}>
+                      <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
+        <div className="white-blocks">jj</div>
       </section>
       <section className="section-3">
         <div className="reviews">

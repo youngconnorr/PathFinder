@@ -153,7 +153,7 @@ const Generate = () => {
 
   return (
     <>
-      <div className="generate-section">
+      <div className={token ? "generate-section" : ""}>
         <form onSubmit={handleSubmit} className="AI-form">
           <CitySelector onInputChange={handleCityChange} />
           <div className="calendar">

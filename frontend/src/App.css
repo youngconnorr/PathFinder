@@ -93,7 +93,7 @@ body {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: lightblue;
+  background-color: white;
 }
 
 h1 {
@@ -302,9 +302,9 @@ a:hover::after {
 }
 
 .navbar-no-account {
+  z-index: 4;
   margin: 0 10px;
   width: 100vw;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -392,11 +392,6 @@ select:hover {
   padding: 0px 0px 30px 10px;
 }
 
-.landing-sections {
-  height: 100vh;
-  width: 100%;
-}
-
 .section-1 {
   color: white;
   height: 100vh;
@@ -406,8 +401,8 @@ select:hover {
 }
 
 .section-2 {
-  height: 74vh;
-  background-color: rgb(135, 158, 106);
+  height: 150vh;
+  display: flex;
 }
 
 .section-3 {
@@ -444,6 +439,21 @@ select:hover {
   justify-content: center;
 }
 
+.carousel-section {
+  width: 80%;
+  height: fit-content;
+  background-image: url("./assets/background-2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 50px;
+  padding: 20px;
+  margin: auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
 .carousel {
   display: flex;
   align-items: center;
@@ -456,6 +466,31 @@ select:hover {
   animation: 60s slide infinite linear;
 }
 
+.white-blocks {
+  color: white;
+  z-index: 2;
+  width: 25%;
+  background-color: white;
+}
+
+.carousel-div {
+  display: flex;
+}
+
+.carousel-headline {
+  color: white;
+  margin-left: 50px;
+  /* display: grid;
+  align-items: center;
+  justify-content: center; */
+}
+
+.carousel-title {
+  display: block;
+  box-sizing: border-box;
+  width: 20%;
+  border-bottom: 2px solid white;
+}
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -466,7 +501,6 @@ select:hover {
 }
 
 .carousel-card-photo {
-  /* position: absolute; */
   width: 200px;
   height: 200px;
 }
@@ -479,8 +513,13 @@ select:hover {
   padding: 2rem;
   margin: 0 20px;
   width: 300px;
+  perspective: 1px;
   height: 340px;
 }
+
+/* .carousel-writing {
+  position: absolute;
+} */
 
 .reviews {
   margin: 0 20%;
@@ -519,7 +558,7 @@ select:hover {
 }
 
 .landing-page-generate {
-  transform: translateY(-200px) !important;
+  height: 100px;
 }
 
 .results-section {
@@ -529,7 +568,7 @@ select:hover {
 }
 
 .sticky {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   background-color: rgb(177, 199, 214);
 }
