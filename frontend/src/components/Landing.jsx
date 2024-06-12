@@ -63,7 +63,7 @@ const Landing = () => {
         </div>
       </section>
       <section className="section-2">
-        <div className="white-blocks">jj</div>
+        {/* <div className="white-blocks">jj</div> */}
         <section className="landing-sections carousel-section">
           <div className="carousel-headline">
             <div className="carousel-title">
@@ -111,7 +111,7 @@ const Landing = () => {
             </div>
           </div>
         </section>
-        <div className="white-blocks">jj</div>
+        {/* <div className="white-blocks">jDASDSADADASDj</div> */}
       </section>
       <section className="section-3">
         <div className="reviews">
@@ -135,7 +135,6 @@ const Landing = () => {
           </div>
           <button onClick={nextRating}>forward</button>
         </div>
-        <div className="review-btns"></div>
       </section>
     </div>
   );
