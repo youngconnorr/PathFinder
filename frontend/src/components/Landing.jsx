@@ -4,6 +4,8 @@ import { reviewList } from "./tools/ReviewList";
 import Generate from "./Generate";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
   const token = localStorage.getItem("Token");
@@ -13,7 +15,6 @@ const Landing = () => {
     setCurrRatingIndex((currIndex) =>
       currIndex === reviewList.length - 1 ? 0 : currIndex + 1
     );
-    console.log("PLEASE");
   };
 
   const prevRating = () => {
@@ -84,9 +85,9 @@ const Landing = () => {
                   <h2>{card.city}</h2>
                   <p>{card.country}</p>
                   <p>{card.name}</p>
-                  <p style={{ display: "flex" }}>
+                  <div style={{ display: "flex" }}>
                     <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
-                  </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -99,12 +100,12 @@ const Landing = () => {
                     className="carousel-card-photo"
                   />
                   <div className="carousel-writing">
-                    <h1>{card.city}</h1>
+                    <h2>{card.city}</h2>
                     <p>{card.country}</p>
                     <p>{card.name}</p>
-                    <p style={{ display: "flex" }}>
+                    <div style={{ display: "flex" }}>
                       <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
-                    </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -114,10 +115,18 @@ const Landing = () => {
         {/* <div className="white-blocks">jDASDSADADASDj</div> */}
       </section>
       <section className="section-3">
+        <div className="reviews-title-div">
+          <h1 className="reviews-title">Hear from </h1>
+          <h1 className="reviews-title">Our community</h1>
+        </div>
         <div className="reviews">
-          <button onClick={prevRating} className="review-back-btn">
-            back
-          </button>
+          {/* <button onClick={prevRating} className="review-back-btn"> */}
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            onClick={prevRating}
+            className="review-back-btn"
+          />
+          {/* </button> */}
           <div>
             {reviewList.map((review, index) => (
               <div
@@ -133,7 +142,9 @@ const Landing = () => {
               </div>
             ))}
           </div>
-          <button onClick={nextRating}>forward</button>
+          {/* <button onClick={nextRating}> */}
+          <FontAwesomeIcon icon={faArrowRight} onClick={nextRating} size="lg" />
+          {/* </button> */}
         </div>
       </section>
     </div>

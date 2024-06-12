@@ -6,7 +6,7 @@ export const reviewList = [
     city: "Santorini",
     country: "Greece",
     content:
-      "I've never had such a seamless travel experience! From mouthwatering local delicacies to exciting outdoor adventures, this AI itinerary service nailed it all. Plus, their weather-based clothing suggestions saved me from packing unnecessary stuff!",
+      "I've never had such a seamless travel experience! From mouthwatering local delicacies to exciting outdoor adventures, this AI itinerary service nailed it all. Plus, their weather-based clothing saved me from packing unnecessary stuff!",
   },
   {
     id: 2,

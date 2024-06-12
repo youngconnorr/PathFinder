@@ -64,7 +64,7 @@ const Login = () => {
             {/* <CreateButton label="Login" type={"submit"} /> */}
           </Box>
           <Box className="item-box">
-            <Link to="/register">No Account? Please register!</Link>
+            <Link to="/register">No Account? Register here!</Link>
           </Box>
         </Box>
       </form>
