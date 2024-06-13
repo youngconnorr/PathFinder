@@ -30,5 +30,5 @@ class SavedInfoSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = SavedInfo
-        fields = ["id", "title", "month", "content", "created_at", "author"]
+        fields = ["id", "title", "month", "itinName", "content", "created_at", "author"]
         extra_kwargs = {"author": {"read_only": True}} #can only read and not edit author (opposite of write only where you can't view at all)

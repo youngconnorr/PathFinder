@@ -32,6 +32,7 @@ class CustomUser(AbstractUser):
 
 class SavedInfo(models.Model):
     title = models.CharField(max_length=100)
+    itinName = models.CharField(max_length=100, default="Itinerary name")
     month = models.CharField(max_length=50, default="January")
     content = models.JSONField()
     created_at = models.DateTimeField(auto_now_add=True)

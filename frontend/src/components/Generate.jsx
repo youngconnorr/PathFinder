@@ -26,6 +26,7 @@ const Generate = () => {
   const [petNum, setPetNum] = useState(0);
   const [dollarNum, setDollarNum] = useState("");
   const [budget, setBudget] = useState("");
+  const [itineraryName, setItineraryName] = useState("");
 
   //data stored
   const [content, setContent] = useState({
@@ -36,6 +37,7 @@ const Generate = () => {
   });
   const [title, setTitle] = useState("");
   const [month, setMonth] = useState("");
+  const [itinName, setItinName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,7 +65,7 @@ const Generate = () => {
 
   const createSaved = (e) => {
     e.preventDefault();
-    AxiosInstance.post(`saved/`, { content, title, month });
+    AxiosInstance.post(`saved/`, { content, title, month, itinName });
   };
 
   const handleCityChange = (city) => {
@@ -82,6 +84,11 @@ const Generate = () => {
     setChildNum(children);
     setInfantNum(infants);
     setPetNum(pets);
+  };
+
+  const handleItineraryName = (event) => {
+    setItineraryName(event.target.value);
+    console.log(itineraryName);
   };
 
   const jsonChecker = async (json) => {
@@ -129,6 +136,7 @@ const Generate = () => {
     );
     setTitle(city);
     setMonth(month);
+    setItinName(itineraryName);
     jsonChecker(JSONresponse);
     setContent(jsonChecker(JSONresponse));
     console.log(content);
@@ -156,6 +164,10 @@ const Generate = () => {
   return (
     <>
       <div className={token ? "generate-section" : ""}>
+        <div>
+          <label>Itinerary Name: </label>
+          <input type="text" onChange={handleItineraryName} />
+        </div>
         <form onSubmit={handleSubmit} className="AI-form">
           <CitySelector onInputChange={handleCityChange} />
           <div className="calendar">
