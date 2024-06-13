@@ -57,19 +57,31 @@ const Profile = () => {
       ) : (
         <div className="all-saved-container">
           {saved.map((saved) => (
-            <div className="saved-container" key={saved.id}>
-              <h1>{saved.itinName}</h1>
-              <h2 className="saved-title">{saved.title}</h2>
-              <h3>{saved.month}</h3>
-              <button
-                onClick={() => {
-                  deleteSaved(saved.id);
-                }}
-              >
-                {" "}
-                Delete saved
-              </button>
-              <button onClick={() => viewSaved(saved.id)}>View saved</button>
+            <div key={saved.id}>
+              <p className="saved-name">{saved.itinName}</p>
+              <div className="saved-container">
+                <div>
+                  <h2 className="saved-title">{saved.title}</h2>
+                  <h3>{saved.month}</h3>
+                </div>
+                <div className="saved-buttons">
+                  <button
+                    onClick={() => {
+                      deleteSaved(saved.id);
+                    }}
+                    className="saved-btn"
+                  >
+                    {" "}
+                    Delete saved
+                  </button>
+                  <button
+                    onClick={() => viewSaved(saved.id)}
+                    className="saved-btn"
+                  >
+                    View saved
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>

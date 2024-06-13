@@ -164,7 +164,8 @@ a:hover::after {
 
 .login-btn,
 .register-btn,
-.guest-menu-btn {
+.guest-menu-btn,
+.saved-btn {
   width: 150px;
   height: 40px;
   border: 1px solid black;
@@ -193,7 +194,8 @@ a:hover::after {
 }
 
 .login-btn:hover,
-.register-btn:hover {
+.register-btn:hover,
+.saved-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
@@ -244,26 +246,38 @@ a:hover::after {
 }
 
 .saved-container {
+  display: block;
   border-style: solid;
-  margin: 2em;
   padding: 1em;
   border-color: black;
   border-radius: 5px;
-  display: block;
-  align-items: center;
   height: fit-content;
-  width: 28%;
+  width: 220px;
   font-size: 10px;
+  margin-bottom: 30px;
+  margin-right: 20px;
 }
 
-.saved-items {
-  display: block;
+.saved-btn {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.saved-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.saved-name {
+  font-size: 20px;
 }
 
 .all-saved-container {
   display: flex;
+  padding: 3em;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .navbar-absolute,
