@@ -59,6 +59,7 @@ const Profile = () => {
           {saved.map((saved) => (
             <div className="saved-container" key={saved.id}>
               <h1 className="saved-title">{saved.title}</h1>
+              <h3>{saved.month}</h3>
               <button
                 onClick={() => {
                   deleteSaved(saved.id);

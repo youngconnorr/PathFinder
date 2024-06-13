@@ -32,6 +32,7 @@ class CustomUser(AbstractUser):
 
 class SavedInfo(models.Model):
     title = models.CharField(max_length=100)
+    month = models.CharField(max_length=50, default="January")
     content = models.JSONField()
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE,  related_name="saved" ) #foreign key links an object that belongs to an object, in this case saved info is linked to User 

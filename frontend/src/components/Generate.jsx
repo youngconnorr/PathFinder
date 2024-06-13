@@ -35,6 +35,7 @@ const Generate = () => {
     places: [],
   });
   const [title, setTitle] = useState("");
+  const [month, setMonth] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,7 +63,7 @@ const Generate = () => {
 
   const createSaved = (e) => {
     e.preventDefault();
-    AxiosInstance.post(`saved/`, { content, title });
+    AxiosInstance.post(`saved/`, { content, title, month });
   };
 
   const handleCityChange = (city) => {
@@ -127,6 +128,7 @@ const Generate = () => {
       dollar
     );
     setTitle(city);
+    setMonth(month);
     jsonChecker(JSONresponse);
     setContent(jsonChecker(JSONresponse));
     console.log(content);
