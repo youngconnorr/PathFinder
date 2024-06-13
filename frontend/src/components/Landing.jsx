@@ -3,13 +3,16 @@ import { itineraryList } from "./tools/ItineraryList";
 import { reviewList } from "./tools/ReviewList";
 import Generate from "./Generate";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
   const token = localStorage.getItem("Token");
+  const location = useLocation();
   const [currRatingIndex, setCurrRatingIndex] = useState(0);
+
+  const isLanding = location.pathname === "/";
 
   const nextRating = () => {
     setCurrRatingIndex((currIndex) =>
@@ -33,15 +36,17 @@ const Landing = () => {
   };
 
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 1) {
-      // Add sticky class after scrolling 50px
-      navbar.classList.add("sticky");
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  });
+  if (isLanding) {
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 1) {
+        // Add sticky class after scrolling 50px
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  }
 
   return (
     <div>

@@ -1,5 +1,5 @@
 const About = () => {
-  return <div className="carousel-section">HELLO WORLD</div>;
+  return <div className="about">HELLO WORLD</div>;
 };
 
 export default About;

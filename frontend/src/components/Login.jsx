@@ -18,22 +18,20 @@ const Login = () => {
   const { handleSubmit, control } = useForm({ defaultValues });
   const [validUser, setValidUser] = useState(true);
 
-  const submission = (data) => {
-    AxiosInstance.post(`login/`, {
-      email: data.email,
-      password: data.password,
-    })
-
-      .then((response) => {
-        console.log(response);
-        setValidUser(true);
-        localStorage.setItem("Token", response.data.token);
-        navigate(`/`);
-      })
-      .catch((error) => {
-        setValidUser(false);
-        console.error("wrong credentials"), error;
+  const submission = async (data) => {
+    try {
+      const response = await AxiosInstance.post(`login/`, {
+        email: data.email,
+        password: data.password,
       });
+      console.log(response);
+      setValidUser(true);
+      localStorage.setItem("Token", response.data.token);
+      navigate(`/`);
+    } catch (error) {
+      setValidUser(false);
+      console.error("Wrong credentials", error);
+    }
   };
 
   return (

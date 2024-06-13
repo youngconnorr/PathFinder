@@ -1,23 +1,22 @@
 import { Link } from "react-router-dom";
-import AxiosInstance from "./tools/AxiosInstance";
-import { useNavigate, useLocation } from "react-router-dom";
+// import AxiosInstance from "./tools/AxiosInstance";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const token = localStorage.getItem("Token");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
 
+  const landingPaths = ["/", "/login", "/register"];
+  const isNotLanding = !landingPaths.includes(location.pathname);
   const isProfile = location.pathname === "/profile";
 
-  const logoutUser = () => {
-    AxiosInstance.post(`logoutall/`, {}).then(() => {
-      localStorage.removeItem("Token");
-      navigate("/");
-    });
-  };
-
   return (
-    <div className="navbar">
+    <div
+      className={`
+        ${isNotLanding ? "navbar-not-landing" : "navbar-absolute"}
+        `}
+    >
       {token ? (
         <>
           <div>
@@ -32,9 +31,9 @@ const Navbar = () => {
             <button>
               <Link to="/about">About Us</Link>
             </button>
-            <button onClick={logoutUser}>
+            {/* <button onClick={logoutUser}>
               <Link>Log out</Link>
-            </button>
+            </button> */}
             {isProfile ? null : (
               <button>
                 <Link to="/profile">Profile</Link>
@@ -43,7 +42,7 @@ const Navbar = () => {
           </div>
         </>
       ) : (
-        <div className="navbar-no-account">
+        <div className={`navbar-no-account`}>
           <div>
             <button>
               <Link to="/">

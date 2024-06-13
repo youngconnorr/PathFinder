@@ -41,9 +41,17 @@ const Profile = () => {
     navigate("/view-saved", { state: { id: id } });
   };
 
+  const logoutUser = () => {
+    AxiosInstance.post(`logoutall/`, {}).then(() => {
+      localStorage.removeItem("Token");
+      navigate("/");
+    });
+  };
+
+  //format of profile page with multiple saved items
   return (
     <div>
-      <h2>Saved:</h2>
+      <h2>Your Itineraries:</h2>
       {saved.length === 0 ? (
         <p>Looks like you need to generate some itineraries!</p>
       ) : (
@@ -57,13 +65,15 @@ const Profile = () => {
                 }}
               >
                 {" "}
-                delete Saved
+                Delete saved
               </button>
               <button onClick={() => viewSaved(saved.id)}>View saved</button>
             </div>
           ))}
         </div>
       )}
+
+      <button onClick={logoutUser}>Log out</button>
     </div>
   );
 };

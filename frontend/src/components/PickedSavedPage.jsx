@@ -26,6 +26,7 @@ const PickedSavedPage = () => {
       });
   };
 
+  //format of a selected saved item
   return (
     <div>
       {saved === null ? (

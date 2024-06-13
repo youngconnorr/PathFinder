@@ -266,7 +266,7 @@ a:hover::after {
   width: 100%;
 }
 
-.navbar,
+.navbar-absolute,
 .login-nav,
 .register-nav {
   /* background: transparent; */
@@ -280,8 +280,10 @@ a:hover::after {
   transition: background-color 0.2s ease-in-out;
 }
 
-.navbar button,
-.navbar a {
+.navbar-absolute button,
+.navbar-not-landing button,
+.navbar-absolute a,
+.navbar-not-landing a {
   background-color: transparent;
   color: #fff;
   border: none;
@@ -291,13 +293,25 @@ a:hover::after {
   transition: all 0.3s ease;
 }
 
+.navbar-absolute {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
 /* .navbar button:hover {
   background-color: #555;
   border-radius: 5px;
 } */
 
-.navbar button:focus,
-.navbar a:focus {
+.navbar-absolute button:focus,
+.navbar-not-landing button:focus,
+.navbar-absolute a:focus,
+.navbar-not-landing a:focus {
   outline: none;
 }
 
@@ -308,6 +322,16 @@ a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: end;
+}
+
+.navbar-not-landing {
+  background-color: rgba(66, 86, 78, 0.58);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .create-now-btn {
@@ -466,7 +490,7 @@ select:hover {
   /* overflow-x: scroll; */
   /* height: 100vh; */
   margin-top: 30px;
-  animation: 60s slide infinite linear;
+  animation: 20s slide infinite linear;
 }
 
 .white-blocks {
@@ -511,7 +535,7 @@ select:hover {
 }
 
 .carousel-cards {
-  background-color: white;
+  background-color: transparent;
   box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
   padding: 2em;
@@ -600,4 +624,9 @@ select:hover {
 .img-fade.active {
   display: inline;
   opacity: 1;
+}
+
+.about {
+  height: 100dvh;
+  background-color: pink;
 }
