@@ -71,22 +71,4 @@ export const itineraryList = [
     photo:
       "https://images.unsplash.com/photo-1529943247435-a5974e63d6e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  {
-    id: 9,
-    name: "Noah Martinez",
-    stars: 5,
-    city: "Rio de Janeiro",
-    country: "Brazil",
-    photo:
-      "https://images.unsplash.com/photo-1620218776119-2bc322e2d7ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 10,
-    name: "Ava Taylor",
-    stars: 4,
-    city: "Cape Town",
-    country: "South Africa",
-    photo:
-      "https://images.unsplash.com/photo-1576485375217-d6a95e34d043?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
 ];

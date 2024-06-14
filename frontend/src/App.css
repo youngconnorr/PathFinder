@@ -504,7 +504,7 @@ select:hover {
   /* overflow-x: scroll; */
   /* height: 100vh; */
   margin-top: 30px;
-  animation: 20s slide infinite linear;
+  animation: 60s slide infinite linear;
 }
 
 .white-blocks {
@@ -539,7 +539,7 @@ select:hover {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% + 250px));
   }
 }
 

@@ -71,22 +71,4 @@ export const reviewList = [
     content:
       "Exploring Amsterdam was a breeze with this AI travel assistant. It directed me to cozy cafes and recommended the ideal clothing for the Dutch weather. Couldn't have asked for a better travel companion!",
   },
-  {
-    id: 9,
-    name: "Noah Martinez",
-    stars: 5,
-    city: "Rio de Janeiro",
-    country: "Brazil",
-    content:
-      "Rio de Janeiro exceeded my expectations, thanks in no small part to this AI itinerary service. It led me to mouthwatering eateries and provided invaluable insights on dressing comfortably for the tropical climate.",
-  },
-  {
-    id: 10,
-    name: "Ava Taylor",
-    stars: 5,
-    city: "Cape Town",
-    country: "South Africa",
-    content:
-      "Cape Town was a delight with the help of this AI travel guide. It curated a fantastic list of dining options and offered practical advice on dressing for the diverse weather conditions. Truly a game-changer!",
-  },
 ];

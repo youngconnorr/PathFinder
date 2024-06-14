@@ -38,8 +38,8 @@ const Landing = () => {
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
   if (isLanding) {
     window.addEventListener("scroll", function () {
-      const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 1) {
+      const navbar = document.querySelector(".navbar-absolute");
+      if (window.scrollY > 400) {
         // Add sticky class after scrolling 50px
         navbar.classList.add("sticky");
       } else {
@@ -78,7 +78,7 @@ const Landing = () => {
             </div>
             <h3>Trips from fellow travellers</h3>
           </div>
-          <div className="carousel-div">
+          {/* <div className="carousel-div">
             <div className="carousel">
               {itineraryList.map((card) => (
                 <div key={card.id} className="carousel-cards">
@@ -86,6 +86,7 @@ const Landing = () => {
                     src={card.photo}
                     alt="photo"
                     className="carousel-card-photo"
+                    loading="lazy"
                   />
                   <h2>{card.city}</h2>
                   <p>{card.country}</p>
@@ -115,7 +116,7 @@ const Landing = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </section>
         {/* <div className="white-blocks">jDASDSADADASDj</div> */}
       </section>
