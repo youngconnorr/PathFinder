@@ -39,9 +39,9 @@ const PickedSavedPage = () => {
         <div>Loading...</div>
       ) : (
         <>
-          <h1 className="saved-title">{saved.title}</h1>
-          <div className="saved-container" key={saved.id}>
-            <div className="saved-content">
+          <h1 className="category-title">{saved.title}</h1>
+          <div className="category-container" key={saved.id}>
+            <div className="category-content">
               {Object.entries(saved.content).map(([category, items]) => (
                 <div key={category} className="saved-category">
                   <h1>{category}</h1>

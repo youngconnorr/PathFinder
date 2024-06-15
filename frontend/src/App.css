@@ -247,17 +247,17 @@ a:hover::after {
 
 /* PickedSavedPage Styling */
 
-.saved-container {
-  border: 2px solid black;
+.category-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
   border-radius: 5px;
   height: fit-content;
-  width: 80dvw;
-  margin-left: 60px;
   font-size: 10px;
 }
 
-.saved-title {
+.category-title {
 }
 
 .category-dropdown button {
@@ -277,7 +277,7 @@ a:hover::after {
 .category-items {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.9s linear;
 }
 
 .category-items.show-category {
@@ -294,6 +294,19 @@ a:hover::after {
 .saved-btn {
   margin-top: 20px;
   width: 100px;
+}
+
+.saved-container {
+  display: block;
+  border-style: solid;
+  padding: 1em;
+  border-color: black;
+  border-radius: 5px;
+  height: fit-content;
+  width: 220px;
+  font-size: 10px;
+  margin-bottom: 30px;
+  margin-right: 20px;
 }
 
 .saved-buttons {
