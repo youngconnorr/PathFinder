@@ -245,18 +245,51 @@ a:hover::after {
   width: fit-content;
 }
 
+/* PickedSavedPage Styling */
+
 .saved-container {
-  display: block;
-  border-style: solid;
+  border: 2px solid black;
   padding: 1em;
-  border-color: black;
   border-radius: 5px;
   height: fit-content;
-  width: 220px;
+  width: 80dvw;
+  margin-left: 60px;
   font-size: 10px;
-  margin-bottom: 30px;
-  margin-right: 20px;
 }
+
+.saved-title {
+}
+
+.category-dropdown button {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.category-dropdown div {
+  display: block;
+  color: black;
+  padding: 10px 10px;
+}
+
+.category-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.category-items.show-category {
+  max-height: 1000px; /* Adjust this value based on your content */
+}
+
+.category-dropdown .show-category {
+  /* display: inline-block; */
+  position: relative;
+}
+
+/*                    */
 
 .saved-btn {
   margin-top: 20px;
@@ -329,7 +362,7 @@ a:hover::after {
   outline: none;
 }
 
-.navbar-no-account {
+.nav-no-account-buttons {
   z-index: 4;
   margin: 0 10px;
   width: 100vw;

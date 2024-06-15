@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </>
       ) : (
-        <div className={`navbar-no-account`}>
+        <div className="nav-no-account-buttons">
           <div>
             <button>
               <Link to="/">

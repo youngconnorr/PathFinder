@@ -5,10 +5,9 @@ import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Profile from "./components/Profile";
 import PickedSavedPage from "./components/PickedSavedPage";
+import About from "./components/About";
 import { Routes, Route, useLocation, Link } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
-import About from "./components/About";
-// import Geocoder from "./components/tools/Geocoder";
 
 function App() {
   const location = useLocation();
@@ -19,36 +18,28 @@ function App() {
     <>
       {noNavbar ? (
         <div>
-          <div className="navbar">
+          <div className="navbar-absolute">
             <button>
               <Link to="/">
                 <b>PathFinder</b>
               </Link>
             </button>
           </div>
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
         </div>
       ) : (
-        <div>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route element={<ProtectedRoute />}>
-              <Route path="/about" element={<About />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/view-saved" element={<PickedSavedPage />} />
-              <Route path="/generate" element={<Generate />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
-              {/* <Route path="/test" element={<Geocoder location={[""]} />} /> */}
-            </Route>
-          </Routes>
-        </div>
+        <Navbar />
       )}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/view-saved" element={<PickedSavedPage />} />
+          <Route path="/generate" element={<Generate />} />
+        </Route>
+      </Routes>
     </>
   );
 }

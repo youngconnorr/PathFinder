@@ -164,10 +164,13 @@ const Generate = () => {
   return (
     <>
       <div className={token ? "generate-section" : ""}>
-        <div>
-          <label>Itinerary Name: </label>
-          <input type="text" onChange={handleItineraryName} />
-        </div>
+        {token ? (
+          <div>
+            <label>Itinerary Name: </label>
+            <input type="text" onChange={handleItineraryName} />
+          </div>
+        ) : null}
+
         <form onSubmit={handleSubmit} className="AI-form">
           <CitySelector onInputChange={handleCityChange} />
           <div className="calendar">
