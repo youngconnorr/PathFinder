@@ -1,6 +1,6 @@
 .signin-bg {
   height: 100vh;
-  background-image: url("./assets/background-1.jpg");
+  background-image: url("../../assets/background-1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -46,6 +46,13 @@
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
   transition: 0.3s ease-in-out;
+}
+
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 114px;
 }
 
 .register-card {

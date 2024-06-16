@@ -1,10 +1,10 @@
 import "../../App";
 import { Box } from "@mui/material";
-import TextField from "../tools/TextFields";
-import PasswordField from "../tools/MyPasswordField";
+import TextField from "../Tools/TextFields";
+import PasswordField from "../Tools/MyPasswordField";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import AxiosInstance from "../tools/AxiosInstance";
+import AxiosInstance from "../Tools/AxiosInstance";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";

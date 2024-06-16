@@ -1,4 +1,4 @@
-import AxiosInstance from "../tools/AxiosInstance";
+import AxiosInstance from "../Tools/AxiosInstance";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

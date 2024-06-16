@@ -1,4 +1,4 @@
-import ProtectedRoute from "./components/tools/ProtectedRoutes";
+import ProtectedRoute from "./components/Tools/ProtectedRoutes";
 import { Routes, Route, useLocation, Link } from "react-router-dom";
 
 import Generate from "./components/AI";

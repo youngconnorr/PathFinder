@@ -3,7 +3,7 @@ import { main } from "./AILogic";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import AxiosInstance from "../tools/AxiosInstance";
+import AxiosInstance from "../Tools/AxiosInstance";
 import CitySelector from "./CitySelector";
 import DateSelector from "./DateSelector";
 import GuestsNumber from "./GuestsNumber";

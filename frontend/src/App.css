@@ -10,6 +10,7 @@
 @import url("./components/Navbar/Navbar.module.css");
 @import url("./components/Profile/Profile.module.css");
 @import url("./components/Saved/Saved.module.css");
+@import url("./components/Tools/Tools.module.css");
 
 applet,
 object,
@@ -135,88 +136,6 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-.signin-bg {
-  height: 100vh;
-  background-image: url("./assets/background-1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.login-forms {
-  width: 80%;
-}
-
-.button-forms {
-  width: 40%;
-}
-
-.register-btn {
-  margin-left: 114px;
-}
-
-/* PickedSavedPage Styling */
-
-.category-container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  border-radius: 5px;
-  height: fit-content;
-  font-size: 10px;
-}
-
-.category-dropdown button {
-  background-color: transparent;
-  color: black;
-  border: 1px solid black;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.category-dropdown div {
-  display: block;
-  color: black;
-  padding: 10px 10px;
-}
-
-.category-items {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.9s linear;
-}
-
-.category-items.show-category {
-  max-height: 1000px; /* Adjust this value based on your content */
-}
-
-.category-dropdown .show-category {
-  /* display: inline-block; */
-  position: relative;
-}
-
-.login-nav,
-.register-nav {
-  /* background: transparent; */
-  /* background-image: url("./assets/background-1.jpg"); */
-  position: absolute;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.form-item {
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border-left: 1px solid black;
-}
-
 select {
   /* Base styles for the select element */
   appearance: none;
@@ -231,55 +150,6 @@ select {
 select:hover {
   border: 1px solid black;
   transition: 0.5s ease;
-}
-
-.guest {
-  display: flex;
-  justify-content: space-between;
-}
-
-.guest-button {
-  height: 20px;
-}
-
-.guest-mod {
-  display: flex;
-  margin-left: 2px;
-  transform: translateY(20px);
-}
-
-.guest-num-display {
-  margin-right: 10px;
-  padding: 0px 0px 30px 10px;
-}
-
-.card-landing {
-  border-style: solid;
-  border-color: black;
-  padding: 10px;
-  margin: 30vh;
-  margin-right: 100px;
-  margin-left: 100px;
-  display: inline-block;
-}
-
-.register-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.white-blocks {
-  color: white;
-  z-index: 2;
-  width: 25%;
-  background-color: red;
-}
-
-.results-section {
-  display: grid;
-  height: 100vh;
-  background-color: pink;
 }
 
 .sticky {
