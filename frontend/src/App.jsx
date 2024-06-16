@@ -1,13 +1,14 @@
-import Generate from "./components/Generate";
-import Register from "./components/Register";
+import ProtectedRoute from "./components/tools/ProtectedRoutes";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
+
+import Generate from "./components/AI";
+import Register from "./components/Auth/Register";
 import Navbar from "./components/Navbar";
-import Login from "./components/Login";
+import Login from "./components/Auth/Login";
 import Landing from "./components/Landing";
 import Profile from "./components/Profile";
-import PickedSavedPage from "./components/PickedSavedPage";
+import PickedSavedPage from "./components/Saved";
 import About from "./components/About";
-import { Routes, Route, useLocation, Link } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoutes";
 
 function App() {
   const location = useLocation();

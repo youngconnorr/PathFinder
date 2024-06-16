@@ -57,7 +57,7 @@ const DateSelector = ({ datePicked }) => {
       <select
         name="MonthPicker"
         id="month-picker"
-        className="month-picker"
+        // className="month-picker"
         onChange={(e) => setStartDate(e.target.value)}
         style={{ marginLeft: "40px" }}
       >

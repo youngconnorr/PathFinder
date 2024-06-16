@@ -1,7 +1,6 @@
-import AxiosInstance from "./tools/AxiosInstance";
+import AxiosInstance from "../tools/AxiosInstance";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// import PickedSavedPage from "./PickedSavedPage";
 
 const Profile = () => {
   const [saved, setSaved] = useState([]);

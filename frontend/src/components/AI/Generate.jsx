@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { main } from "./tools/AILogic";
+import { main } from "./AILogic";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import AxiosInstance from "./tools/AxiosInstance";
-import CitySelector from "./tools/CitySelector";
-import DateSelector from "./tools/DateSelector";
-import GuestsNumber from "./tools/GuestsNumber";
-import BudgetNumber from "./tools/BudgetNumber";
+import AxiosInstance from "../tools/AxiosInstance";
+import CitySelector from "./CitySelector";
+import DateSelector from "./DateSelector";
+import GuestsNumber from "./GuestsNumber";
+import BudgetNumber from "./BudgetNumber";
 // import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {

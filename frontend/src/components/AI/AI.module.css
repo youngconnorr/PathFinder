@@ -1,0 +1,119 @@
+/* 
+
+- guest-menu-btn
+
+*/
+
+/* overall styles */
+
+.form-item {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-left: 1px solid black;
+}
+
+.generate-section {
+  transform: translateY(200px);
+  height: 100vh;
+}
+
+.AI-form {
+  margin-top: 30px;
+  border: 1px solid black;
+  height: 60px;
+  padding: 0px 30px;
+  margin-right: 50px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.submit-ai {
+  background-color: transparent;
+}
+
+.ai-response {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.ai-cards {
+  border-style: solid;
+  margin: 2em;
+  padding: 2em;
+  border-color: black;
+  border-radius: 5px;
+  display: block;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+/* budget styles */
+
+.budget-picker:focus {
+  /* Styling for focus state */
+  outline: none;
+  border-color: #999;
+}
+
+/* calendar */
+
+.calendar {
+  margin-left: 10px;
+}
+
+/* guests */
+
+.pre-guest-btn {
+  /* border: 1px solid black; */
+  padding: 10px;
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+}
+
+.guest {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guest-button {
+  height: 20px;
+}
+
+.guest-mod {
+  display: flex;
+  margin-left: 2px;
+  transform: translateY(20px);
+}
+
+.guest-num-display {
+  margin-right: 10px;
+  padding: 0px 0px 30px 10px;
+}
+
+.guest-menu-btn {
+  height: 40px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-left: 20px;
+  width: 100px;
+  border: 1px solid rgb(191, 189, 189);
+}
+
+.guest-menu-btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s ease-in-out;
+}

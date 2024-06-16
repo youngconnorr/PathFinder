@@ -3,6 +3,14 @@
    License: none (public domain)
 */
 
+@import url("./components/About/About.module.css");
+@import url("./components/AI/AI.module.css");
+@import url("./components/Auth/Auth.module.css");
+@import url("./components/Landing/Landing.module.css");
+@import url("./components/Navbar/Navbar.module.css");
+@import url("./components/Profile/Profile.module.css");
+@import url("./components/Saved/Saved.module.css");
+
 applet,
 object,
 iframe,
@@ -142,29 +150,10 @@ a:hover::after {
   width: 40%;
 }
 
-.user-cards {
-  padding-top: 40px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 400px;
-  height: 350px;
-  text-align: center;
-  background: transparent;
-  background-color: rgba(236, 240, 238, 0.644);
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .register-btn {
   margin-left: 114px;
 }
 
-.login-btn,
-.register-btn,
-.guest-menu-btn,
 .saved-btn {
   width: 150px;
   height: 40px;
@@ -173,76 +162,11 @@ a:hover::after {
   border-radius: 50px;
 }
 
-.guest-menu-btn {
-  margin-left: 20px;
-  width: 100px;
-  border: 1px solid rgb(191, 189, 189);
-}
-
-.guest-menu-btn:hover {
-  cursor: pointer;
-  border: 1px solid black;
-  transition: 0.3s ease-in-out;
-}
-
-.pre-guest-btn {
-  /* border: 1px solid black; */
-  padding: 10px;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-}
-
-.login-btn:hover,
-.register-btn:hover,
 .saved-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
   transition: 0.3s ease-in-out;
-}
-
-.register-card {
-  padding-top: 25px;
-  height: 500px;
-}
-
-.item-box {
-  padding: 10px;
-}
-
-.account-question-link {
-  margin-top: 50px;
-}
-
-.user-title {
-  font-size: 30px;
-  color: black;
-  margin-left: -60%;
-}
-
-.user-title-register {
-  margin-left: -50%;
-}
-
-.ai-response {
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5%;
-  width: 100%;
-}
-
-.ai-cards {
-  border-style: solid;
-  margin: 2em;
-  padding: 2em;
-  border-color: black;
-  border-radius: 5px;
-  display: block;
-  align-items: center;
-  height: fit-content;
-  width: fit-content;
 }
 
 /* PickedSavedPage Styling */
@@ -257,8 +181,6 @@ a:hover::after {
   font-size: 10px;
 }
 
-.category-title {
-}
 
 .category-dropdown button {
   background-color: transparent;
@@ -399,20 +321,6 @@ a:hover::after {
   margin-top: 50px;
 }
 
-.AI-form {
-  margin-top: 30px;
-  border: 1px solid black;
-  height: 60px;
-  padding: 0px 30px;
-  margin-right: 50px;
-  background: white;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 50px;
-}
-
 .form-item {
   padding: 0 20px;
   display: flex;
@@ -438,23 +346,9 @@ select:hover {
   transition: 0.5s ease;
 }
 
-.budget-picker:focus {
-  /* Styling for focus state */
-  outline: none;
-  border-color: #999;
-}
-
-.calendar {
-  margin-left: 10px;
-}
-
 .guest {
   display: flex;
   justify-content: space-between;
-}
-
-.guests-picker {
-  display: flex;
 }
 
 .guest-button {
@@ -465,10 +359,6 @@ select:hover {
   display: flex;
   margin-left: 2px;
   transform: translateY(20px);
-}
-
-.submit-ai {
-  background-color: transparent;
 }
 
 .guest-num-display {
@@ -654,11 +544,6 @@ select:hover {
   width: 600px;
 }
 
-.generate-section {
-  transform: translateY(200px);
-  height: 100vh;
-}
-
 .landing-page-generate {
   height: 100px;
 }
@@ -684,9 +569,4 @@ select:hover {
 .img-fade.active {
   display: inline;
   opacity: 1;
-}
-
-.about {
-  height: 100dvh;
-  background-color: pink;
 }

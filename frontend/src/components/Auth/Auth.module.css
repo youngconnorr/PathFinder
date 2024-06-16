@@ -1,0 +1,62 @@
+.signin-bg {
+  height: 100vh;
+  background-image: url("./assets/background-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.user-cards {
+  padding-top: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 400px;
+  height: 350px;
+  text-align: center;
+  background: transparent;
+  background-color: rgba(236, 240, 238, 0.644);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item-box {
+  padding: 10px;
+}
+
+.user-title {
+  font-size: 30px;
+  color: black;
+  margin-left: -60%;
+}
+
+.login-btn,
+.register-btn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  cursor: pointer;
+  background-color: rgb(90, 122, 98);
+  border-color: rgb(90, 122, 98);
+  transition: 0.3s ease-in-out;
+}
+
+.register-card {
+  padding-top: 25px;
+  height: 500px;
+}
+
+.user-title-register {
+  margin-left: -50%;
+}
+
+.account-question-link {
+  margin-top: 50px;
+}
