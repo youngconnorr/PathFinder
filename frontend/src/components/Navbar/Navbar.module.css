@@ -1,0 +1,58 @@
+.navbar-absolute button,
+.navbar-not-landing button,
+.navbar-absolute a,
+.navbar-not-landing a {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-absolute {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-absolute {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-not-landing {
+  background-color: rgba(66, 86, 78, 0.58);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-absolute button:focus,
+.navbar-not-landing button:focus,
+.navbar-absolute a:focus,
+.navbar-not-landing a:focus {
+  outline: none;
+}
+
+.nav-no-account-buttons {
+  z-index: 4;
+  margin: 0 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Generate from "../../AI/Generate";
 
-export const LandSectOne = () => {
+export const SectionOne = () => {
   const token = localStorage.getItem("Token");
   return (
-    <section className="landing-sections section-1">
+    <section className="section-1">
       <div className="website-tagline">
         <h1>CHART YOUR COURSE FROM</h1>
         <h1>DREAMS TO DESTINATIONS</h1>

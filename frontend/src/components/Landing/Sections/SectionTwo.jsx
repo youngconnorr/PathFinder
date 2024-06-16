@@ -12,7 +12,7 @@ export const SectionTwo = () => {
 
   return (
     <section className="section-2">
-      <section className="landing-sections carousel-section">
+      <section className="carousel-section">
         <div className="carousel-headline">
           <div className="carousel-title">
             <h1>Get</h1>

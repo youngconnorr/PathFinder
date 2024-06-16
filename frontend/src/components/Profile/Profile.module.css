@@ -1,0 +1,45 @@
+.all-saved-container {
+  display: flex;
+  padding: 3em;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+
+.saved-name {
+  font-size: 20px;
+}
+
+.saved-container {
+  display: block;
+  border-style: solid;
+  padding: 1em;
+  border-color: black;
+  border-radius: 5px;
+  height: fit-content;
+  width: 220px;
+  font-size: 10px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.saved-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.saved-btn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.saved-btn:hover {
+  cursor: pointer;
+  background-color: rgb(90, 122, 98);
+  border-color: rgb(90, 122, 98);
+  transition: 0.3s ease-in-out;
+}
