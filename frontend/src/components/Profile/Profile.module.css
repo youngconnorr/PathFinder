@@ -1,34 +1,45 @@
-.all-saved-container {
+.profile-parent {
+  background-image: url("../../assets/saved-item-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100dvh;
+}
+
+.profile-content {
+  padding: 100px 2em;
+}
+
+.profile-all-saved-container {
+  /* border: 1px solid black; */
   display: flex;
-  padding: 3em;
-  /* justify-content: space-between; */
+  padding: 3em 5em;
   flex-wrap: wrap;
   /* width: 100%; */
 }
 
-.saved-name {
+.profile-saved-name {
   font-size: 20px;
 }
 
-.saved-container {
+.profile-saved-container {
   display: block;
   border-style: solid;
   padding: 1em;
   border-color: black;
   border-radius: 5px;
-  height: fit-content;
+  height: 100px;
   width: 220px;
   font-size: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-right: 20px;
 }
 
-.saved-buttons {
+.profile-saved-buttons {
   display: flex;
   justify-content: space-around;
 }
 
-.saved-btn {
+.profile-saved-btn {
   margin-top: 20px;
   width: 150px;
   height: 40px;
@@ -37,9 +48,24 @@
   border-radius: 50px;
 }
 
-.saved-btn:hover {
+.profile-saved-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
   transition: 0.3s ease-in-out;
+}
+
+.profile-saved-text {
+  display: flex;
+}
+
+.profile-saved-title {
+  font-size: 2.5em;
+}
+
+.each-profile-saved-container {
+  margin-right: 50px;
+  width: 243px;
+  cursor: pointer;
+  /* border: 1px solid black; */
 }

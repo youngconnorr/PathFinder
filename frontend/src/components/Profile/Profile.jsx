@@ -5,9 +5,20 @@ import { useNavigate } from "react-router-dom";
 const Profile = () => {
   const [saved, setSaved] = useState([]);
   const navigate = useNavigate();
-  // const location = useLocation();
-
-  // const isViewSaved = location.pathname === "/view-saved";
+  const bgColors = {
+    January: "#f94144",
+    February: "#f3722c",
+    March: "#f8961e",
+    April: "#f9844a",
+    May: "#f9c74f",
+    June: "#90be6d",
+    July: "#43aa8b",
+    August: "#4d908e",
+    Sepetember: "#577590",
+    October: "#277da1",
+    November: "#5e6472",
+    December: "#184e77",
+  };
 
   useEffect(() => {
     showSaved();
@@ -26,14 +37,14 @@ const Profile = () => {
       .catch((err) => alert(err));
   };
 
-  const deleteSaved = (id) => {
-    console.log("test");
-    AxiosInstance.delete(`saved/${id}`).then(() => {
-      const updatedSaved = saved.filter((item) => item.id !== id);
-      setSaved(updatedSaved);
-    });
-    console.log(saved);
-  };
+  // const deleteSaved = (id) => {
+  //   console.log("test");
+  //   AxiosInstance.delete(`saved/${id}`).then(() => {
+  //     const updatedSaved = saved.filter((item) => item.id !== id);
+  //     setSaved(updatedSaved);
+  //   });
+  //   console.log(saved);
+  // };
 
   const viewSaved = (id) => {
     console.log(id);
@@ -49,45 +60,54 @@ const Profile = () => {
 
   //format of profile page with multiple saved items
   return (
-    <div>
-      <h2>Your Itineraries:</h2>
-      {saved.length === 0 ? (
-        <p>Looks like you need to generate some itineraries!</p>
-      ) : (
-        <div className="all-saved-container">
-          {saved.map((saved) => (
-            <div key={saved.id}>
-              <p className="saved-name">{saved.itinName}</p>
-              <div className="saved-container">
-                <div>
-                  <h2 className="saved-title">{saved.title}</h2>
+    <section className="profile-parent">
+      <div className="profile-content">
+        <h2>My Trips</h2>
+        {saved.length === 0 ? (
+          <p>Looks like you need to generate some itineraries!</p>
+        ) : (
+          <div className="profile-all-saved-container">
+            {saved.map((saved) => (
+              <div
+                key={saved.id}
+                className="each-profile-saved-container"
+                onClick={() => viewSaved(saved.id)}
+              >
+                <div
+                  className="profile-saved-container"
+                  style={{ backgroundColor: `${bgColors[saved.month]}` }}
+                >
+                  <h2 className="profile-saved-title">{saved.title}</h2>
+
                   <h3>{saved.month}</h3>
                 </div>
-                <div className="saved-buttons">
+                <div className="profile-saved-text"></div>
+                <h2 className="profile-saved-name">{saved.itinName}</h2>
+                {/* <div className="profile-saved-buttons">
                   <button
                     onClick={() => {
                       deleteSaved(saved.id);
                     }}
-                    className="saved-btn"
+                    className="profile-saved-btn"
                   >
                     {" "}
-                    Delete saved
+                    Delete
                   </button>
                   <button
                     onClick={() => viewSaved(saved.id)}
-                    className="saved-btn"
+                    className="profile-saved-btn"
                   >
-                    View saved
+                    View
                   </button>
-                </div>
+                </div> */}
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
 
-      <button onClick={logoutUser}>Log out</button>
-    </div>
+        <button onClick={logoutUser}>Log out</button>
+      </div>
+    </section>
   );
 };
 

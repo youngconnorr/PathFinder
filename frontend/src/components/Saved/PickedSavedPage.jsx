@@ -1,11 +1,12 @@
 import AxiosInstance from "../Tools/AxiosInstance";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const PickedSavedPage = () => {
   const [saved, setSaved] = useState(null);
   const [showItems, setShowItems] = useState({});
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     showSaved();
@@ -13,17 +14,22 @@ const PickedSavedPage = () => {
 
   const showSaved = () => {
     const savedID = location.state.id;
-    console.log("this is id: " + savedID);
 
     AxiosInstance.get(`saved/${savedID}`)
       .then((res) => res.data)
       .then((data) => {
         setSaved(data);
-        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching saved data", error);
       });
+  };
+
+  const deleteSaved = (id) => {
+    console.log("test");
+    AxiosInstance.delete(`saved/${id}`).then(() => {
+      navigate("/profile");
+    });
   };
 
   const toggleShowItems = (category) => {
@@ -64,6 +70,17 @@ const PickedSavedPage = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="profile-saved-buttons">
+              <button
+                onClick={() => {
+                  deleteSaved(saved.id);
+                }}
+                className="profile-saved-btn"
+              >
+                {" "}
+                Delete
+              </button>
             </div>
           </div>
         </>

@@ -7,8 +7,8 @@ const Navbar = () => {
   // const navigate = useNavigate();
   const location = useLocation();
 
-  const landingPaths = ["/", "/login", "/register"];
-  const isNotLanding = !landingPaths.includes(location.pathname);
+  const transparentNav = ["/", "/login", "/register", "/profile"];
+  const isNotLanding = !transparentNav.includes(location.pathname);
   const isProfile = location.pathname === "/profile";
 
   return (
