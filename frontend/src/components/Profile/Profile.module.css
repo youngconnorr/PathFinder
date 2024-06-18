@@ -1,37 +1,48 @@
-.profile-parent {
+/* .profile-parent {
   background-image: url("../../assets/saved-item-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 100dvh;
-}
+  background-color: #d7ba89;
+  background-color: white;
+} */
 
 .profile-content {
-  padding: 100px 2em;
+  padding: 80px 4em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.profile-upper-photo {
+  background-image: url("../../assets/saved-items-bg.jpg");
+  background-size: 100%;
+  padding: 0;
+  margin-bottom: -518px;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .profile-all-saved-container {
-  /* border: 1px solid black; */
+  width: 80%;
+  overflow: hidden;
   display: flex;
   padding: 3em 5em;
-  flex-wrap: wrap;
-  /* width: 100%; */
 }
 
 .profile-saved-name {
-  font-size: 20px;
+  font-size: 2em;
+  padding-bottom: 10px;
 }
 
-.profile-saved-container {
+.profile-saved-bg-color {
   display: block;
-  border-style: solid;
-  padding: 1em;
-  border-color: black;
-  border-radius: 5px;
-  height: 100px;
-  width: 220px;
+  height: 40px;
+  width: inherit;
   font-size: 10px;
   margin-bottom: 5px;
-  margin-right: 20px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
 }
 
 .profile-saved-buttons {
@@ -39,7 +50,8 @@
   justify-content: space-around;
 }
 
-.profile-saved-btn {
+.profile-saved-btn,
+.profile-logout-btn {
   margin-top: 20px;
   width: 150px;
   height: 40px;
@@ -48,24 +60,36 @@
   border-radius: 50px;
 }
 
-.profile-saved-btn:hover {
+.profile-saved-btn:hover,
+.profile-logout-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
   border-color: rgb(90, 122, 98);
   transition: 0.3s ease-in-out;
 }
 
-.profile-saved-text {
-  display: flex;
+.profile-saved-text,
+.profile-saved-name {
+  display: inline-block;
+  margin: 5px 15px;
 }
 
 .profile-saved-title {
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 .each-profile-saved-container {
+  background-color: transparent;
   margin-right: 50px;
-  width: 243px;
+  margin-bottom: 25px;
+  width: 280px;
+  height: 150px;
   cursor: pointer;
-  /* border: 1px solid black; */
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.profile-header {
+  color: white;
+  padding: 7em;
 }

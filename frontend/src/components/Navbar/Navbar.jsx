@@ -15,7 +15,7 @@ const Navbar = () => {
     <div
       className={`
         ${isNotLanding ? "navbar-not-landing" : "navbar-absolute"}
-        `}
+        ${isProfile ? "black" : ""}`}
     >
       {token ? (
         <>
@@ -31,14 +31,9 @@ const Navbar = () => {
             <button>
               <Link to="/about">About Us</Link>
             </button>
-            {/* <button onClick={logoutUser}>
-              <Link>Log out</Link>
-            </button> */}
-            {isProfile ? null : (
-              <button>
-                <Link to="/profile">Profile</Link>
-              </button>
-            )}
+            <button>
+              <Link to="/profile">Profile</Link>
+            </button>
           </div>
         </>
       ) : (

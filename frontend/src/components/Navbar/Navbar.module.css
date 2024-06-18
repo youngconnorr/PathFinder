@@ -13,18 +13,10 @@
 
 .navbar-absolute {
   position: absolute;
+  margin-right: 10px;
   width: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.navbar-absolute {
-  position: absolute;
-  width: 100%;
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,4 +47,11 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
+}
+
+.black {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin-top: -80px !important;
 }
