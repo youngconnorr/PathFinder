@@ -80,7 +80,6 @@ const Profile = () => {
           <p>loading...</p>
         ) : (
           <>
-            <button> + New Trip </button>
             <input
               type="text"
               onChange={(e) => {
@@ -88,6 +87,7 @@ const Profile = () => {
               }}
               placeholder="Search saved trips..."
             />
+            <button onClick={() => navigate("/generate")}> + New Trip </button>
             {saved.length === 0 ? (
               <p>Looks like you need to generate some itineraries!</p>
             ) : (
