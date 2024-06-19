@@ -81,10 +81,6 @@ const CitySelector = ({ onInputChange }) => {
           </select>
         </div>
       )}
-      <p style={{ color: "white" }}>
-        {currentCity}
-        {currentCountry}
-      </p>
     </div>
   );
 };

@@ -16,9 +16,18 @@
 }
 
 .generate-section {
+  color: black;
+  background-color: beige;
+  /* background-image: url("../../assets/generate-section-bg.jpg"); */
+  color: white;
+  border-radius: 0 0 30px 30px;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px 30px 0px 0px;
   transform: translateY(50px);
-  height: 100vh;
-  margin-left: 50px;
+  height: fit-content;
+  padding: 30px;
 }
 
 .AI-form {
@@ -41,13 +50,15 @@
 
 .ai-response {
   border-radius: 5px;
-  display: flex;
+  display: block;
   justify-content: space-between;
   margin-top: 5%;
   width: 100%;
 }
 
 .ai-cards {
+  background-color: white;
+  color: black;
   border-style: solid;
   margin: 2em;
   padding: 2em;
@@ -141,7 +152,7 @@
 }
 
 .generate-save-btn {
-  background: transparent;
+  background: white;
   border: 1px solid black;
   padding: 20px;
   border-radius: 20px;

@@ -28,8 +28,11 @@ const Profile = () => {
     showSaved();
   }, []);
 
-  const filteredSaved = saved.filter((s) =>
-    s.itinName.toLowerCase().includes(search.toLowerCase())
+  const filteredSaved = saved.filter(
+    (s) =>
+      s.itinName.toLowerCase().includes(search.toLowerCase()) ||
+      s.title.toLowerCase().includes(search.toLowerCase()) ||
+      s.month.toLowerCase().includes(search.toLowerCase())
   );
 
   const showSaved = () => {

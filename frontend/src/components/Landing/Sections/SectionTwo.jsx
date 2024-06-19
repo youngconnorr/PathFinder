@@ -1,14 +1,14 @@
-// import { itineraryList } from "../Json/ItineraryList";
+import { itineraryList } from "../Json/ItineraryList";
 
 export const SectionTwo = () => {
-  // const starCount = (stars) => {
-  //   let starList = [];
-  //   for (let i = 0; i < stars; i++) {
-  //     starList.push(<p key={i}>⭐</p>);
-  //   }
+  const starCount = (stars) => {
+    let starList = [];
+    for (let i = 0; i < stars; i++) {
+      starList.push(<p key={i}>⭐</p>);
+    }
 
-  //   return starList;
-  // };
+    return starList;
+  };
 
   return (
     <section className="section-2">
@@ -20,16 +20,33 @@ export const SectionTwo = () => {
           </div>
           <h3>Trips from fellow travellers</h3>
         </div>
-        {/* <div className="carousel-div">
-            <div className="carousel">
-              {itineraryList.map((card) => (
-                <div key={card.id} className="carousel-cards">
-                  <img
-                    src={card.photo}
-                    alt="photo"
-                    className="carousel-card-photo"
-                    loading="lazy"
-                  />
+        <div className="carousel-div">
+          <div className="carousel">
+            {itineraryList.map((card) => (
+              <div key={card.id} className="carousel-cards">
+                {/* <img
+                  src={card.photo}
+                  alt="photo"
+                  className="carousel-card-photo"
+                /> */}
+                <h2>{card.city}</h2>
+                <p>{card.country}</p>
+                <p>{card.name}</p>
+                <div style={{ display: "flex" }}>
+                  <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="carousel">
+            {itineraryList.map((card) => (
+              <div key={card.id} className="carousel-cards">
+                {/* <img
+                  src={card.photo}
+                  alt="photo"
+                  className="carousel-card-photo"
+                /> */}
+                <div className="carousel-writing">
                   <h2>{card.city}</h2>
                   <p>{card.country}</p>
                   <p>{card.name}</p>
@@ -37,28 +54,10 @@ export const SectionTwo = () => {
                     <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="carousel">
-              {itineraryList.map((card) => (
-                <div key={card.id} className="carousel-cards">
-                  <img
-                    src={card.photo}
-                    alt="photo"
-                    className="carousel-card-photo"
-                  />
-                  <div className="carousel-writing">
-                    <h2>{card.city}</h2>
-                    <p>{card.country}</p>
-                    <p>{card.name}</p>
-                    <div style={{ display: "flex" }}>
-                      <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </section>
   );

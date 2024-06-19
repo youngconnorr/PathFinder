@@ -63,12 +63,17 @@ const Generate = () => {
     }
   };
 
-  const createSaved = (e) => {
-    e.preventDefault();
-    if (itineraryName === "") {
-      alert("Name your itinerary :)");
-    } else {
-      AxiosInstance.post(`saved/`, { content, title, month, itinName });
+  const createSaved = async (e) => {
+    try {
+      e.preventDefault();
+      if (itineraryName === "") {
+        alert("Name your itinerary :)");
+      } else {
+        console.log("got to the saving part!");
+        await AxiosInstance.post(`saved/`, { content, title, month, itinName });
+      }
+    } catch (error) {
+      console.log("couldn't save");
     }
   };
 
@@ -174,13 +179,13 @@ const Generate = () => {
       </section>
       <div className={token ? "generate-section" : ""}>
         {token ? (
-          <div className="">
+          <div style={{ color: "black" }}>
             <label>Itinerary Name: </label>
             <input type="text" onChange={handleItineraryName} />
           </div>
         ) : null}
 
-        <form onSubmit={handleSubmit} className="AI-form">
+        <form onSubmit={handleSubmit} className={`AI-form`}>
           <CitySelector onInputChange={handleCityChange} />
           <div className="calendar">
             <DateSelector datePicked={handleMonthChange} />
@@ -212,7 +217,7 @@ const Generate = () => {
         {submitted ? (
           <section>
             {loading && content ? (
-              <p>loading...</p>
+              <p style={{ color: "black" }}>loading...</p>
             ) : (
               <div className="generated-list">
                 <button onClick={createSaved} className="generate-save-btn">
