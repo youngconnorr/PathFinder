@@ -155,5 +155,6 @@ select:hover {
 .sticky {
   z-index: 100;
   position: fixed;
-  background-color: rgba(66, 86, 78, 0.58);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
 }

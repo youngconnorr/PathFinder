@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { main } from "./AILogic";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import AxiosInstance from "../Tools/AxiosInstance";
@@ -11,8 +11,10 @@ import BudgetNumber from "./BudgetNumber";
 // import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
+  const location = useLocation();
   const token = localStorage.getItem("Token");
   //dynamic states of page
+  const isGenerating = location.pathName === "/generate";
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   // const [showChosenCity, setShowChosenCity] = useState(false);
@@ -172,82 +174,101 @@ const Generate = () => {
 
   return (
     <>
-      <section className="gen-bg">
-        <div>
-          <h1>BEGIN YOUR JOURNEY</h1>
-        </div>
-      </section>
-      <div className={token ? "generate-section" : ""}>
-        {token ? (
-          <div style={{ color: "black" }}>
-            <label>Itinerary Name: </label>
-            <input type="text" onChange={handleItineraryName} />
-          </div>
-        ) : null}
-
-        <form onSubmit={handleSubmit} className={`AI-form`}>
-          <CitySelector onInputChange={handleCityChange} />
-          <div className="calendar">
-            <DateSelector datePicked={handleMonthChange} />
-          </div>
-          <div className="guest-picker form-item">
-            <GuestsNumber guestsNumber={handleGuestNumber} />
-          </div>
-          <div className="budget-chooser">
-            <BudgetNumber chosenBudget={handleBudget} />
-          </div>
-
-          {token ? (
-            <button type="submit" className="submit-ai">
-              Submit
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="submit-ai form-item"
-              style={{ backgroundColor: "none", border: "none" }}
-            >
-              <Link to="/login">
-                <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-              </Link>
-            </button>
-          )}
-        </form>
-
-        {submitted ? (
-          <section>
-            {loading && content ? (
-              <p style={{ color: "black" }}>loading...</p>
-            ) : (
-              <div className="generated-list">
-                <button onClick={createSaved} className="generate-save-btn">
-                  Save note!
-                </button>
-                <div className="ai-response">
-                  <span className="ai-cards">
-                    <div>Lodging: </div>
-                    <div>{formatAIOutput(lodgingList)}</div>
-                  </span>
-
-                  <span className="ai-cards">
-                    <div>Restaurants: </div>
-                    <div>{formatAIOutput(restaurantList)}</div>
-                  </span>
-
-                  <span className="ai-cards">
-                    <div>Malls:</div>
-                    <div>{formatAIOutput(mallList)}</div>
-                  </span>
-
-                  <span className="ai-cards">
-                    <div>Places to visit:</div>
-                    <div>{formatAIOutput(placesList)}</div>
-                  </span>
-                </div>
-              </div>
-            )}
+      {isGenerating ? (
+        <>
+          <section className="gen-bg">
+            <div>
+              <h1 className="generate-tagline">BEGIN YOUR JOURNEY</h1>
+            </div>
           </section>
-        ) : null}
+          <section className="gen-bg">
+            <div>
+              <h1 className="generate-tagline">BEGIN YOUR JOURNEY</h1>
+            </div>
+          </section>
+        </>
+      ) : null}
+      <div className={isGenerating ? "generate-page" : "move-left"}>
+        <div className={isGenerating ? "generate-section" : ""}>
+          {token ? (
+            <div style={{ marginTop: "50px", marginLeft: "20px" }}>
+              <label>Itinerary Name: </label>
+              <input type="text" onChange={handleItineraryName} />
+            </div>
+          ) : null}
+
+          <form onSubmit={handleSubmit} className={`AI-form`}>
+            <CitySelector onInputChange={handleCityChange} />
+            <div className="calendar">
+              <DateSelector datePicked={handleMonthChange} />
+            </div>
+            <div className="guest-picker form-item">
+              <GuestsNumber guestsNumber={handleGuestNumber} />
+            </div>
+            <div className="budget-chooser">
+              <BudgetNumber chosenBudget={handleBudget} />
+            </div>
+
+            {isGenerating ? (
+              <button type="submit" className="submit-ai">
+                Submit
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="submit-ai form-item"
+                style={{ backgroundColor: "none", border: "none" }}
+              >
+                <Link to="/login">
+                  <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
+                </Link>
+              </button>
+            )}
+          </form>
+
+          {submitted ? (
+            <section>
+              {loading && content ? (
+                <div className="loading-gif"></div>
+              ) : (
+                <div className="generated-list">
+                  <button onClick={createSaved} className="generate-save-btn">
+                    Save note!
+                  </button>
+                  <div className="ai-response">
+                    <span className="ai-cards">
+                      <h3>Lodging: </h3>
+                      <br />
+                      <div>{formatAIOutput(lodgingList)}</div>
+                      <br />
+                    </span>
+
+                    <span className="ai-cards">
+                      <h3>Restaurants: </h3>
+                      <br />
+                      <div>{formatAIOutput(restaurantList)}</div>
+                      <br />
+                    </span>
+
+                    <span className="ai-cards">
+                      <h3>Malls:</h3>
+                      <br />
+                      <div>{formatAIOutput(mallList)}</div>
+                      <br />
+                    </span>
+
+                    <span className="ai-cards">
+                      <h3>Places to visit:</h3>
+                      <br />
+                      <div>{formatAIOutput(placesList)}</div>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+              )}
+            </section>
+          ) : null}
+        </div>
       </div>
       {/* <div className="results-section">
         <MapsTool />

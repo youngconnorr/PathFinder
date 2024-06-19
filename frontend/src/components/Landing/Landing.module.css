@@ -29,8 +29,42 @@
 }
 
 .create-now-btn {
+  display: flex;
+  align-items: center; /* Added for proper alignment */
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding: 10px;
   color: white;
   margin-top: 50px;
+  transition: all 1s ease-in;
+  width: 120px; /* Changed to fit-content for initial width */
+}
+
+.create-now-btn p {
+  position: absolute;
+  transform: translateX(100px);
+  opacity: 0; /* Use opacity instead of display */
+  margin-left: 10px;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in; /* Added transition for opacity and transform */
+}
+
+.create-now-btn:hover p {
+  opacity: 1; /* Set opacity to 1 on hover */
+  transform: translateX(120px);
+}
+
+.create-now-btn:hover {
+  cursor: pointer;
+}
+
+.create-now-btn a {
+  color: white;
+}
+
+.create-now-btn a::after {
+  background-color: transparent;
 }
 
 .landing-page-generate {
@@ -169,6 +203,6 @@
 }
 
 .review-content {
-  padding: 10px;
+  padding: 20px;
   width: 600px;
 }

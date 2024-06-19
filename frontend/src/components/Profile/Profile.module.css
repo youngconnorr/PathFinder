@@ -9,7 +9,7 @@
 
 .profile-content {
   padding: 80px 4em;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255);
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   height: 370px;
@@ -25,10 +25,24 @@
 }
 
 .profile-all-saved-container {
-  width: 80%;
-  overflow: hidden;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   padding: 3em 5em;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Added for smooth transitions */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.profile-all-saved-container.show {
+  max-height: fit-content; /* Adjust based on content */
+  opacity: 1;
+}
+
+.profile-all-saved-container.hide {
+  max-height: 120px;
+  opacity: 1;
 }
 
 .profile-saved-name {
@@ -107,7 +121,8 @@
   padding: 10px;
 }
 
-.profile-create-btn {
+.profile-create-btn,
+.profile-toggle-btn {
   background: transparent;
   border-radius: 10px;
   border: 1px solid black;
@@ -116,8 +131,30 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.profile-create-btn:hover {
+.profile-create-btn:hover,
+.profile-toggle-btn:hover {
   border: rgb(116, 143, 116);
   cursor: pointer;
   background: rgb(116, 143, 116);
+}
+
+.profile-logout-btn {
+  margin-bottom: 50px;
+}
+
+.delete-btn-placement {
+  margin-top: 15px;
+  margin-left: 215px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  border: 1px solid pink;
+  background-color: pink;
 }

@@ -24,7 +24,8 @@
 }
 
 .navbar-not-landing {
-  background-color: rgba(66, 86, 78, 0.58);
+  /* background-color: rgba(66, 86, 78, 0.58); */
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 10px;
   display: flex;

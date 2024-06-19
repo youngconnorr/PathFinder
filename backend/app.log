@@ -14,3 +14,16 @@
 2024-06-18 23:40:39,944 - INFO - Login request received
 2024-06-18 23:40:39,953 - INFO - Attempting to authenticate user: newUser@gmail.com
 2024-06-18 23:40:40,637 - INFO - User authenticated successfully
+2024-06-19 12:15:13,270 - WARNING - Unauthorized: /saved/
+2024-06-19 12:15:24,500 - INFO - Login request received
+2024-06-19 12:15:24,504 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-19 12:15:25,072 - INFO - User authenticated successfully
+2024-06-19 13:02:33,266 - WARNING - Bad Request: /saved/
+2024-06-19 13:03:07,621 - WARNING - Bad Request: /saved/
+2024-06-19 13:03:55,057 - WARNING - Bad Request: /saved/
+2024-06-19 13:37:25,627 - WARNING - Bad Request: /saved/
+2024-06-19 13:37:28,250 - WARNING - Bad Request: /saved/
+2024-06-19 13:40:08,980 - WARNING - Bad Request: /saved/
+2024-06-19 13:41:21,197 - WARNING - Bad Request: /saved/
+2024-06-19 13:41:34,441 - WARNING - Bad Request: /saved/
+2024-06-19 13:41:49,317 - WARNING - Bad Request: /saved/

@@ -15,19 +15,29 @@
   border-left: 1px solid black;
 }
 
-.generate-section {
-  color: black;
-  background-color: beige;
-  /* background-image: url("../../assets/generate-section-bg.jpg"); */
-  color: white;
-  border-radius: 0 0 30px 30px;
-  height: 60vh;
+.generate-page {
+  margin-top: 40px;
+  height: fit-content;
+  padding: 5px;
+  background-image: url("../../assets/generate-section-bg.jpg");
+  height: fit-content;
   background-repeat: no-repeat;
   background-size: 100%;
-  border-radius: 30px 30px 0px 0px;
-  transform: translateY(50px);
+  border-radius: 30px 30px;
+}
+
+.generate-section {
+  margin: 50px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
   height: fit-content;
-  padding: 30px;
+  color: black;
+  border-radius: 0 0 30px 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
 }
 
 .AI-form {
@@ -35,13 +45,14 @@
   border: 1px solid black;
   height: 60px;
   padding: 0px 30px;
-  margin-right: 50px;
   background: white;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 50px;
+  width: 93%;
+  margin-left: 10px;
 }
 
 .submit-ai {
@@ -50,6 +61,7 @@
 
 .ai-response {
   border-radius: 5px;
+  font-size: 0.7em;
   display: block;
   justify-content: space-between;
   margin-top: 5%;
@@ -162,4 +174,22 @@
 .generate-save-btn:hover {
   background-color: rgb(119, 187, 145);
   border-color: rgb(119, 187, 145);
+}
+
+.generate-tagline {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loading-gif {
+  background-image: url("../../assets/searching-gif.gif");
+  transform: translate(470px, 100px);
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.move-left {
+  margin-left: -20px;
+  padding-right: 20px;
 }

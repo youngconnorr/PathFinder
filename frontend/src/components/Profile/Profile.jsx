@@ -8,6 +8,7 @@ const Profile = () => {
   const [saved, setSaved] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [showAll, setShowAll] = useState(false); // New state for toggling visibility
   const navigate = useNavigate();
   const bgColors = {
     January: "#f94144",
@@ -18,7 +19,7 @@ const Profile = () => {
     June: "#90be6d",
     July: "#43aa8b",
     August: "#4d908e",
-    Sepetember: "#577590",
+    September: "#577590",
     October: "#277da1",
     November: "#5e6472",
     December: "#184e77",
@@ -49,14 +50,12 @@ const Profile = () => {
       .catch((err) => alert(err));
   };
 
-  // const deleteSaved = (id) => {
-  //   console.log("test");
-  //   AxiosInstance.delete(`saved/${id}`).then(() => {
-  //     const updatedSaved = saved.filter((item) => item.id !== id);
-  //     setSaved(updatedSaved);
-  //   });
-  //   console.log(saved);
-  // };
+  const deleteSaved = (id) => {
+    console.log("test");
+    AxiosInstance.delete(`saved/${id}`).then(() => {
+      navigate("/profile");
+    });
+  };
 
   const viewSaved = (id) => {
     console.log(id);
@@ -70,7 +69,6 @@ const Profile = () => {
     });
   };
 
-  //format of profile page with multiple saved items
   return (
     <section className="profile-parent">
       <div className="profile-upper-photo">
@@ -89,22 +87,31 @@ const Profile = () => {
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}
-                placeholder="Search Trip Names... "
+                placeholder="Search Trips... "
                 className="profile-searcher"
               />
               <button
                 onClick={() => navigate("/generate")}
                 className="profile-create-btn"
               >
-                {" "}
-                + New Trip{" "}
+                + New Trip
+              </button>
+              <button
+                onClick={() => setShowAll(!showAll)} // Toggle showAll state
+                className="profile-toggle-btn"
+              >
+                {showAll ? "Hide Trips" : "Show All Trips"}
               </button>
             </div>
             {saved.length === 0 ? (
               <p>Looks like you need to generate some itineraries!</p>
             ) : (
-              <div className="profile-all-saved-container">
-                {filteredSaved.map((saved) => (
+              <div
+                className={`profile-all-saved-container ${
+                  showAll ? "show" : "hide"
+                }`}
+              >
+                {filteredSaved.reverse().map((saved) => (
                   <div
                     key={saved.id}
                     className="each-profile-saved-container"
@@ -125,26 +132,19 @@ const Profile = () => {
                           style={{ marginLeft: "10px" }}
                         />
                       </h2>
-
                       <h3>{saved.month}</h3>
                     </div>
-                    {/* <div className="profile-saved-buttons">
-                  <button
-                  onClick={() => {
-                    deleteSaved(saved.id);
-                    }}
-                    className="profile-saved-btn"
-                    >
-                    {" "}
-                    Delete
-                    </button>
-                    <button
-                    onClick={() => viewSaved(saved.id)}
-                    className="profile-saved-btn"
-                    >
-                    View
-                    </button>
-                    </div> */}
+                    <div className="delete-btn-placement">
+                      <button
+                        onClick={() => {
+                          deleteSaved(saved.id);
+                        }}
+                        className="delete-btn"
+                      >
+                        {" "}
+                        remove
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
