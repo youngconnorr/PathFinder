@@ -14,9 +14,10 @@ const Generate = () => {
   const location = useLocation();
   const token = localStorage.getItem("Token");
   //dynamic states of page
-  const isGenerating = location.pathName === "/generate";
+  const isGenerating = location.pathname === "/generate";
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [hasSaved, setHasSaved] = useState(false);
   // const [showChosenCity, setShowChosenCity] = useState(false);
 
   //user inputs to give to AI
@@ -74,6 +75,7 @@ const Generate = () => {
         console.log("got to the saving part!");
         await AxiosInstance.post(`saved/`, { content, title, month, itinName });
       }
+      setHasSaved(true);
     } catch (error) {
       console.log("couldn't save");
     }
@@ -106,8 +108,10 @@ const Generate = () => {
     try {
       const parsedJson = await JSON.parse(json);
       console.log("It's a good parse!");
-      setContent(parsedJson); // Call setContent only after successful parsing
+      setContent(parsedJson);
+      setHasSaved(false);
     } catch (e) {
+      setHasSaved(true);
       setLoading(false);
       alert("There was a generation error, please retry"); // Optional alert
       console.log("GENERATION ERROR!! PLEASE TRY AGAIN");
@@ -181,11 +185,6 @@ const Generate = () => {
               <h1 className="generate-tagline">BEGIN YOUR JOURNEY</h1>
             </div>
           </section>
-          <section className="gen-bg">
-            <div>
-              <h1 className="generate-tagline">BEGIN YOUR JOURNEY</h1>
-            </div>
-          </section>
         </>
       ) : null}
       <div className={isGenerating ? "generate-page" : "move-left"}>
@@ -232,9 +231,12 @@ const Generate = () => {
                 <div className="loading-gif"></div>
               ) : (
                 <div className="generated-list">
-                  <button onClick={createSaved} className="generate-save-btn">
-                    Save note!
-                  </button>
+                  {hasSaved ? null : (
+                    <button onClick={createSaved} className="generate-save-btn">
+                      Save note!
+                    </button>
+                  )}
+
                   <div className="ai-response">
                     <span className="ai-cards">
                       <h3>Lodging: </h3>
