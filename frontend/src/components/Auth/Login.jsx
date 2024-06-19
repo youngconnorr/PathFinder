@@ -24,12 +24,14 @@ const Login = () => {
         email: data.email,
         password: data.password,
       });
-      console.log(response);
+      console.log("here at response");
+      console.log(`response: ${response}`);
       setValidUser(true);
       localStorage.setItem("Token", response.data.token);
       navigate(`/`);
     } catch (error) {
       setValidUser(false);
+      console.log("caught error!");
       console.error("Wrong credentials", error);
     }
   };

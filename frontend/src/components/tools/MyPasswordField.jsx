@@ -36,8 +36,8 @@ export default function MyPassField(prop) {
               <InputAdornment position="end">
                 <IconButton
                   aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
+                  onClick={() => handleClickShowPassword()}
+                  onMouseDown={() => handleMouseDownPassword()}
                   edge="end"
                 >
                   {showPassword ? <VisibilityOff /> : <Visibility />}

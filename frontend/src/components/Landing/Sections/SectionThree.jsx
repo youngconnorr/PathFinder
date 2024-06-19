@@ -27,7 +27,7 @@ export const SectionThree = () => {
       <div className="reviews">
         <FontAwesomeIcon
           icon={faArrowLeft}
-          onClick={prevRating}
+          onClick={() => prevRating()}
           className="review-back-btn"
         />
         <div>
@@ -45,7 +45,11 @@ export const SectionThree = () => {
             </div>
           ))}
         </div>
-        <FontAwesomeIcon icon={faArrowRight} onClick={nextRating} size="lg" />
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          onClick={() => nextRating()}
+          size="lg"
+        />
       </div>
     </section>
   );

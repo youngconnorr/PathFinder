@@ -5,25 +5,43 @@ from .models import *
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model, authenticate #although we overrided authenticate, itll use our implementation
 from knox.models import AuthToken
+import logging
+
+logger = logging.getLogger(__name__)
 
 User = get_user_model() #always get latest user
 # Create your views here.
 
+import logging
+
+logger = logging.getLogger(__name__)
+
+logging.basicConfig(
+    level=logging.DEBUG,  # Set the logging level to DEBUG to capture all messages
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('app.log'),  # Log to a file
+        logging.StreamHandler()  # Log to console
+    ]
+)
+
 class LoginViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = LoginSerializer
-    
+
     def create(self, request):
+        logger.info("Login request received")
         serializer = self.serializer_class(data=request.data)
         
         if serializer.is_valid():
             email = serializer.validated_data['email']
             password = serializer.validated_data['password']
             
+            logger.info(f"Attempting to authenticate user: {email}")
             user = authenticate(request , email=email, password=password)
-        
             
             if user: #if user is there or not
+                logger.info("User authenticated successfully")
                 _, token = AuthToken.objects.create(user) #auth token is name of database
                 return Response(
                     {
@@ -32,9 +50,12 @@ class LoginViewset(viewsets.ViewSet):
                     }
                 ) 
             else:
-                return Response({"error" : "Invalid credentials"}, status = 400)
+                logger.warning("Invalid credentials provided")
+                return Response({"error" : "Invalid credentials"}, status=400)
         else:
+            logger.warning("Invalid data received: %s", serializer.errors)
             return Response(serializer.errors, status=400)
+
  
 
 

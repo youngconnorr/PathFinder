@@ -139,7 +139,7 @@ const Profile = () => {
             )}
           </>
         )}
-        <button onClick={logoutUser} className="profile-logout-btn">
+        <button onClick={() => logoutUser()} className="profile-logout-btn">
           Log out
         </button>
       </div>

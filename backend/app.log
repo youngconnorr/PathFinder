@@ -1,0 +1,16 @@
+2024-06-18 20:20:42,353 - INFO - Login request received
+2024-06-18 20:20:42,365 - WARNING - Invalid data received: {'email': [ErrorDetail(string='Enter a valid email address.', code='invalid')]}
+2024-06-18 20:20:42,368 - WARNING - Bad Request: /login/
+2024-06-18 20:21:12,346 - INFO - Login request received
+2024-06-18 20:21:12,366 - INFO - Attempting to authenticate user: watermymelons12345@gmail.com
+2024-06-18 20:21:12,798 - INFO - User authenticated successfully
+2024-06-18 20:21:32,397 - INFO - Login request received
+2024-06-18 20:21:32,417 - INFO - Attempting to authenticate user: watermymelons12345@gmail.com
+2024-06-18 20:21:33,007 - INFO - User authenticated successfully
+2024-06-18 20:22:01,456 - INFO - Login request received
+2024-06-18 20:22:01,479 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-18 20:22:02,158 - INFO - User authenticated successfully
+2024-06-18 23:00:37,366 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-18 23:40:39,944 - INFO - Login request received
+2024-06-18 23:40:39,953 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-18 23:40:40,637 - INFO - User authenticated successfully
