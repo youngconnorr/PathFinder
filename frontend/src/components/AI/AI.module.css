@@ -16,12 +16,13 @@
 }
 
 .generate-section {
-  transform: translateY(200px);
+  transform: translateY(50px);
   height: 100vh;
+  margin-left: 50px;
 }
 
 .AI-form {
-  margin-top: 30px;
+  margin-top: 50px;
   border: 1px solid black;
   height: 60px;
   padding: 0px 30px;
@@ -116,4 +117,38 @@
   cursor: pointer;
   border: 1px solid black;
   transition: 0.3s ease-in-out;
+}
+
+.gen-bg {
+  background-image: url("../../assets/generate-bg.jpg");
+  color: white;
+  border-radius: 0 0 30px 30px;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.gen-bg h1 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-left: 13px;
+}
+
+.generated-list {
+  margin-top: 50px;
+}
+
+.generate-save-btn {
+  background: transparent;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.generate-save-btn:hover {
+  background-color: rgb(119, 187, 145);
+  border-color: rgb(119, 187, 145);
 }

@@ -65,7 +65,11 @@ const Generate = () => {
 
   const createSaved = (e) => {
     e.preventDefault();
-    AxiosInstance.post(`saved/`, { content, title, month, itinName });
+    if (itineraryName === "") {
+      alert("Name your itinerary :)");
+    } else {
+      AxiosInstance.post(`saved/`, { content, title, month, itinName });
+    }
   };
 
   const handleCityChange = (city) => {
@@ -163,9 +167,14 @@ const Generate = () => {
 
   return (
     <>
+      <section className="gen-bg">
+        <div>
+          <h1>BEGIN YOUR JOURNEY</h1>
+        </div>
+      </section>
       <div className={token ? "generate-section" : ""}>
         {token ? (
-          <div>
+          <div className="">
             <label>Itinerary Name: </label>
             <input type="text" onChange={handleItineraryName} />
           </div>
@@ -205,8 +214,10 @@ const Generate = () => {
             {loading && content ? (
               <p>loading...</p>
             ) : (
-              <div>
-                <button onClick={createSaved}>Save note!</button>
+              <div className="generated-list">
+                <button onClick={createSaved} className="generate-save-btn">
+                  Save note!
+                </button>
                 <div className="ai-response">
                   <span className="ai-cards">
                     <div>Lodging: </div>

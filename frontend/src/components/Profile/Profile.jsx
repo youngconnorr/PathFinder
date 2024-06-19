@@ -80,14 +80,23 @@ const Profile = () => {
           <p>loading...</p>
         ) : (
           <>
-            <input
-              type="text"
-              onChange={(e) => {
-                setSearch(e.target.value);
-              }}
-              placeholder="Search saved trips..."
-            />
-            <button onClick={() => navigate("/generate")}> + New Trip </button>
+            <div className="profile-interact-bar">
+              <input
+                type="text"
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
+                placeholder="Search Trip Names... "
+                className="profile-searcher"
+              />
+              <button
+                onClick={() => navigate("/generate")}
+                className="profile-create-btn"
+              >
+                {" "}
+                + New Trip{" "}
+              </button>
+            </div>
             {saved.length === 0 ? (
               <p>Looks like you need to generate some itineraries!</p>
             ) : (
