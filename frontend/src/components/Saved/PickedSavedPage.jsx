@@ -40,14 +40,14 @@ const PickedSavedPage = () => {
   };
 
   return (
-    <div>
+    <div className="pickedsavedpage-bg">
       {saved === null ? (
         <div>Loading...</div>
       ) : (
         <>
           <h1>{saved.title}</h1>
           <div className="category-container" key={saved.id}>
-            <div>
+            <div className="descriptions">
               {Object.entries(saved.content).map(([category, items]) => (
                 <div key={category}>
                   <h1>{category}</h1>

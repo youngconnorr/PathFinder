@@ -188,7 +188,11 @@ const Generate = () => {
         </>
       ) : null}
       <div className={isGenerating ? "generate-page" : "move-left"}>
-        <div className={isGenerating ? "generate-section" : ""}>
+        <div
+          className={`${isGenerating ? "generate-section" : ""} ${
+            submitted ? "fit-gen" : "high-gen"
+          }`}
+        >
           {token ? (
             <div style={{ marginTop: "50px", marginLeft: "20px" }}>
               <label>Itinerary Name: </label>

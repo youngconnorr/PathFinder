@@ -17,7 +17,6 @@
 
 .generate-page {
   margin-top: 40px;
-  height: fit-content;
   padding: 5px;
   background-image: url("../../assets/generate-section-bg.jpg");
   height: fit-content;
@@ -32,12 +31,20 @@
   background-color: white;
   border: 1px solid black;
   box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
-  height: fit-content;
+  /* height: fit-content; */
   color: black;
   border-radius: 0 0 30px 30px;
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 30px;
+}
+
+.fit-gen {
+  height: fit-content;
+}
+
+.high-gen {
+  height: 600px;
 }
 
 .AI-form {

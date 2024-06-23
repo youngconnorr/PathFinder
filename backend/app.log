@@ -27,3 +27,70 @@
 2024-06-19 13:41:21,197 - WARNING - Bad Request: /saved/
 2024-06-19 13:41:34,441 - WARNING - Bad Request: /saved/
 2024-06-19 13:41:49,317 - WARNING - Bad Request: /saved/
+2024-06-19 17:29:19,181 - INFO - Login request received
+2024-06-19 17:29:19,197 - INFO - Attempting to authenticate user: watermymelons12345@gmail.com
+2024-06-19 17:29:20,332 - INFO - User authenticated successfully
+2024-06-19 17:29:27,838 - INFO - Login request received
+2024-06-19 17:29:27,846 - INFO - Attempting to authenticate user: watermymelons12345@gmail.com
+2024-06-19 17:29:28,620 - INFO - User authenticated successfully
+2024-06-20 21:08:25,373 - WARNING - Unauthorized: /saved/
+2024-06-20 21:08:35,079 - INFO - Login request received
+2024-06-20 21:08:35,079 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-20 21:08:35,921 - INFO - User authenticated successfully
+2024-06-20 21:08:36,884 - INFO - Login request received
+2024-06-20 21:08:36,884 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-20 21:08:37,737 - INFO - User authenticated successfully
+2024-06-22 23:18:28,710 - WARNING - Unauthorized: /saved/
+2024-06-22 23:18:39,088 - INFO - Login request received
+2024-06-22 23:18:39,094 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:18:40,752 - INFO - User authenticated successfully
+2024-06-22 23:18:40,807 - INFO - Login request received
+2024-06-22 23:18:40,807 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:18:43,013 - INFO - User authenticated successfully
+2024-06-22 23:20:57,763 - INFO - Login request received
+2024-06-22 23:20:57,766 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:20:58,823 - INFO - User authenticated successfully
+2024-06-22 23:25:30,812 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-22 23:25:38,382 - INFO - Login request received
+2024-06-22 23:25:38,386 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:25:39,169 - INFO - User authenticated successfully
+2024-06-22 23:25:52,558 - INFO - Login request received
+2024-06-22 23:25:52,558 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:25:53,714 - WARNING - Invalid credentials provided
+2024-06-22 23:25:53,724 - WARNING - Bad Request: /login/
+2024-06-22 23:26:10,767 - INFO - Login request received
+2024-06-22 23:26:10,767 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:26:11,893 - INFO - User authenticated successfully
+2024-06-22 23:28:16,234 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-22 23:28:41,431 - INFO - Login request received
+2024-06-22 23:28:41,438 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:28:42,221 - INFO - Authentication result: newUser@gmail.com
+2024-06-22 23:28:42,221 - INFO - User authenticated successfully
+2024-06-22 23:28:42,402 - INFO - Token created successfully
+2024-06-22 23:28:42,402 - INFO - Response data prepared: {'user': {'email': 'newUser@gmail.com'}, 'token': 'c0d20077cf62ae846bba22bcfc97b8223136cba0f90a962b2b41e21aa3260931'}
+2024-06-22 23:29:39,068 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-22 23:29:44,590 - INFO - Login request received
+2024-06-22 23:29:44,594 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:29:45,338 - INFO - Authentication result: newUser@gmail.com
+2024-06-22 23:29:45,338 - INFO - User authenticated successfully
+2024-06-22 23:29:45,447 - INFO - Token created successfully
+2024-06-22 23:29:45,447 - INFO - Response data prepared: {'user': {'email': 'newUser@gmail.com'}, 'token': 'df241d305559744b5b6f384f6f65764323c6b6194d95ae5fc10f8432608d8427'}
+2024-06-22 23:30:51,382 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-22 23:31:08,996 - INFO - Login request received
+2024-06-22 23:31:09,005 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:31:10,261 - INFO - Authentication result: None
+2024-06-22 23:31:10,261 - WARNING - Invalid credentials provided
+2024-06-22 23:31:10,268 - WARNING - Bad Request: /login/
+2024-06-22 23:31:20,385 - INFO - Login request received
+2024-06-22 23:31:20,387 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:31:22,300 - INFO - Authentication result: newUser@gmail.com
+2024-06-22 23:31:22,300 - INFO - User authenticated successfully
+2024-06-22 23:31:22,375 - INFO - Token created successfully
+2024-06-22 23:31:22,400 - INFO - Response data prepared: {'user': {'email': 'newUser@gmail.com'}, 'token': 'e02a79bb7e99756fe24b36ee5da096ee1b55fe4c4e8b0b7a362950606663ac6b'}
+2024-06-22 23:31:41,740 - INFO - Login request received
+2024-06-22 23:31:41,740 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-22 23:31:42,437 - INFO - Authentication result: newUser@gmail.com
+2024-06-22 23:31:42,439 - INFO - User authenticated successfully
+2024-06-22 23:31:42,450 - INFO - Token created successfully
+2024-06-22 23:31:42,450 - INFO - Response data prepared: {'user': {'email': 'newUser@gmail.com'}, 'token': 'bc8d0e7f35b5748438cacdf6db907fe7637c32ea284a0fe3f54497b0c76b85d0'}
+2024-06-22 23:35:40,141 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.

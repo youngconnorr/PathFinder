@@ -40,15 +40,20 @@ class LoginViewset(viewsets.ViewSet):
             logger.info(f"Attempting to authenticate user: {email}")
             user = authenticate(request , email=email, password=password)
             
-            if user: #if user is there or not
+            if user:
                 logger.info("User authenticated successfully")
-                _, token = AuthToken.objects.create(user) #auth token is name of database
+                try:
+                    _, token = AuthToken.objects.create(user)
+                except Exception as e:
+                    logger.error(f"Error creating auth token: {e}")
+                    return Response({"error": "Token creation failed"}, status=500)
+                
                 return Response(
                     {
-                    "user" : self.serializer_class(user).data,
-                    "token": token                
+                        "user": self.serializer_class(user).data,
+                        "token": token                
                     }
-                ) 
+                )
             else:
                 logger.warning("Invalid credentials provided")
                 return Response({"error" : "Invalid credentials"}, status=400)

@@ -5,6 +5,11 @@ show-category
 
 */
 
+.pickedsavedpage-bg {
+  background-color: beige;
+  height: 100dvh;
+}
+
 .category-container {
   display: grid;
   justify-content: center;
@@ -13,6 +18,10 @@ show-category
   border-radius: 5px;
   height: fit-content;
   font-size: 10px;
+}
+
+.descriptions {
+  display: flex;
 }
 
 .category-dropdown button {
@@ -37,7 +46,7 @@ show-category
 .category-items {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.9s linear;
+  transition: max-height 0.2s linear;
 }
 
 .category-items.show-category {
