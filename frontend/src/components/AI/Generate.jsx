@@ -8,11 +8,16 @@ import CitySelector from "./CitySelector";
 import DateSelector from "./DateSelector";
 import GuestsNumber from "./GuestsNumber";
 import BudgetNumber from "./BudgetNumber";
+import swal from "sweetalert";
+// import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
   const location = useLocation();
   const token = localStorage.getItem("Token");
+  // const notify = () => toast("Name your itinerary!");
+
   //dynamic states of page
   const isGenerating = location.pathname === "/generate";
   const [loading, setLoading] = useState(false);
@@ -47,9 +52,11 @@ const Generate = () => {
     if (
       selectedCity === "" ||
       (petNum == 0 && childNum === 0 && adultNum === 0 && infantNum === 0) ||
-      (petNum != 0 && childNum === 0 && adultNum === 0 && infantNum === 0)
+      (petNum != 0 && childNum === 0 && adultNum === 0 && infantNum === 0) ||
+      budget === "" ||
+      selectedMonth === ""
     ) {
-      console.log("fill out human categories or missing chosen city");
+      swal("fill out all categories!", "", "info");
     } else {
       setSubmitted(true);
       setLoading(true);
@@ -70,29 +77,30 @@ const Generate = () => {
     try {
       e.preventDefault();
       if (itineraryName === "") {
-        alert("Name your itinerary :)");
+        swal(
+          "name your itinerary!",
+          "Make a special name for your itinerary :)",
+          "info"
+        );
       } else {
-        console.log("got to the saving part!");
         await AxiosInstance.post(`saved/`, { content, title, month, itinName });
+        swal("Saved!", "Go to your profile to view", "success");
+        setHasSaved(true);
       }
-      setHasSaved(true);
     } catch (error) {
-      console.log("couldn't save");
+      swal("Try again!", "Couldn't save :(", "error");
     }
   };
 
   const handleCityChange = (city) => {
-    console.log(city);
     setSelectedCity(city);
   };
 
   const handleMonthChange = (month) => {
-    console.log(month);
     setSelectedMonth(month);
   };
 
   const handleGuestNumber = (adults, children, infants, pets) => {
-    console.log(adults, children, infants, pets);
     setAdultNum(adults);
     setChildNum(children);
     setInfantNum(infants);
@@ -101,20 +109,17 @@ const Generate = () => {
 
   const handleItineraryName = (event) => {
     setItineraryName(event.target.value);
-    console.log(itineraryName);
   };
 
   const jsonChecker = async (json) => {
     try {
       const parsedJson = await JSON.parse(json);
-      console.log("It's a good parse!");
       setContent(parsedJson);
       setHasSaved(false);
     } catch (e) {
       setHasSaved(true);
       setLoading(false);
-      alert("There was a generation error, please retry"); // Optional alert
-      console.log("GENERATION ERROR!! PLEASE TRY AGAIN");
+      swal("There was a generation error, please retry", "error");
     }
   };
 
@@ -154,7 +159,6 @@ const Generate = () => {
     setItinName(itineraryName);
     jsonChecker(JSONresponse);
     setContent(jsonChecker(JSONresponse));
-    console.log(content);
     setLoading(false);
   };
 
@@ -172,7 +176,7 @@ const Generate = () => {
         </div>
       ));
     } else {
-      console.log(jsonList, "was empty!!!!");
+      // console.log(jsonList, "was empty!!!!");
     }
   };
 

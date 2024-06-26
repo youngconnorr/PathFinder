@@ -114,6 +114,7 @@
 }
 
 .guest {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -122,10 +123,19 @@
   height: 20px;
 }
 
+.guest-btn-selection {
+  margin-top: 10px;
+  padding: 0 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: absolute;
+  margin-left: -15px;
+}
+
 .guest-mod {
   display: flex;
-  margin-left: 2px;
-  transform: translateY(20px);
+  margin-left: 40px;
+  /* transform: translateY(20px); */
 }
 
 .guest-num-display {

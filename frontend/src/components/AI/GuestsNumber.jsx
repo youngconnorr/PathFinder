@@ -26,7 +26,7 @@ const GuestsNumber = ({ guestsNumber }) => {
           Show menu
         </button>
       </div>
-      <div>
+      <div className={show ? "guest-btn-selection" : null}>
         {show ? (
           <div>
             <span className="guest">
