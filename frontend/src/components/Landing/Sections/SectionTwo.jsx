@@ -18,7 +18,7 @@ export const SectionTwo = () => {
             <h1>Get</h1>
             <h1> Inspired</h1>
           </div>
-          <h3>Trips from fellow travellers</h3>
+          <p>Trips from fellow travellers</p>
         </div>
         <div className="carousel-div">
           <div className="carousel">
