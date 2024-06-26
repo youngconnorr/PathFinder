@@ -5,9 +5,35 @@ show-category
 
 */
 
-.pickedsavedpage-bg {
-  background-color: beige;
+.saved-bg {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.saved-upper-photo {
+  background-image: url("../../assets/saved-items-bg.jpg");
+  background-size: 100%;
+  padding: 80px 30px 30px 30px;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
   height: 100dvh;
+}
+
+.delete-saved-btn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.delete-saved-btn:hover {
+  cursor: pointer;
+  background-color: rgb(90, 122, 98);
+  border-color: rgb(90, 122, 98);
+  transition: 0.3s ease-in-out;
 }
 
 .category-container {
@@ -22,6 +48,11 @@ show-category
 
 .descriptions {
   display: flex;
+}
+
+.descriptions h2,
+button {
+  margin-left: 15px;
 }
 
 .category-dropdown button {
@@ -50,5 +81,5 @@ show-category
 }
 
 .category-items.show-category {
-  max-height: 1000px; /* Adjust this value based on your content */
+  max-height: 1000px;
 }

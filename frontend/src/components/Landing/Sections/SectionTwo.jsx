@@ -33,7 +33,7 @@ export const SectionTwo = () => {
                 <p>{card.country}</p>
                 <p>{card.name}</p>
                 <div style={{ display: "flex" }}>
-                  <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
+                  <div style={{ display: "flex" }}>{starCount(card.stars)}</div>
                 </div>
               </div>
             ))}
@@ -51,7 +51,9 @@ export const SectionTwo = () => {
                   <p>{card.country}</p>
                   <p>{card.name}</p>
                   <div style={{ display: "flex" }}>
-                    <p style={{ display: "flex" }}>{starCount(card.stars)}</p>
+                    <div style={{ display: "flex" }}>
+                      {starCount(card.stars)}
+                    </div>
                   </div>
                 </div>
               </div>
