@@ -24,7 +24,7 @@ const About = () => {
 
           <section className="school-part-of-section">
             <div className="description-section hidden">
-              <h2 className="hidden spacer">About PathFinder:</h2>
+              <h2 className="hidden spacer">PathFinder:</h2>
               <h3 className="hidden spacer">The Mission:</h3>
               <p className="hidden spacer">
                 At PathFinder, we believe that travel should be an exciting,
