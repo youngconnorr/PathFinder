@@ -18,7 +18,7 @@
 .generate-page {
   margin-top: 40px;
   padding: 5px;
-  background-image: url("../../assets/generate-section-bg.jpg");
+  /* background-image: url("../../assets/generate-section-bg.jpg"); */
   height: fit-content;
   background-repeat: no-repeat;
   background-size: 100%;
