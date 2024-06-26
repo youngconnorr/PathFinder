@@ -149,12 +149,13 @@
 
 .delete-btn {
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid rgb(172, 172, 172);
   border-radius: 10px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .delete-btn:hover {
-  border: 1px solid pink;
-  background-color: pink;
+  border: 1px solid rgb(116, 143, 116);
+  cursor: pointer;
+  background: rgb(116, 143, 116);
 }
