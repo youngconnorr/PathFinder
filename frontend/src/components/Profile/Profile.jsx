@@ -73,7 +73,9 @@ const Profile = () => {
           <h1>My Trips</h1>
         </div>
       </div>
-      <div className="profile-content">
+      <div
+        className={`profile-content ${showAll ? null : "profile-transluscent"}`}
+      >
         {loading ? (
           <p>loading...</p>
         ) : (

@@ -1,18 +1,28 @@
-/* .profile-parent {
-  background-image: url("../../assets/saved-item-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100dvh;
-  background-color: #d7ba89;
-  background-color: white;
-} */
-
 .profile-content {
   padding: 80px 4em;
   background-color: rgba(255, 255, 255);
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   height: 370px;
+}
+
+.profile-transluscent {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.profile-transluscent .profile-create-btn,
+.profile-transluscent .profile-toggle-btn,
+.profile-transluscent .profile-logout-btn {
+  border: 1px solid white;
+  background-color: white;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.profile-transluscent .profile-create-btn:hover,
+.profile-transluscent .profile-toggle-btn:hover,
+.profile-transluscent .profile-logout-btn:hover {
+  border-color: rgb(90, 122, 98);
+  background-color: rgba(90, 122, 98);
 }
 
 .profile-upper-photo {
@@ -29,14 +39,14 @@
   display: flex;
   flex-wrap: wrap;
   padding: 3em 5em;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Added for smooth transitions */
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
 }
 
 .profile-all-saved-container.show {
-  max-height: fit-content; /* Adjust based on content */
+  max-height: fit-content;
   opacity: 1;
 }
 
@@ -65,17 +75,15 @@
   justify-content: space-around;
 }
 
-.profile-saved-btn,
 .profile-logout-btn {
   margin-top: 20px;
   width: 150px;
   height: 40px;
   border: 1px solid black;
-  background-color: transparent;
+  background-color: white;
   border-radius: 50px;
 }
 
-.profile-saved-btn:hover,
 .profile-logout-btn:hover {
   cursor: pointer;
   background-color: rgb(90, 122, 98);
@@ -123,12 +131,12 @@
 
 .profile-create-btn,
 .profile-toggle-btn {
-  background: transparent;
+  background: white;
   border-radius: 10px;
   border: 1px solid black;
   width: 150px;
   height: 50px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .profile-create-btn:hover,
