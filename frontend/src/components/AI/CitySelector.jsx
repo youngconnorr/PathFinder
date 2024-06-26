@@ -34,8 +34,6 @@ const CitySelector = ({ onInputChange }) => {
         inputtedState,
         currentCountry
       );
-      console.log(stateName.name);
-      console.log("this is the state name:" + stateName.name);
       setCurrentCity(stateName.name);
     }
   };

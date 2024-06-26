@@ -10,7 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
+import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,11 +27,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-vk(4mz%d_mf@4_hmu*u4b)k8ykii-@3pgq2a$8+m@r#e$e@lh*'
+# SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = env.list("ALLOWED_HOSTS_DEPLOY")
 
 
 # Application definition
@@ -97,6 +106,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES["default"] = dj_database_url.parse("postgresql://pathfinder_postgresql_db_user:5DgMrFG0ylgoixHi38OmReEmLoKHkTB7@dpg-cpu5mplumphs738i16lg-a.oregon-postgres.render.com/pathfinder_postgresql_db")
 
 
 # Password validation

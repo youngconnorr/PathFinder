@@ -94,3 +94,16 @@
 2024-06-22 23:31:42,450 - INFO - Token created successfully
 2024-06-22 23:31:42,450 - INFO - Response data prepared: {'user': {'email': 'newUser@gmail.com'}, 'token': 'bc8d0e7f35b5748438cacdf6db907fe7637c32ea284a0fe3f54497b0c76b85d0'}
 2024-06-22 23:35:40,141 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-26 13:01:18,039 - WARNING - Unauthorized: /saved/
+2024-06-26 13:01:30,490 - INFO - Login request received
+2024-06-26 13:01:30,495 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 13:01:30,887 - WARNING - Invalid credentials provided
+2024-06-26 13:01:30,889 - WARNING - Bad Request: /login/
+2024-06-26 13:03:02,272 - WARNING - Bad Request: /register/
+2024-06-26 13:04:25,860 - INFO - Login request received
+2024-06-26 13:04:25,861 - INFO - Attempting to authenticate user: admin@admin.com
+2024-06-26 13:04:26,734 - INFO - User authenticated successfully
+2024-06-26 13:04:28,410 - INFO - Login request received
+2024-06-26 13:04:28,410 - INFO - Attempting to authenticate user: admin@admin.com
+2024-06-26 13:04:29,338 - INFO - User authenticated successfully
+2024-06-26 13:08:40,521 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\pathfinderbackend\settings.py changed, reloading.
