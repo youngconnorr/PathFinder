@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import swal from "sweetalert";
 
 const Profile = () => {
   const [saved, setSaved] = useState([]);
@@ -44,21 +45,17 @@ const Profile = () => {
         setSaved(data);
         setLoading(false);
       })
-      .then(() => {
-        console.log(saved);
-      })
       .catch((err) => alert(err));
   };
 
   const deleteSaved = (id) => {
-    console.log("test");
+    swal("Deleted Itinerary", "", "success");
     AxiosInstance.delete(`saved/${id}`).then(() => {
       navigate("/profile");
     });
   };
 
   const viewSaved = (id) => {
-    console.log(id);
     navigate("/view-saved", { state: { id: id } });
   };
 

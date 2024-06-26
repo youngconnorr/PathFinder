@@ -1,6 +1,7 @@
 import AxiosInstance from "../Tools/AxiosInstance";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const PickedSavedPage = () => {
   const [saved, setSaved] = useState(null);
@@ -26,7 +27,7 @@ const PickedSavedPage = () => {
   };
 
   const deleteSaved = (id) => {
-    console.log("test");
+    swal("Deleted Itinerary", "", "success");
     AxiosInstance.delete(`saved/${id}`).then(() => {
       navigate("/profile");
     });

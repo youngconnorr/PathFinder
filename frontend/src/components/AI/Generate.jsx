@@ -9,14 +9,11 @@ import DateSelector from "./DateSelector";
 import GuestsNumber from "./GuestsNumber";
 import BudgetNumber from "./BudgetNumber";
 import swal from "sweetalert";
-// import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 // import MapsTool from "./tools/GoogleMaps";
 
 const Generate = () => {
   const location = useLocation();
   const token = localStorage.getItem("Token");
-  // const notify = () => toast("Name your itinerary!");
 
   //dynamic states of page
   const isGenerating = location.pathname === "/generate";

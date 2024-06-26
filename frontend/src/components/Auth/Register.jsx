@@ -2,6 +2,7 @@ import "../../App";
 import { Box } from "@mui/material";
 import TextField from "../Tools/TextFields";
 import PasswordField from "../Tools/MyPasswordField";
+import swal from "sweetalert";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import AxiosInstance from "../Tools/AxiosInstance";
@@ -43,17 +44,17 @@ const Register = () => {
     defaultValues,
   }); //handleSubmit is checked by axios and control is from text and password fields
 
-  const submission = (data) => {
-    AxiosInstance.post(`register/`, {
-      email: data.email,
-      password: data.password,
-    })
-      .catch((error) => {
-        console.log(error);
-      })
-      .then(() => {
-        navigate(`/login`);
+  const submission = async (data) => {
+    try {
+      await AxiosInstance.post(`register/`, {
+        email: data.email,
+        password: data.password,
       });
+      swal("Account created!", "", "success");
+      navigate(`/login`);
+    } catch (error) {
+      // console.log(error);
+    }
   };
 
   return (
