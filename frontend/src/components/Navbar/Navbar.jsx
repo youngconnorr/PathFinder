@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Link to="/generate">Generate</Link>
               </button>
               <button>
-                <Link to="/about">About Us</Link>
+                <Link to="/about">About</Link>
               </button>
               <button>
                 <Link to="/profile">Profile</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
             <div>
               <button>
-                <Link to="/about">About Us</Link>
+                <Link to="/about">About</Link>
               </button>
               <button>
                 <Link to="/login">Log in</Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 </button>
                 <button>
                   <Link to="/about" className="navbar-black">
-                    About Us
+                    About
                   </Link>
                 </button>
                 <button>
@@ -103,7 +103,7 @@ const Navbar = () => {
               <>
                 <button>
                   <Link to="/about" className="navbar-black">
-                    About Us
+                    About
                   </Link>
                 </button>
                 <button>

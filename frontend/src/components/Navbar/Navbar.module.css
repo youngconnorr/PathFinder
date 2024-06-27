@@ -71,6 +71,13 @@
     margin-left: -12px;
   }
 
+  .navbar-absolute button,
+  .navbar-not-landing button,
+  .navbar-absolute a,
+  .navbar-not-landing a {
+    padding: 2px 8px;
+  }
+
   .not-collapsed {
     display: none;
   }
@@ -78,5 +85,6 @@
   .collapsed {
     color: black;
     display: flex;
+    justify-content: space-between;
   }
 }
