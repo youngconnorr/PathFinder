@@ -283,3 +283,39 @@ users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
 2024-06-27 11:24:06,440 - INFO - Attempting to authenticate user: newUser@gmail.com
 2024-06-27 11:24:07,674 - INFO - User authenticated successfully
 2024-06-27 11:25:31,503 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-27 11:25:36,949 - INFO - Login request received
+2024-06-27 11:25:36,949 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:37,926 - INFO - User authenticated successfully
+2024-06-27 11:25:43,641 - INFO - Login request received
+2024-06-27 11:25:43,643 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:44,613 - INFO - Login request received
+2024-06-27 11:25:44,616 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:45,073 - INFO - User authenticated successfully
+2024-06-27 11:25:45,566 - INFO - Login request received
+2024-06-27 11:25:45,574 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:46,340 - INFO - Login request received
+2024-06-27 11:25:46,346 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:46,605 - INFO - Login request received
+2024-06-27 11:25:46,605 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:46,697 - INFO - User authenticated successfully
+2024-06-27 11:25:46,924 - INFO - Login request received
+2024-06-27 11:25:46,924 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:47,055 - INFO - User authenticated successfully
+2024-06-27 11:25:47,095 - INFO - Login request received
+2024-06-27 11:25:47,103 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:47,231 - INFO - Login request received
+2024-06-27 11:25:47,231 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:47,386 - INFO - Login request received
+2024-06-27 11:25:47,386 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:47,531 - INFO - Login request received
+2024-06-27 11:25:47,538 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:47,712 - INFO - User authenticated successfully
+2024-06-27 11:25:48,004 - INFO - User authenticated successfully
+2024-06-27 11:25:48,307 - INFO - User authenticated successfully
+2024-06-27 11:25:48,438 - INFO - User authenticated successfully
+2024-06-27 11:25:48,543 - INFO - User authenticated successfully
+2024-06-27 11:25:48,551 - INFO - User authenticated successfully
+2024-06-27 11:25:48,665 - INFO - User authenticated successfully
+2024-06-27 11:25:49,411 - INFO - Login request received
+2024-06-27 11:25:49,411 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:25:50,371 - INFO - User authenticated successfully

@@ -11,12 +11,16 @@
   transition: all 0.3s ease;
 }
 
+.not-collapsed {
+  display: inline-block;
+}
+
 .navbar-absolute {
   position: absolute;
-  margin-right: 10px;
   width: 100%;
-  padding-top: 10px;
-  padding-right: 40px;
+  height: 30px;
+  padding-top: 5px;
+  /* padding-right: 40px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +28,6 @@
 }
 
 .navbar-not-landing {
-  /* background-color: rgba(66, 86, 78, 0.58); */
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 10px;
@@ -56,8 +59,24 @@
   height: 30px;
 }
 
+.collapsed {
+  display: none;
+}
+
 @media (max-width: 640px) {
-  .navbar-absolute {
-    width: 90.4%;
+  .navbar-absolute,
+  .navbar-not-landing {
+    display: flex;
+    width: 103%;
+    margin-left: -12px;
+  }
+
+  .not-collapsed {
+    display: none;
+  }
+
+  .collapsed {
+    color: black;
+    display: flex;
   }
 }
