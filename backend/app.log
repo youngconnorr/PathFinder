@@ -184,3 +184,102 @@ Traceback (most recent call last):
   File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\django\db\models\query.py", line 649, in get
     raise self.model.DoesNotExist(
 users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
+2024-06-26 17:44:50,524 - ERROR - Internal Server Error: /saved/70/
+Traceback (most recent call last):
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py", line 119, in retrieve
+    saved = self.queryset.get(pk=pk)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\venv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
+2024-06-26 17:57:59,298 - INFO - Login request received
+2024-06-26 17:57:59,306 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:00,585 - INFO - User authenticated successfully
+2024-06-26 17:58:00,881 - INFO - Login request received
+2024-06-26 17:58:00,881 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:02,012 - INFO - User authenticated successfully
+2024-06-26 17:58:02,923 - INFO - Login request received
+2024-06-26 17:58:02,924 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:04,989 - INFO - User authenticated successfully
+2024-06-26 17:58:10,690 - INFO - Login request received
+2024-06-26 17:58:10,692 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:11,142 - INFO - Login request received
+2024-06-26 17:58:11,144 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:11,287 - INFO - Login request received
+2024-06-26 17:58:11,287 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:11,416 - INFO - Login request received
+2024-06-26 17:58:11,416 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:11,561 - INFO - Login request received
+2024-06-26 17:58:11,563 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-26 17:58:11,655 - INFO - User authenticated successfully
+2024-06-26 17:58:12,461 - INFO - User authenticated successfully
+2024-06-26 17:58:12,655 - INFO - User authenticated successfully
+2024-06-26 17:58:12,655 - INFO - User authenticated successfully
+2024-06-26 17:58:12,843 - INFO - User authenticated successfully
+2024-06-27 11:19:56,927 - WARNING - Unauthorized: /saved/
+2024-06-27 11:22:36,796 - INFO - Login request received
+2024-06-27 11:22:36,804 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:37,972 - INFO - User authenticated successfully
+2024-06-27 11:22:38,706 - INFO - Login request received
+2024-06-27 11:22:38,707 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:39,956 - INFO - User authenticated successfully
+2024-06-27 11:22:40,279 - INFO - Login request received
+2024-06-27 11:22:40,282 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:41,010 - INFO - Login request received
+2024-06-27 11:22:41,010 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:41,256 - INFO - Login request received
+2024-06-27 11:22:41,355 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:41,507 - INFO - Login request received
+2024-06-27 11:22:41,515 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:41,680 - INFO - Login request received
+2024-06-27 11:22:41,828 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:42,040 - INFO - Login request received
+2024-06-27 11:22:42,065 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:42,483 - INFO - Login request received
+2024-06-27 11:22:42,495 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:42,665 - INFO - User authenticated successfully
+2024-06-27 11:22:42,895 - INFO - Login request received
+2024-06-27 11:22:43,003 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:43,005 - INFO - Login request received
+2024-06-27 11:22:43,020 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:43,284 - INFO - Login request received
+2024-06-27 11:22:43,305 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:47,066 - INFO - User authenticated successfully
+2024-06-27 11:22:47,782 - INFO - User authenticated successfully
+2024-06-27 11:22:47,891 - INFO - User authenticated successfully
+2024-06-27 11:22:47,956 - INFO - User authenticated successfully
+2024-06-27 11:22:48,086 - INFO - User authenticated successfully
+2024-06-27 11:22:48,195 - INFO - User authenticated successfully
+2024-06-27 11:22:48,219 - INFO - User authenticated successfully
+2024-06-27 11:22:48,252 - INFO - User authenticated successfully
+2024-06-27 11:22:48,292 - INFO - User authenticated successfully
+2024-06-27 11:22:51,954 - INFO - Login request received
+2024-06-27 11:22:51,960 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:22:53,249 - INFO - User authenticated successfully
+2024-06-27 11:24:01,687 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.
+2024-06-27 11:24:06,433 - INFO - Login request received
+2024-06-27 11:24:06,440 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 11:24:07,674 - INFO - User authenticated successfully
+2024-06-27 11:25:31,503 - INFO - C:\Users\conno\OneDrive\Desktop\personal files\coding-folders\personal-projects\PathFinder\backend\users\views.py changed, reloading.

@@ -21,7 +21,7 @@ const Landing = () => {
   }
 
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <SectionOne />
       <SectionTwo />
       <SectionThree />

@@ -37,7 +37,8 @@
   font-size: 1.2em;
   padding: 10px;
   color: white;
-  margin-top: 50px;
+  margin-top: 370px;
+  margin-left: 50px;
   transition: all 1s ease-in;
   width: 120px; /* Changed to fit-content for initial width */
 }
@@ -132,7 +133,7 @@
 }
 
 .carousel-cards {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.678);
   box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
   padding: 2em;
@@ -204,4 +205,200 @@
 .review-content {
   padding: 20px;
   width: 600px;
+}
+
+@media (max-width: 960px) {
+  .section-1 {
+    color: white;
+    border-radius: 0 0 30px 30px;
+    height: 100dvh;
+    background-image: url("../../assets/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .website-tagline {
+    margin-left: 20px;
+    transform: translateY(0);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .create-now-btn {
+    display: flex;
+    align-items: center; /* Added for proper alignment */
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 10px;
+    color: white;
+    margin-top: 50px;
+    transition: all 1s ease-in;
+    width: 120px; /* Changed to fit-content for initial width */
+  }
+
+  .create-now-btn p {
+    position: absolute;
+    transform: translateX(100px);
+    opacity: 0; /* Use opacity instead of display */
+    margin-left: 10px;
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in; /* Added transition for opacity and transform */
+  }
+
+  .create-now-btn:hover p {
+    opacity: 1; /* Set opacity to 1 on hover */
+    transform: translateX(120px);
+  }
+
+  .create-now-btn:hover {
+    cursor: pointer;
+  }
+
+  .create-now-btn a {
+    color: white;
+  }
+
+  .create-now-btn a::after {
+    background-color: transparent;
+  }
+
+  .landing-page-generate {
+    height: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-1 {
+    width: 100%;
+    background-image: url("../../assets/reponsive-lp1.jpg");
+    background-size: cover;
+    /* padding: 150px; */
+    overflow: hidden;
+
+    height: 67dvh;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .website-tagline h1 {
+    font-size: 1.5em;
+  }
+
+  .website-tagline {
+    margin-left: 15px;
+    margin-top: 270px;
+    /* width: 200px; */
+  }
+
+  .create-now-btn {
+    padding: 10px;
+    margin-left: 20px;
+  }
+
+  .section-2 {
+    height: 60dvh;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .carousel-section {
+    width: 100dvw;
+    height: 60dvh;
+    background-image: url("../../assets/responsive-lp2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 30px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-headline {
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    /* display: grid;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .carousel-title {
+    display: block;
+    box-sizing: border-box;
+    width: 20%;
+  }
+
+  .carousel-title h1 {
+    font-size: 1.6em;
+  }
+
+  .carousel-cards {
+    font-size: 0.7em;
+    background-color: rgba(255, 255, 255, 0.678);
+    box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    padding: 2em;
+    margin: 0 20px;
+    width: 160px;
+    height: fit-content;
+  }
+
+  .section-3 {
+    width: 100dvw;
+    height: 100dvh;
+    background-image: url("../../assets/responsive-lp3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 30px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .reviews-title-div {
+    color: white;
+    margin-left: 20px;
+    width: 160px;
+    border-bottom: 2px solid white;
+    padding-top: 50px;
+  }
+
+  .reviews {
+    padding-top: 32%;
+    color: white;
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .review-card {
+    margin-top: 50px;
+  }
+
+  .img-fade {
+    display: none;
+    opacity: 0;
+    transition: display 0.5s ease;
+  }
+
+  .img-fade.active {
+    display: inline;
+    opacity: 1;
+  }
+
+  .review-name,
+  .review-city,
+  .review-country,
+  .review-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .review-content {
+    padding: 20px;
+    width: 300px;
+  }
 }

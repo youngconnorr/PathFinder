@@ -41,9 +41,9 @@ class LoginViewset(viewsets.ViewSet):
             user = authenticate(request , email=email, password=password)
             
             if user:
-                logger.info("User authenticated successfully")
                 try:
                     _, token = AuthToken.objects.create(user)
+                    logger.info("User authenticated successfully")
                 except Exception as e:
                     logger.error(f"Error creating auth token: {e}")
                     return Response({"error": "Token creation failed"}, status=500)

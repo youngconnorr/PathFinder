@@ -14,20 +14,20 @@ export const SectionOne = () => {
         <p style={{ marginTop: "10px" }}>
           Personalized travel itinerary made easy
         </p>
-        {token ? (
-          <button
-            className="create-now-btn"
-            onClick={() => navigate("/generate")}
-          >
-            <Link to="/generate">Create now</Link>
-            <p>&gt;</p>
-          </button>
-        ) : (
-          <div className="landing-page-generate">
-            <Generate />
-          </div>
-        )}
       </div>
+      {token ? (
+        <button
+          className="create-now-btn"
+          onClick={() => navigate("/generate")}
+        >
+          <Link to="/generate">Create now</Link>
+          <p>&gt;</p>
+        </button>
+      ) : (
+        <div className="landing-page-generate">
+          <Generate />
+        </div>
+      )}
     </section>
   );
 };
