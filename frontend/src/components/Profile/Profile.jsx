@@ -72,87 +72,89 @@ const Profile = () => {
         <div className="profile-header">
           <h1>My Trips</h1>
         </div>
-      </div>
-      <div
-        className={`profile-content ${showAll ? null : "profile-transluscent"}`}
-      >
-        {loading ? (
-          <p>loading...</p>
-        ) : (
-          <>
-            <div className="profile-interact-bar">
-              <input
-                type="text"
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                placeholder="Search Trips... "
-                className="profile-searcher"
-              />
-              <button
-                onClick={() => navigate("/generate")}
-                className="profile-create-btn"
-              >
-                + New Trip
-              </button>
-              <button
-                onClick={() => setShowAll(!showAll)} // Toggle showAll state
-                className="profile-toggle-btn"
-              >
-                {showAll ? "Hide Trips" : "Show All Trips"}
-              </button>
-            </div>
-            {saved.length === 0 ? (
-              <p>Looks like you need to generate some itineraries!</p>
-            ) : (
-              <div
-                className={`profile-all-saved-container ${
-                  showAll ? "show" : "hide"
-                }`}
-              >
-                {filteredSaved.reverse().map((saved) => (
-                  <div
-                    key={saved.id}
-                    className="each-profile-saved-container"
-                    onClick={() => viewSaved(saved.id)}
-                  >
-                    <div
-                      className="profile-saved-bg-color"
-                      style={{ backgroundColor: `${bgColors[saved.month]}` }}
-                    >
-                      <h2 className="profile-saved-name">{saved.itinName}</h2>
-                    </div>
-                    <div className="profile-saved-text">
-                      <h2 className="profile-saved-title">
-                        {saved.title}
-                        <FontAwesomeIcon
-                          icon={faLocationDot}
-                          size="md"
-                          style={{ marginLeft: "10px" }}
-                        />
-                      </h2>
-                      <h3>{saved.month}</h3>
-                    </div>
-                    <div className="delete-btn-placement">
-                      <button
-                        onClick={() => {
-                          deleteSaved(saved.id);
-                        }}
-                        className="delete-btn"
-                      >
-                        {" "}
-                        remove
-                      </button>
-                    </div>
-                  </div>
-                ))}
+        <div
+          className={`profile-content ${
+            showAll ? null : "profile-transluscent"
+          }`}
+        >
+          {loading ? (
+            <p>loading...</p>
+          ) : (
+            <>
+              <div className="profile-interact-bar">
+                <input
+                  type="text"
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                  }}
+                  placeholder="Search Trips... "
+                  className="profile-searcher"
+                />
+                <button
+                  onClick={() => navigate("/generate")}
+                  className="profile-create-btn"
+                >
+                  + New Trip
+                </button>
+                <button
+                  onClick={() => setShowAll(!showAll)} // Toggle showAll state
+                  className="profile-toggle-btn"
+                >
+                  {showAll ? "Hide Trips" : "Show All Trips"}
+                </button>
               </div>
-            )}
-          </>
-        )}
-        <button onClick={() => logoutUser()} className="profile-logout-btn">
-          Log out
-        </button>
+              {saved.length === 0 ? (
+                <p>Looks like you need to generate some itineraries!</p>
+              ) : (
+                <div
+                  className={`profile-all-saved-container ${
+                    showAll ? "show" : "hide"
+                  }`}
+                >
+                  {filteredSaved.reverse().map((saved) => (
+                    <div
+                      key={saved.id}
+                      className="each-profile-saved-container"
+                      onClick={() => viewSaved(saved.id)}
+                    >
+                      <div
+                        className="profile-saved-bg-color"
+                        style={{ backgroundColor: `${bgColors[saved.month]}` }}
+                      >
+                        <h2 className="profile-saved-name">{saved.itinName}</h2>
+                      </div>
+                      <div className="profile-saved-text">
+                        <h2 className="profile-saved-title">
+                          {saved.title}
+                          <FontAwesomeIcon
+                            icon={faLocationDot}
+                            size="md"
+                            style={{ marginLeft: "10px" }}
+                          />
+                        </h2>
+                        <h3>{saved.month}</h3>
+                      </div>
+                      <div className="delete-btn-placement">
+                        <button
+                          onClick={() => {
+                            deleteSaved(saved.id);
+                          }}
+                          className="delete-btn"
+                        >
+                          {" "}
+                          remove
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+          <button onClick={() => logoutUser()} className="profile-logout-btn">
+            Log out
+          </button>
+        </div>
       </div>
     </section>
   );

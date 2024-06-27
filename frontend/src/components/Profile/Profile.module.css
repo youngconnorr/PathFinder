@@ -3,7 +3,7 @@
   background-color: rgba(255, 255, 255);
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
-  height: 370px;
+  height: 307px;
 }
 
 .profile-transluscent {
@@ -29,9 +29,9 @@
   background-image: url("../../assets/saved-items-bg.jpg");
   background-size: 100%;
   padding: 0;
-  margin-bottom: -530px;
+  margin-bottom: -550px;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 740px;
 }
 
 .profile-all-saved-container {
@@ -51,7 +51,7 @@
 }
 
 .profile-all-saved-container.hide {
-  max-height: 120px;
+  max-height: 110px;
   opacity: 1;
 }
 
@@ -166,4 +166,182 @@
   border: 1px solid rgb(116, 143, 116);
   cursor: pointer;
   background: rgb(116, 143, 116);
+}
+
+@media (max-width: 640px) {
+  .profile-upper-photo {
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-image: url("../../assets/responsive-sv.jpg");
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .profile-content {
+    position: absolute;
+    padding: 20px 0 0 0;
+    background-color: rgba(255, 255, 255);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: fit-content;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .profile-transluscent {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .profile-transluscent .profile-create-btn,
+  .profile-transluscent .profile-toggle-btn,
+  .profile-transluscent .profile-logout-btn {
+    border: 1px solid white;
+    background-color: white;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .profile-transluscent .profile-create-btn:hover,
+  .profile-transluscent .profile-toggle-btn:hover,
+  .profile-transluscent .profile-logout-btn:hover {
+    border-color: rgb(90, 122, 98);
+    background-color: rgba(90, 122, 98);
+  }
+
+  .profile-all-saved-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3em 4.5em;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .profile-all-saved-container.show {
+    max-height: fit-content;
+    opacity: 1;
+  }
+
+  .profile-all-saved-container.hide {
+    max-height: 110px;
+    width: 230px;
+    opacity: 1;
+  }
+
+  .profile-saved-name {
+    font-size: 2em;
+    padding-bottom: 10px;
+  }
+
+  .profile-saved-bg-color {
+    display: block;
+    height: 40px;
+    width: inherit;
+    font-size: 10px;
+    margin-bottom: 5px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+
+  .profile-saved-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .profile-logout-btn {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50px;
+  }
+
+  .profile-logout-btn:hover {
+    cursor: pointer;
+    background-color: rgb(90, 122, 98);
+    border-color: rgb(90, 122, 98);
+    transition: 0.3s ease-in-out;
+  }
+
+  .profile-saved-text,
+  .profile-saved-name {
+    display: inline-block;
+    margin: 5px 15px;
+  }
+
+  .profile-saved-title {
+    font-size: 1.5em;
+  }
+
+  .each-profile-saved-container {
+    background-color: transparent;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    width: 280px;
+    height: 150px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  .profile-header h1 {
+    transform: translateY(100px);
+    margin-left: -90px;
+    width: fit-content;
+    font-size: 2.4em;
+  }
+
+  .profile-interact-bar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .profile-searcher {
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .profile-create-btn,
+  .profile-toggle-btn {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 90px;
+    height: 50px;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+
+  .profile-create-btn:hover,
+  .profile-toggle-btn:hover {
+    border: rgb(116, 143, 116);
+    cursor: pointer;
+    background: rgb(116, 143, 116);
+  }
+
+  .profile-logout-btn {
+    margin-bottom: 50px;
+  }
+
+  .delete-btn-placement {
+    margin-top: 15px;
+    margin-left: 200px;
+  }
+
+  .delete-btn {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+
+  .delete-btn:hover {
+    border: 1px solid rgb(116, 143, 116);
+    cursor: pointer;
+    background: rgb(116, 143, 116);
+  }
 }
