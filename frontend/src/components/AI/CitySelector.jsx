@@ -39,7 +39,7 @@ const CitySelector = ({ onInputChange }) => {
   };
 
   return (
-    <div>
+    <div className="location">
       <label htmlFor="country">Location </label>
       <select
         onChange={(e) => handleCountryInput(e.target.value)}

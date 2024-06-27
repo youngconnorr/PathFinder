@@ -19,7 +19,6 @@
   margin-top: 40px;
   padding: 5px;
   background-color: rgba(128, 128, 128, 0.616);
-  /* background-image: url("../../assets/generate-section-bg.jpg"); */
   height: fit-content;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -212,4 +211,223 @@
 .move-left {
   margin-left: -20px;
   padding-right: 20px;
+}
+
+@media (max-width: 640px) {
+  /* 
+
+- guest-menu-btn
+
+*/
+
+  /* overall styles */
+
+  .form-item {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-left: none;
+  }
+
+  .generate-page {
+    margin-top: 40px;
+    padding: 5px;
+    background-color: white;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .generate-section {
+    margin: 50px;
+    color: black;
+    background-color: white;
+    padding-top: 5px;
+    box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 0 0 30px 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 30px;
+  }
+
+  .fit-gen {
+    height: fit-content;
+  }
+
+  .high-gen {
+    height: 600px;
+  }
+
+  .AI-form {
+    margin-top: 0px;
+    border: none;
+    height: 50dvh;
+    padding-left: 20px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: fit-content;
+    margin-left: 0px;
+  }
+
+  .submit-ai {
+    background-color: transparent;
+  }
+
+  .ai-response {
+    border-radius: 5px;
+    font-size: 0.7em;
+    display: block;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .ai-cards {
+    background-color: white;
+    color: black;
+    border-style: solid;
+    margin: 0px;
+    padding: 20px;
+    border-color: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    border: none;
+  }
+
+  /* name itinerary */
+
+  .name-itinerary {
+    padding-left: 20px;
+  }
+
+  /* location */
+
+  .location {
+    margin-top: 20px;
+    width: 50px;
+    margin-left: 0px;
+  }
+
+  /* budget styles */
+
+  .budget-picker:focus {
+    /* Styling for focus state */
+    outline: none;
+    border-color: #999;
+  }
+
+  /* calendar */
+
+  .calendar {
+    margin-left: 10px;
+  }
+
+  /* guests */
+
+  .pre-guest-btn {
+    padding-left: 0px;
+  }
+
+  .guest {
+    margin-top: 10px;
+    display: inline;
+    justify-content: space-between;
+  }
+
+  .guest-button {
+    background: transparent;
+    border: none;
+    height: 20px;
+  }
+
+  .guest-btn-selection {
+    background-color: white;
+    margin-top: 10px;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    margin-left: -15px;
+  }
+
+  .guest-mod {
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .guest-num-display {
+    margin-right: 0px;
+    padding-left: 20px;
+  }
+
+  .guest-menu-btn {
+    height: 40px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50px;
+    /* margin-left: 20px; */
+    width: 100px;
+    border: 1px solid rgb(191, 189, 189);
+  }
+
+  .guest-menu-btn:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.3s ease-in-out;
+  }
+
+  .gen-bg {
+    background-image: url("../../assets/generate-bg.jpg");
+    color: white;
+    border-radius: 0 0 30px 30px;
+    height: 24vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .generated-list {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .generate-save-btn {
+    background: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .generate-save-btn:hover {
+    background-color: rgb(119, 187, 145);
+    border-color: rgb(119, 187, 145);
+  }
+
+  .loading-gif {
+    background-image: url("../../assets/searching-gif.gif");
+    transform: translate(100px, 0px);
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .formatted-ai-output {
+    padding-bottom: 10px;
+  }
 }

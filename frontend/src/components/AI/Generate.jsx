@@ -167,7 +167,7 @@ const Generate = () => {
   const formatAIOutput = (jsonList) => {
     if (jsonList) {
       return jsonList.map((list, index) => (
-        <div key={index}>
+        <div key={index} className="formatted-ai-output">
           <strong>{list[0]}</strong>
           <div>{list[1]}</div>
         </div>
@@ -190,19 +190,24 @@ const Generate = () => {
       ) : null}
       <div className={isGenerating ? "generate-page" : "move-left"}>
         <div
-          className={`${isGenerating ? "generate-section" : ""} ${
+          className={`${isGenerating ? "generate-section" : "no-display"} ${
             submitted ? "fit-gen" : "high-gen"
           }`}
         >
           {token ? (
-            <div style={{ marginTop: "50px", marginLeft: "20px" }}>
+            <div
+              style={{ marginTop: "50px", marginLeft: "20px" }}
+              className="name-itinerary"
+            >
               <label>Itinerary Name: </label>
               <input type="text" onChange={handleItineraryName} />
             </div>
           ) : null}
 
           <form onSubmit={handleSubmit} className={`AI-form`}>
-            <CitySelector onInputChange={handleCityChange} />
+            <div className="location">
+              <CitySelector onInputChange={handleCityChange} />
+            </div>
             <div className="calendar">
               <DateSelector datePicked={handleMonthChange} />
             </div>
