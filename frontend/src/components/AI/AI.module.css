@@ -18,7 +18,7 @@
 .generate-page {
   margin-top: 40px;
   padding: 5px;
-  background-color: rgba(128, 128, 128, 0.616);
+  background-image: url("../../assets/gen-section.jpg");
   height: fit-content;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -28,7 +28,7 @@
 .generate-section {
   margin: 50px;
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding-top: 5px;
   /* border: 1px solid black; */
   box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
@@ -40,19 +40,34 @@
   border-radius: 30px;
 }
 
-.fit-gen {
+.before-gen-height {
   height: fit-content;
 }
 
-.high-gen {
+.after-gen-height {
   height: 600px;
 }
 
 .AI-form {
-  margin-top: 50px;
+  margin-top: 400px;
+  /* border: 1px solid black; */
+  height: 60px;
+  padding: 0px 0px 0px 20px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  width: 93%;
+  margin-left: 60px;
+}
+
+.logged-in-AI-form {
+  margin-top: 100px;
   border: 1px solid black;
   height: 60px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   background: white;
   color: black;
   display: flex;
@@ -220,6 +235,10 @@
 
 */
 
+  .no-display {
+    display: none;
+  }
+
   /* overall styles */
 
   .form-item {
@@ -234,10 +253,10 @@
   .generate-page {
     margin-top: 40px;
     padding: 5px;
-    background-color: white;
+    background-image: url("../../assets/responsive-gen.jpg");
     height: fit-content;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     border-radius: 30px 30px 0 0;
   }
 
@@ -262,7 +281,7 @@
     height: 600px;
   }
 
-  .AI-form {
+  .logged-in-AI-form {
     margin-top: 0px;
     border: none;
     height: 50dvh;

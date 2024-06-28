@@ -191,7 +191,7 @@ const Generate = () => {
       <div className={isGenerating ? "generate-page" : "move-left"}>
         <div
           className={`${isGenerating ? "generate-section" : "no-display"} ${
-            submitted ? "fit-gen" : "high-gen"
+            submitted ? ".before-gen-height" : "after-gen-height"
           }`}
         >
           {token ? (
@@ -204,7 +204,10 @@ const Generate = () => {
             </div>
           ) : null}
 
-          <form onSubmit={handleSubmit} className={`AI-form`}>
+          <form
+            onSubmit={handleSubmit}
+            className={`${token ? "logged-in-AI-form" : "AI-form"}`}
+          >
             <div className="location">
               <CitySelector onInputChange={handleCityChange} />
             </div>
@@ -243,7 +246,7 @@ const Generate = () => {
                 <div className="generated-list">
                   {hasSaved ? null : (
                     <button onClick={createSaved} className="generate-save-btn">
-                      Save note!
+                      Save!
                     </button>
                   )}
 
