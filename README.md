@@ -5,7 +5,7 @@ Welcome to Path Finder, a web application that helps you easily plan your travel
 ## Technologies Used 💻
 
 - React.js
-- Django Rest Framework
+- Django (RESTful APIs)
 - CSS
 - OpenAI API
 
