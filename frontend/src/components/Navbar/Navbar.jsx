@@ -23,11 +23,7 @@ const Navbar = () => {
       ${isNotLanding ? "navbar-not-landing" : "navbar-absolute"}
       ${isProfile ? "black" : ""}`}
     >
-      <div
-        className={`
-        ${isNotLanding ? "navbar-not-landing" : "navbar-absolute"}
-        ${isProfile ? "black" : ""} not-collapsed`}
-      >
+      <div className={`not-collapsed`}>
         {token ? (
           <>
             <div>
@@ -67,11 +63,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <section
-        className={`
-        ${isNotLanding ? "navbar-not-landing" : "navbar-absolute"}
-        ${isProfile ? "black" : ""} collapsed`}
-      >
+      <section className={`collapsed`}>
         <div>
           <button>
             <Link to="/" className="navbar-black">

@@ -12,28 +12,21 @@
 }
 
 .not-collapsed {
-  display: inline-block;
-}
-
-.navbar-absolute {
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  padding-top: 5px;
-  /* padding-right: 40px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.navbar-not-landing {
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar-absolute {
+  position: absolute;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-not-landing {
+  background-color: rgba(0, 0, 0, 0.75);
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -85,6 +78,14 @@
   .collapsed {
     color: black;
     display: flex;
+    height: 30px;
+    padding-top: 5px;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .drawer-toggle {
+    position: absolute;
+    margin-left: 90%;
   }
 }

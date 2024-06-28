@@ -48,3 +48,46 @@
   filter: blur(0);
   transform: translateX(0);
 }
+
+@media (max-width: 640px) {
+  .about {
+    color: black;
+    height: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+  }
+
+  .grades-section {
+    height: 10vh;
+  }
+
+  .school-section {
+    margin-top: 30px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .description-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .spacer {
+    margin-bottom: 20px;
+  }
+
+  .me-section {
+    margin-top: 300px;
+  }
+
+  .school-section {
+    padding: 40px;
+  }
+
+  .school-section h1 {
+    font-size: 2em;
+  }
+}

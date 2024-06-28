@@ -399,6 +399,11 @@
     background-size: 100%;
   }
 
+  .gen-bg h1 {
+    font-size: 1.6em;
+    padding-top: 70px;
+  }
+
   .generated-list {
     margin-top: 50px;
     padding-bottom: 50px;
