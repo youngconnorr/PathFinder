@@ -65,9 +65,9 @@
 
 .logged-in-AI-form {
   margin-top: 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 60px;
-  padding: 0px 20px;
+  padding: 0px 30px;
   background: white;
   color: black;
   display: flex;
@@ -149,6 +149,12 @@
   border: 1px solid black;
   position: absolute;
   margin-left: -15px;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
 }
 
 .guest-mod {
@@ -337,7 +343,7 @@
 
   .location {
     margin-top: 20px;
-    width: 50px;
+    width: 320px;
     margin-left: 0px;
   }
 
