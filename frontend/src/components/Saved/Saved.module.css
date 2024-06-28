@@ -92,6 +92,10 @@ button {
     padding: 20px;
   }
 
+  .categories-spead {
+    display: block;
+  }
+
   .saved-upper-photo {
     background-image: url("../../assets/responsive-sv.jpg");
     background-size: 100%;
@@ -117,7 +121,8 @@ button {
   }
 
   .category-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1em;

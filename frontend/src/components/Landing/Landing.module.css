@@ -14,6 +14,8 @@
 
 .section-1 {
   color: white;
+  display: flex;
+  flex-direction: column;
   border-radius: 0 0 30px 30px;
   height: 105vh;
   background-image: url("../../assets/background-1.jpg");
@@ -22,8 +24,9 @@
 }
 
 .website-tagline {
+  margin-bottom: 0px;
   margin-left: 50px;
-  transform: translateY(52vh);
+  margin-top: 50dvh;
   align-items: center;
   justify-content: center;
 }
@@ -37,7 +40,7 @@
   font-size: 1.2em;
   padding: 10px;
   color: white;
-  margin-top: 370px;
+  margin-top: 30px;
   margin-left: 50px;
   transition: all 1s ease-in;
   width: 120px; /* Changed to fit-content for initial width */

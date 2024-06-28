@@ -48,7 +48,7 @@ const PickedSavedPage = () => {
             {saved === null ? (
               <div>Loading...</div>
             ) : (
-              <>
+              <div className="categories-spread">
                 <h1>{saved.title}</h1>
                 <div className="category-container" key={saved.id}>
                   <div className="descriptions">
@@ -91,7 +91,7 @@ const PickedSavedPage = () => {
                     </button>
                   </div>
                 </div>
-              </>
+              </div>
             )}
           </section>
         </div>
