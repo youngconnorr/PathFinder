@@ -319,3 +319,17 @@ users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
 2024-06-27 11:25:49,411 - INFO - Login request received
 2024-06-27 11:25:49,411 - INFO - Attempting to authenticate user: newUser@gmail.com
 2024-06-27 11:25:50,371 - INFO - User authenticated successfully
+2024-06-27 21:31:14,266 - WARNING - Unauthorized: /saved/
+2024-06-27 21:35:32,416 - INFO - Login request received
+2024-06-27 21:35:32,440 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 21:35:33,139 - INFO - User authenticated successfully
+2024-06-27 21:43:45,244 - INFO - Login request received
+2024-06-27 21:43:45,244 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-27 21:43:45,821 - INFO - User authenticated successfully
+2024-06-28 17:51:28,186 - WARNING - Unauthorized: /saved/
+2024-06-28 17:51:39,324 - INFO - Login request received
+2024-06-28 17:51:39,331 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-28 17:51:40,469 - INFO - User authenticated successfully
+2024-06-28 17:51:40,954 - INFO - Login request received
+2024-06-28 17:51:40,961 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-06-28 17:51:41,924 - INFO - User authenticated successfully
