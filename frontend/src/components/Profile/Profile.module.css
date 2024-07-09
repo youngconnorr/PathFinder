@@ -168,7 +168,7 @@
   background: rgb(116, 143, 116);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .profile-upper-photo {
     height: 100dvh;
     width: 100dvw;
@@ -212,15 +212,17 @@
   .profile-all-saved-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 3em 4.5em;
+    padding: 3em 14dvw;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    width: fit-content;
   }
 
   .profile-all-saved-container.show {
     max-height: fit-content;
+    padding: 20px 0px 0px 50px;
     opacity: 1;
   }
 

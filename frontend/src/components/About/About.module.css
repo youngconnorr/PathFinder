@@ -49,7 +49,7 @@
   transform: translateX(0);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .about {
     color: black;
     height: 50px;

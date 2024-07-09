@@ -333,3 +333,130 @@ users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
 2024-06-28 17:51:40,954 - INFO - Login request received
 2024-06-28 17:51:40,961 - INFO - Attempting to authenticate user: newUser@gmail.com
 2024-06-28 17:51:41,924 - INFO - User authenticated successfully
+2024-07-02 14:50:29,471 - WARNING - Unauthorized: /saved/
+2024-07-02 14:50:41,574 - INFO - Login request received
+2024-07-02 14:50:41,581 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:43,120 - INFO - User authenticated successfully
+2024-07-02 14:50:44,488 - INFO - Login request received
+2024-07-02 14:50:44,491 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:45,595 - INFO - User authenticated successfully
+2024-07-02 14:50:46,005 - INFO - Login request received
+2024-07-02 14:50:46,005 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:46,982 - INFO - Login request received
+2024-07-02 14:50:46,983 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:47,076 - INFO - User authenticated successfully
+2024-07-02 14:50:48,051 - INFO - User authenticated successfully
+2024-07-02 14:50:48,251 - INFO - Login request received
+2024-07-02 14:50:48,252 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:49,191 - INFO - Login request received
+2024-07-02 14:50:49,192 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:50,127 - INFO - Login request received
+2024-07-02 14:50:50,225 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:50,465 - INFO - User authenticated successfully
+2024-07-02 14:50:50,803 - INFO - Login request received
+2024-07-02 14:50:50,815 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:51,048 - INFO - Login request received
+2024-07-02 14:50:51,193 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:51,512 - INFO - Login request received
+2024-07-02 14:50:51,517 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:51,653 - INFO - Login request received
+2024-07-02 14:50:51,664 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:51,811 - INFO - Login request received
+2024-07-02 14:50:51,833 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:52,274 - INFO - Login request received
+2024-07-02 14:50:52,286 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:52,399 - INFO - Login request received
+2024-07-02 14:50:52,438 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:53,039 - INFO - Login request received
+2024-07-02 14:50:53,510 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:50:56,152 - INFO - User authenticated successfully
+2024-07-02 14:50:58,275 - INFO - User authenticated successfully
+2024-07-02 14:50:58,330 - INFO - User authenticated successfully
+2024-07-02 14:50:58,588 - INFO - User authenticated successfully
+2024-07-02 14:50:58,612 - INFO - User authenticated successfully
+2024-07-02 14:50:58,647 - INFO - User authenticated successfully
+2024-07-02 14:50:58,721 - INFO - User authenticated successfully
+2024-07-02 14:50:58,738 - INFO - User authenticated successfully
+2024-07-02 14:50:58,764 - INFO - User authenticated successfully
+2024-07-02 14:50:58,793 - INFO - User authenticated successfully
+2024-07-02 14:51:03,971 - INFO - Login request received
+2024-07-02 14:51:03,978 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 14:51:04,613 - INFO - User authenticated successfully
+2024-07-02 15:25:44,151 - INFO - Login request received
+2024-07-02 15:25:44,176 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:45,257 - INFO - User authenticated successfully
+2024-07-02 15:25:45,910 - INFO - Login request received
+2024-07-02 15:25:45,931 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:47,022 - INFO - User authenticated successfully
+2024-07-02 15:25:49,140 - INFO - Login request received
+2024-07-02 15:25:49,149 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:49,730 - INFO - Login request received
+2024-07-02 15:25:49,747 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:50,429 - INFO - User authenticated successfully
+2024-07-02 15:25:50,553 - INFO - Login request received
+2024-07-02 15:25:50,568 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:50,945 - INFO - User authenticated successfully
+2024-07-02 15:25:51,102 - INFO - Login request received
+2024-07-02 15:25:51,116 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:51,576 - INFO - Login request received
+2024-07-02 15:25:51,585 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:51,891 - INFO - Login request received
+2024-07-02 15:25:51,910 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:52,040 - INFO - User authenticated successfully
+2024-07-02 15:25:52,109 - INFO - Login request received
+2024-07-02 15:25:52,118 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:52,301 - INFO - Login request received
+2024-07-02 15:25:52,317 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:52,642 - INFO - User authenticated successfully
+2024-07-02 15:25:53,120 - INFO - User authenticated successfully
+2024-07-02 15:25:53,386 - INFO - User authenticated successfully
+2024-07-02 15:25:53,526 - INFO - User authenticated successfully
+2024-07-02 15:25:53,851 - INFO - User authenticated successfully
+2024-07-02 15:25:57,205 - INFO - Login request received
+2024-07-02 15:25:57,223 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:25:58,299 - INFO - User authenticated successfully
+2024-07-02 15:26:00,631 - INFO - Login request received
+2024-07-02 15:26:00,645 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:01,095 - INFO - Login request received
+2024-07-02 15:26:01,118 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:01,972 - INFO - User authenticated successfully
+2024-07-02 15:26:02,564 - INFO - User authenticated successfully
+2024-07-02 15:26:05,342 - INFO - Login request received
+2024-07-02 15:26:05,363 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:06,390 - INFO - User authenticated successfully
+2024-07-02 15:26:06,599 - INFO - Login request received
+2024-07-02 15:26:06,624 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:07,435 - INFO - Login request received
+2024-07-02 15:26:07,442 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:07,854 - INFO - User authenticated successfully
+2024-07-02 15:26:07,922 - INFO - Login request received
+2024-07-02 15:26:07,936 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:08,344 - INFO - Login request received
+2024-07-02 15:26:08,364 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:08,619 - INFO - Login request received
+2024-07-02 15:26:08,632 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:08,862 - INFO - User authenticated successfully
+2024-07-02 15:26:08,924 - INFO - Login request received
+2024-07-02 15:26:08,933 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:09,306 - INFO - Login request received
+2024-07-02 15:26:09,329 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:09,435 - INFO - User authenticated successfully
+2024-07-02 15:26:09,768 - INFO - User authenticated successfully
+2024-07-02 15:26:10,146 - INFO - User authenticated successfully
+2024-07-02 15:26:10,397 - INFO - User authenticated successfully
+2024-07-02 15:26:10,681 - INFO - User authenticated successfully
+2024-07-02 15:26:10,923 - INFO - Login request received
+2024-07-02 15:26:10,942 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:12,030 - INFO - User authenticated successfully
+2024-07-02 15:26:20,319 - INFO - Login request received
+2024-07-02 15:26:20,325 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:20,748 - INFO - Login request received
+2024-07-02 15:26:20,755 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:21,944 - INFO - User authenticated successfully
+2024-07-02 15:26:22,447 - INFO - User authenticated successfully
+2024-07-02 15:26:29,110 - INFO - Login request received
+2024-07-02 15:26:29,133 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:29,686 - INFO - Login request received
+2024-07-02 15:26:29,696 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-02 15:26:29,733 - INFO - User authenticated successfully
+2024-07-02 15:26:31,013 - INFO - User authenticated successfully

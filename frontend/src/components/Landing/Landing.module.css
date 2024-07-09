@@ -72,7 +72,8 @@
 }
 
 .landing-page-generate {
-  height: 100px;
+  transform: translateY(-350px);
+  height: 00px;
 }
 /*         */
 
@@ -210,12 +211,21 @@
   width: 600px;
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .section-1 {
     color: white;
     border-radius: 0 0 30px 30px;
     height: 100dvh;
     background-image: url("../../assets/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    background-image: url("../../assets/reponsive-lp1.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+    height: 67dvh;
+    margin-bottom: 20px;
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -229,7 +239,7 @@
 
   .create-now-btn {
     display: flex;
-    align-items: center; /* Added for proper alignment */
+    align-items: center;
     background: transparent;
     border: 1px solid white;
     border-radius: 10px;
@@ -238,19 +248,19 @@
     color: white;
     margin-top: 50px;
     transition: all 1s ease-in;
-    width: 120px; /* Changed to fit-content for initial width */
+    width: 120px;
   }
 
   .create-now-btn p {
     position: absolute;
     transform: translateX(100px);
-    opacity: 0; /* Use opacity instead of display */
+    opacity: 0;
     margin-left: 10px;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in; /* Added transition for opacity and transform */
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
   }
 
   .create-now-btn:hover p {
-    opacity: 1; /* Set opacity to 1 on hover */
+    opacity: 1;
     transform: translateX(120px);
   }
 
@@ -269,9 +279,9 @@
   .landing-page-generate {
     height: 100px;
   }
-}
+} */
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .section-1 {
     width: 100%;
     background-image: url("../../assets/reponsive-lp1.jpg");

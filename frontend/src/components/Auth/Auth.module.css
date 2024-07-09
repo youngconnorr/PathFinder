@@ -68,7 +68,7 @@
   margin-top: 50px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .signin-bg {
     height: 100vh;
     background-image: url("../../assets/responsive-gen.jpg");

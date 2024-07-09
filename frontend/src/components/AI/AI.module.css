@@ -152,7 +152,7 @@
 }
 
 .location {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   width: 310px;
 }
@@ -234,7 +234,7 @@
   padding-right: 20px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   /* 
 
 - guest-menu-btn
@@ -267,10 +267,15 @@
   }
 
   .generate-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 50px;
     color: black;
     background-color: white;
     padding-top: 5px;
+    padding-bottom: 10px;
     box-shadow: 0 7px 8px 0px rgba(0, 0, 0, 0.2);
     color: black;
     border-radius: 0 0 30px 30px;
@@ -291,14 +296,12 @@
     margin-top: 0px;
     border: none;
     height: 50dvh;
-    padding-left: 20px;
+    padding-left: 0px;
     background: white;
     color: black;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-    width: fit-content;
+    align-items: center;
+    width: 100px;
     margin-left: 0px;
   }
 
@@ -336,15 +339,16 @@
   /* name itinerary */
 
   .name-itinerary {
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   /* location */
 
   .location {
+    justify-content: space-around;
     margin-top: 20px;
     width: 320px;
-    margin-left: 0px;
+    margin-left: 20px;
   }
 
   /* budget styles */
@@ -358,7 +362,7 @@
   /* calendar */
 
   .calendar {
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   /* guests */
