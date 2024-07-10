@@ -460,3 +460,166 @@ users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
 2024-07-02 15:26:29,696 - INFO - Attempting to authenticate user: newUser@gmail.com
 2024-07-02 15:26:29,733 - INFO - User authenticated successfully
 2024-07-02 15:26:31,013 - INFO - User authenticated successfully
+2024-07-03 18:31:00,195 - WARNING - Unauthorized: /saved/
+2024-07-03 18:33:48,914 - INFO - Login request received
+2024-07-03 18:33:48,925 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:33:50,380 - INFO - User authenticated successfully
+2024-07-03 18:33:51,257 - INFO - Login request received
+2024-07-03 18:33:51,268 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:33:52,315 - INFO - User authenticated successfully
+2024-07-03 18:34:13,843 - INFO - Login request received
+2024-07-03 18:34:13,845 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:14,785 - INFO - Login request received
+2024-07-03 18:34:14,785 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:14,853 - INFO - User authenticated successfully
+2024-07-03 18:34:15,193 - INFO - Login request received
+2024-07-03 18:34:15,196 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:15,597 - INFO - Login request received
+2024-07-03 18:34:15,603 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:15,935 - INFO - Login request received
+2024-07-03 18:34:15,935 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:16,179 - INFO - Login request received
+2024-07-03 18:34:16,180 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:16,369 - INFO - Login request received
+2024-07-03 18:34:16,369 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:16,587 - INFO - Login request received
+2024-07-03 18:34:16,591 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:16,782 - INFO - Login request received
+2024-07-03 18:34:16,788 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:16,788 - INFO - User authenticated successfully
+2024-07-03 18:34:16,956 - INFO - Login request received
+2024-07-03 18:34:16,977 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:17,219 - INFO - Login request received
+2024-07-03 18:34:17,355 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:17,369 - INFO - Login request received
+2024-07-03 18:34:17,375 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:17,797 - INFO - Login request received
+2024-07-03 18:34:17,814 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:18,037 - INFO - Login request received
+2024-07-03 18:34:18,121 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:18,240 - INFO - Login request received
+2024-07-03 18:34:18,240 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:21,679 - INFO - User authenticated successfully
+2024-07-03 18:34:23,690 - INFO - User authenticated successfully
+2024-07-03 18:34:24,179 - INFO - User authenticated successfully
+2024-07-03 18:34:24,459 - INFO - User authenticated successfully
+2024-07-03 18:34:24,598 - INFO - User authenticated successfully
+2024-07-03 18:34:24,624 - INFO - User authenticated successfully
+2024-07-03 18:34:24,652 - INFO - User authenticated successfully
+2024-07-03 18:34:24,759 - INFO - User authenticated successfully
+2024-07-03 18:34:24,883 - INFO - User authenticated successfully
+2024-07-03 18:34:24,899 - INFO - User authenticated successfully
+2024-07-03 18:34:24,920 - INFO - User authenticated successfully
+2024-07-03 18:34:24,969 - INFO - User authenticated successfully
+2024-07-03 18:34:24,986 - INFO - User authenticated successfully
+2024-07-03 18:34:32,911 - INFO - Login request received
+2024-07-03 18:34:32,916 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:33,297 - INFO - Login request received
+2024-07-03 18:34:33,298 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:33,527 - INFO - Login request received
+2024-07-03 18:34:33,527 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:33,813 - INFO - Login request received
+2024-07-03 18:34:33,813 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:33,890 - INFO - User authenticated successfully
+2024-07-03 18:34:33,950 - INFO - Login request received
+2024-07-03 18:34:33,950 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:34,325 - INFO - Login request received
+2024-07-03 18:34:34,325 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:34,499 - INFO - User authenticated successfully
+2024-07-03 18:34:34,599 - INFO - Login request received
+2024-07-03 18:34:34,601 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:34,804 - INFO - User authenticated successfully
+2024-07-03 18:34:35,003 - INFO - Login request received
+2024-07-03 18:34:35,003 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:35,003 - INFO - User authenticated successfully
+2024-07-03 18:34:35,170 - INFO - User authenticated successfully
+2024-07-03 18:34:35,254 - INFO - Login request received
+2024-07-03 18:34:35,254 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:35,422 - INFO - Login request received
+2024-07-03 18:34:35,422 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:35,620 - INFO - User authenticated successfully
+2024-07-03 18:34:35,837 - INFO - User authenticated successfully
+2024-07-03 18:34:36,067 - INFO - Login request received
+2024-07-03 18:34:36,067 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:36,255 - INFO - User authenticated successfully
+2024-07-03 18:34:36,287 - INFO - Login request received
+2024-07-03 18:34:36,287 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:36,440 - INFO - User authenticated successfully
+2024-07-03 18:34:36,729 - INFO - User authenticated successfully
+2024-07-03 18:34:37,364 - INFO - User authenticated successfully
+2024-07-03 18:34:37,613 - INFO - User authenticated successfully
+2024-07-03 18:34:41,708 - INFO - Login request received
+2024-07-03 18:34:41,708 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:42,737 - INFO - User authenticated successfully
+2024-07-03 18:34:44,977 - INFO - Login request received
+2024-07-03 18:34:44,978 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:46,032 - INFO - User authenticated successfully
+2024-07-03 18:34:48,063 - INFO - Login request received
+2024-07-03 18:34:48,065 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:34:49,079 - INFO - User authenticated successfully
+2024-07-03 18:35:17,941 - INFO - Login request received
+2024-07-03 18:35:17,941 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:18,658 - INFO - Login request received
+2024-07-03 18:35:18,658 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:19,055 - INFO - User authenticated successfully
+2024-07-03 18:35:19,856 - INFO - User authenticated successfully
+2024-07-03 18:35:20,255 - INFO - Login request received
+2024-07-03 18:35:20,257 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:20,465 - INFO - Login request received
+2024-07-03 18:35:20,465 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:20,745 - INFO - Login request received
+2024-07-03 18:35:20,856 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:21,066 - INFO - Login request received
+2024-07-03 18:35:21,068 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:21,327 - INFO - Login request received
+2024-07-03 18:35:21,327 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:21,740 - INFO - Login request received
+2024-07-03 18:35:21,740 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:21,890 - INFO - Login request received
+2024-07-03 18:35:22,018 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:22,024 - INFO - Login request received
+2024-07-03 18:35:22,096 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:22,242 - INFO - Login request received
+2024-07-03 18:35:22,357 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:22,566 - INFO - Login request received
+2024-07-03 18:35:22,575 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:22,857 - INFO - Login request received
+2024-07-03 18:35:23,020 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:23,313 - INFO - Login request received
+2024-07-03 18:35:23,760 - INFO - Login request received
+2024-07-03 18:35:23,925 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:23,925 - INFO - Login request received
+2024-07-03 18:35:23,992 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:24,080 - INFO - Login request received
+2024-07-03 18:35:24,109 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:24,277 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:26,445 - INFO - Login request received
+2024-07-03 18:35:26,460 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:27,306 - INFO - Login request received
+2024-07-03 18:35:27,311 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:29,813 - INFO - User authenticated successfully
+2024-07-03 18:35:30,103 - INFO - Login request received
+2024-07-03 18:35:30,135 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:30,905 - INFO - User authenticated successfully
+2024-07-03 18:35:31,217 - INFO - Login request received
+2024-07-03 18:35:31,217 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:33,632 - INFO - User authenticated successfully
+2024-07-03 18:35:34,482 - INFO - User authenticated successfully
+2024-07-03 18:35:36,024 - INFO - User authenticated successfully
+2024-07-03 18:35:36,810 - INFO - User authenticated successfully
+2024-07-03 18:35:37,278 - INFO - User authenticated successfully
+2024-07-03 18:35:37,903 - INFO - User authenticated successfully
+2024-07-03 18:35:37,928 - INFO - User authenticated successfully
+2024-07-03 18:35:38,002 - INFO - User authenticated successfully
+2024-07-03 18:35:38,128 - INFO - User authenticated successfully
+2024-07-03 18:35:38,167 - INFO - User authenticated successfully
+2024-07-03 18:35:38,174 - INFO - User authenticated successfully
+2024-07-03 18:35:38,254 - INFO - User authenticated successfully
+2024-07-03 18:35:38,279 - INFO - User authenticated successfully
+2024-07-03 18:35:38,357 - INFO - User authenticated successfully
+2024-07-03 18:35:38,403 - INFO - User authenticated successfully
+2024-07-03 18:35:38,504 - INFO - User authenticated successfully
+2024-07-03 18:35:38,538 - INFO - User authenticated successfully
+2024-07-03 18:35:42,360 - INFO - Login request received
+2024-07-03 18:35:42,360 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
+2024-07-03 18:35:43,041 - INFO - User authenticated successfully
