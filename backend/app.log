@@ -623,3 +623,24 @@ users.models.SavedInfo.DoesNotExist: SavedInfo matching query does not exist.
 2024-07-03 18:35:42,360 - INFO - Login request received
 2024-07-03 18:35:42,360 - INFO - Attempting to authenticate user: chelseak0620@gmail.com
 2024-07-03 18:35:43,041 - INFO - User authenticated successfully
+2024-07-10 13:40:47,298 - INFO - Login request received
+2024-07-10 13:40:47,309 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:40:48,800 - INFO - User authenticated successfully
+2024-07-10 13:40:51,399 - INFO - Login request received
+2024-07-10 13:40:51,399 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:40:53,356 - INFO - User authenticated successfully
+2024-07-10 13:40:56,597 - INFO - Login request received
+2024-07-10 13:40:56,601 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:40:57,722 - INFO - User authenticated successfully
+2024-07-10 13:40:58,763 - INFO - Login request received
+2024-07-10 13:40:58,767 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:40:59,850 - INFO - User authenticated successfully
+2024-07-10 13:41:03,060 - INFO - Login request received
+2024-07-10 13:41:03,069 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:41:03,626 - INFO - Login request received
+2024-07-10 13:41:03,627 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:41:04,874 - INFO - User authenticated successfully
+2024-07-10 13:41:05,381 - INFO - User authenticated successfully
+2024-07-10 13:41:06,877 - INFO - Login request received
+2024-07-10 13:41:06,877 - INFO - Attempting to authenticate user: newUser@gmail.com
+2024-07-10 13:41:07,638 - INFO - User authenticated successfully

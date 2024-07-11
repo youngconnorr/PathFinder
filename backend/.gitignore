@@ -1,2 +1,4 @@
 .env
 ahhh
+db.sqlite3
+app.log
