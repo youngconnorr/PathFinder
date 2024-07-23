@@ -23,8 +23,3 @@ https://github.com/user-attachments/assets/c2717303-f075-49a8-a047-bab453295ac5
 - **Tailored Itineraries**: Utilizing the OpenAI API, Travel Planner generates customized itineraries based on your destination and the month of your travel. Get recommendations on places to visit, restaurants to dine at, and clothing to pack, all curated for the specific month you're traveling.
 - **User Itineraries**: Save your generated itineraries for future reference. Easily manage your saved itineraries by deleting the ones you no longer need.
 - **Fast Search**: Search through all of your itineraries efficiently through the search bar of your profile
-
-## Getting Started 🚦
-
-To get started with Travel Planner follow this link: [ TBA ]
-
